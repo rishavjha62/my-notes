@@ -39,7 +39,7 @@ don't want to type in the whole command.
 
   - Type `new window` when in command mode to launch a new window
   - Shortcut to open a new window is `Ctrl+b+c`
-  - Renameing a window by `Ctrl+b+,`
+  - Renaming a window by `Ctrl+b+,`
 
 * Switching between windows
 
@@ -57,3 +57,22 @@ don't want to type in the whole command.
 * Creatin a new split
   - Type `split-window -h` in command mode to split window horizontally or press `Ctrl+b+-`.
   - Type `split-window -v` in command mode to split window vertically or press `Ctrl+b+|`.
+
+## Copy pasting with tmux
+
+- with the copy paste plugin installed, copy pasting is easy with a selection with the mouse.
+- select with the use and use `Ctrl+u` or `Ctrl+d` to move up and down.
+
+```bash
+# for yanking
+
+set -g @plugin 'tmux-plugins/tmux-yank'
+
+```
+
+# Neovim
+
+## Copy pasting from nvim
+
+- Using the + register -> Press `Shift + " + +"` followed by the y or however many lines or using vim motion to copy.
+- Using visual mode to select and then following the above steps.

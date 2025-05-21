@@ -67,12 +67,4 @@ don't want to type in the whole command.
 # for yanking
 
 set -g @plugin 'tmux-plugins/tmux-yank'
-
 ```
-
-# Neovim
-
-## Copy pasting from nvim
-
-- Using the + register -> Press `Shift + " + +"` followed by the y or however many lines or using vim motion to copy.
-- Using visual mode to select and then following the above steps.

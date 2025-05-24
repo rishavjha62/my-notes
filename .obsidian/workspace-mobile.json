@@ -161,8 +161,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "64568c34b509c0de",
+  "active": "649d9ee17c89c5bc",
   "lastOpenFiles": [
+    "templates/note.md",
+    "/templates/note.md",
+    "inbox/2025-05-25_testfile-for-script.md",
+    "/inbox/2025-05-25_testfile-for-script.md",
+    "templates",
+    "inbox",
+    "/templates",
+    "/inbox",
+    "/template",
     "hubs/prometheus.md.md",
     "hubs/graphana.md.md",
     "hubs/ci-cd.md.md",
@@ -185,10 +194,6 @@
     "hubs/database-concept.md.md",
     "/hubs/web-dev.md.md",
     "/hubs/tmux.md.md",
-    "/hubs/system-design.md.md",
-    "/hubs/python.md.md",
-    "/hubs/postgresql.md.md",
-    "/hubs/nvim.md.md",
     "/hubs",
     "/projects"
   ]

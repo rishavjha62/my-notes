@@ -161,8 +161,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "649d9ee17c89c5bc",
+  "active": "64568c34b509c0de",
   "lastOpenFiles": [
+    "hubs/prometheus.md.md",
+    "hubs/graphana.md.md",
+    "hubs/ci-cd.md.md",
+    "/hubs/prometheus.md.md",
+    "/hubs/graphana.md.md",
+    "/hubs/ci-cd.md.md",
     "hubs/web-dev.md.md",
     "hubs/tmux.md.md",
     "hubs/system-design.md.md",
@@ -183,12 +189,6 @@
     "/hubs/python.md.md",
     "/hubs/postgresql.md.md",
     "/hubs/nvim.md.md",
-    "/hubs/markdown.md.md",
-    "/hubs/linux.md.md",
-    "/hubs/kubernetes.md.md",
-    "/hubs/javascript.md.md",
-    "/hubs/git.md.md",
-    "/hubs/gcp.md.md",
     "/hubs",
     "/projects"
   ]

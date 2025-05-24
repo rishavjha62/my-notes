@@ -25,13 +25,13 @@ and make allowance for their doubting too,_
 
 Markdown supports 2 types of headers.
 
-1.  One with equal sign under the Header 1 & dashes under the Header 2.  
-    i.e.
+1.  One with equal sign under the Header 1 & dashes under the Header 2 i.e.
 
-        Header1
-        =======
-        Header2
-        -------
+Header1
+--
+Header2
+==
+
 
 2.  We can `#` to create headers.
     i.e.
@@ -40,9 +40,9 @@ Markdown supports 2 types of headers.
 
 ## 2. Hash Symbol for H2.
 
-###### 3. 6 Hash Sybmol for upto 6 headers.
+###### 3. 6 Hash symbol for up to 6 headers.
 
-### Showing Emphashis
+### Showing Emphasis
 
 - We can put Italics/Bold in two different ways.
 

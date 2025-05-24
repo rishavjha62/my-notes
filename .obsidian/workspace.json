@@ -181,7 +181,8 @@
   },
   "active": "ec909fcce833e480",
   "lastOpenFiles": [
-    "code-snip",
+    "notes/cheat-sheet",
+    "notes/code-snip",
     "notes",
     "hubs/graphana.md.md",
     "hubs/ci-cd.md.md",
@@ -213,7 +214,6 @@
     "hubs",
     "template",
     "projects",
-    "notes",
-    "inbox"
+    "notes"
   ]
 }

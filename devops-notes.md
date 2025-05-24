@@ -9,9 +9,9 @@ Last Updated : 21-05-2025
 
 ## Course: A Comprehensive Guide to the Markdown Writing Format Offering both technical examples and hands-on demos.
 
-### Paragrah and Line Break
+### Paragraph and Line Break
 
-We can write a Paragrah as normal and use double spaces to force a line break.
+We can write a paragraph as normal and use double spaces to force a line break.
 
 For example in Poem below we use `double spaces` to break at _you_. However we didn't use the double space in the 3rd
 line which is causing the line break to not happen.

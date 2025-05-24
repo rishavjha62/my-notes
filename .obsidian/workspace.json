@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "hubs/ci-cd.md.md",
+                "file": "inbox/2025-05-25_testfile-for-script.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ci-cd.md"
+              "title": "2025-05-25_testfile-for-script"
             }
           }
         ]
@@ -179,8 +179,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ec909fcce833e480",
+  "active": "1b0ba27d47d11560",
   "lastOpenFiles": [
+    "inbox/2025-05-25_testfile-for-script.md~",
+    "inbox/4913",
+    "hubs/ci-cd.md.md",
     "inbox/2025-05-25_testfile-for-script.md",
     "templates/note.md",
     "inbox/2025-05-25_testfile.md",
@@ -188,7 +191,6 @@
     "notes/code-snip",
     "notes",
     "hubs/graphana.md.md",
-    "hubs/ci-cd.md.md",
     "hubs/prometheus.md.md",
     "hubs/system-design.md.md",
     "hubs/web-dev.md.md",
@@ -213,9 +215,7 @@
     "inbox",
     "templates",
     "hubs",
-    "dev-env-notes.md",
     "hubs",
-    "templates",
-    "projects"
+    "templates"
   ]
 }

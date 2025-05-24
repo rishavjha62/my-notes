@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "hubs/Untitled.md",
+                "file": "hubs/linux.md.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "linux.md"
             }
           }
         ]
@@ -181,8 +181,10 @@
   },
   "active": "fd52165965ba582c",
   "lastOpenFiles": [
+    "hubs/tmux.md.md",
+    "hubs/linux.md.md",
+    "hubs/javascript.md.md",
     "hubs/kubernetes.md.md",
-    "hubs/Untitled.md",
     "hubs/docker.md.md",
     "hubs/python.md.md",
     "projects/fastapi-task-manager-app.md",
@@ -193,7 +195,6 @@
     "template",
     "hubs",
     "dev-env-notes.md",
-    "hubs/tmux.md.md",
     "hubs",
     "template",
     "projects",

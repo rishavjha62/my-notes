@@ -1,3 +1,3 @@
-Test changes..
- hi from laptop..
- Hi from phone..
+Test changes  
+ hi from laptop  
+ Hi from phone  

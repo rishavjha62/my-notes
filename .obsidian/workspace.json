@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "devops-notes.md",
+                "file": "template/template1.md.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "devops-notes"
+              "title": "template1.md"
             }
           }
         ]
@@ -179,11 +179,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ec909fcce833e480",
+  "active": "fd52165965ba582c",
   "lastOpenFiles": [
+    "devops-notes.md",
     "inbox",
     "Untitled.md",
-    "devops-notes.md",
     "hubs/docker.md.md",
     "template/template1.md.md",
     "template",

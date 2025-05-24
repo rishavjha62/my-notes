@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "hubs/Untitled.md",
+                "file": "hubs/gcp.md.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "gcp.md"
             }
           }
         ]
@@ -181,8 +181,10 @@
   },
   "active": "fd52165965ba582c",
   "lastOpenFiles": [
+    "hubs/devops-concept.md.md",
+    "hubs/gcp.md.md",
+    "hubs/database-concept.md.md",
     "hubs/postgresql.md.md",
-    "hubs/Untitled.md",
     "hubs/algorithms.md.md",
     "hubs/linux.md.md",
     "zettelkasten",

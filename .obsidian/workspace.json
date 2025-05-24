@@ -182,7 +182,7 @@
   "active": "ec909fcce833e480",
   "lastOpenFiles": [
     "inbox/2025-05-25_testfile-for-script.md",
-    "template/note.md",
+    "templates/note.md",
     "inbox/2025-05-25_testfile.md",
     "notes/cheat-sheet",
     "notes/code-snip",
@@ -211,11 +211,11 @@
     "template/template1.md.md",
     "devops-notes.md",
     "inbox",
-    "template",
+    "templates",
     "hubs",
     "dev-env-notes.md",
     "hubs",
-    "template",
+    "templates",
     "projects"
   ]
 }

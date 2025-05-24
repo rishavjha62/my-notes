@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "template/template1.md.md",
+                "file": "projects/fastapi-task-manager-app.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "template1.md"
+              "title": "fastapi-task-manager-app"
             }
           }
         ]
@@ -181,11 +181,11 @@
   },
   "active": "fd52165965ba582c",
   "lastOpenFiles": [
+    "template/template1.md.md",
     "devops-notes.md",
     "inbox",
     "Untitled.md",
     "hubs/docker.md.md",
-    "template/template1.md.md",
     "template",
     "hubs",
     "dev-env-notes.md",

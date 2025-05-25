@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/2025-05-25_testfile-for-script.md",
+                "file": "devops-notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-05-25_testfile-for-script"
+              "title": "devops-notes"
             }
           }
         ]
@@ -181,10 +181,10 @@
   },
   "active": "1b0ba27d47d11560",
   "lastOpenFiles": [
+    "inbox/2025-05-25_testfile-for-script.md",
     "inbox/2025-05-25_testfile-for-script.md~",
     "inbox/4913",
     "hubs/ci-cd.md.md",
-    "inbox/2025-05-25_testfile-for-script.md",
     "templates/note.md",
     "inbox/2025-05-25_testfile.md",
     "notes/cheat-sheet",
@@ -215,7 +215,6 @@
     "inbox",
     "templates",
     "hubs",
-    "hubs",
-    "templates"
+    "hubs"
   ]
 }

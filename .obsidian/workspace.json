@@ -181,6 +181,7 @@
   },
   "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "notes/resource",
     "notes/facts",
     "notes/course",
     "inbox/2025-05-25_testfile-for-script.md",
@@ -215,7 +216,6 @@
     "template/template1.md.md",
     "devops-notes.md",
     "inbox",
-    "templates",
-    "hubs"
+    "templates"
   ]
 }

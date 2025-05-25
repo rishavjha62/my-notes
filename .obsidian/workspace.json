@@ -179,8 +179,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1b0ba27d47d11560",
+  "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "notes/facts",
+    "notes/course",
     "inbox/2025-05-25_testfile-for-script.md",
     "inbox/2025-05-25_testfile-for-script.md~",
     "inbox/4913",
@@ -214,7 +216,6 @@
     "devops-notes.md",
     "inbox",
     "templates",
-    "hubs",
     "hubs"
   ]
 }

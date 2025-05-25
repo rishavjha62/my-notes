@@ -181,6 +181,8 @@
   },
   "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "hubs/web-dev.md",
+    "hubs/tmux.md",
     "hubs/system-design.md",
     "hubs/python.md",
     "hubs/prometheus.md",
@@ -213,8 +215,6 @@
     "hubs/graphana.md.md",
     "hubs/prometheus.md.md",
     "hubs/system-design.md.md",
-    "hubs/web-dev.md.md",
-    "hubs/nvim.md.md",
     "zettelkasten",
     "inbox"
   ]

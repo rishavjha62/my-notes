@@ -177,8 +177,9 @@
   },
   "active": "ec909fcce833e480",
   "lastOpenFiles": [
-    "devops-notes.md",
     "inbox/2025-05-26_istio-notes.md~",
+    "hubs/notes.md",
+    "devops-notes.md",
     "hubs/istio.md",
     "https/www.udemy.com/course/istio-hands-on-for-kubernetes",
     "https/www.udemy.com/course",
@@ -210,8 +211,6 @@
     "hubs/database-concept.md",
     "hubs/ci-cd.md",
     "hubs/algorithms.md",
-    "inbox/2025-05-25_testfile-for-script.md",
-    "hubs/ci-cd.md.md",
-    "templates/note.md"
+    "inbox/2025-05-25_testfile-for-script.md"
   ]
 }

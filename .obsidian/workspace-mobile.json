@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "zettelkasten/2025-05-26_istio-notes.md",
+                "file": "templates/note.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-05-26_istio-notes"
+              "title": "note"
             }
           }
         ]
@@ -163,6 +163,7 @@
   },
   "active": "649d9ee17c89c5bc",
   "lastOpenFiles": [
+    "zettelkasten/2025-05-26_istio-notes.md",
     "/zettelkasten/2025-05-26_istio-notes.md",
     "/zettelkasten",
     "/inbox/2025-05-26_istio-notes.md",
@@ -172,7 +173,6 @@
     "hubs/istio.md",
     "/hubs",
     "templates/note.md",
-    "zettelkasten/2025-05-26_istio-notes.md",
     "zettelkasten",
     "hubs/docker.md",
     "/hubs/docker.md",

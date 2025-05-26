@@ -163,6 +163,9 @@
   },
   "active": "649d9ee17c89c5bc",
   "lastOpenFiles": [
+    "/inbox/2025-05-26_istio-notes.md",
+    "inbox/2025-05-26_istio-notes.md",
+    "/inbox",
     "hubs/docker.md",
     "/hubs/docker.md",
     "hubs/web-dev.md",
@@ -187,13 +190,10 @@
     "/hubs/tmux.md",
     "/hubs/system-design.md",
     "/hubs/python.md",
-    "/hubs/prometheus.md",
-    "/hubs/postgresql.md",
     "/hubs",
     "templates",
     "inbox",
     "/templates",
-    "/inbox",
     "/template",
     "/projects"
   ]

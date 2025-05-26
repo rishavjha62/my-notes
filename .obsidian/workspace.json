@@ -181,6 +181,7 @@
   },
   "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "zettelkasten/2025-05-26_istio-notes.md",
     "inbox/2025-05-26_istio-notes.md",
     "notes/dev-env",
     "notes/code-snip/dev-env",
@@ -215,7 +216,6 @@
     "inbox/2025-05-25_testfile.md",
     "notes/cheat-sheet",
     "notes/code-snip",
-    "hubs/graphana.md.md",
-    "hubs/prometheus.md.md"
+    "hubs/graphana.md.md"
   ]
 }

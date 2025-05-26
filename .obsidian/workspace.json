@@ -11,10 +11,10 @@
             "id": "35dfde7aefd09de8",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -175,8 +175,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ec909fcce833e480",
+  "active": "35dfde7aefd09de8",
   "lastOpenFiles": [
+    "zettelkasten/2025-05-26_istio-notes.md",
     "inbox/2025-05-26_istio-notes.md~",
     "hubs/notes.md",
     "devops-notes.md",
@@ -188,7 +189,6 @@
     "inbox/2025-05-26_istio-notes.md",
     "inbox/2025-05-25_testfile-for-script.md~",
     "inbox/4913",
-    "zettelkasten/2025-05-26_istio-notes.md",
     "notes/dev-env",
     "notes/code-snip/dev-env",
     "4913",

@@ -181,6 +181,8 @@
   },
   "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "inbox/2025-05-25_testfile-for-script.md~",
+    "inbox/4913",
     "zettelkasten/2025-05-26_istio-notes.md",
     "inbox/2025-05-26_istio-notes.md",
     "notes/dev-env",
@@ -209,13 +211,10 @@
     "notes/facts",
     "notes/course",
     "inbox/2025-05-25_testfile-for-script.md",
-    "inbox/2025-05-25_testfile-for-script.md~",
-    "inbox/4913",
     "hubs/ci-cd.md.md",
     "templates/note.md",
     "inbox/2025-05-25_testfile.md",
     "notes/cheat-sheet",
-    "notes/code-snip",
-    "hubs/graphana.md.md"
+    "notes/code-snip"
   ]
 }

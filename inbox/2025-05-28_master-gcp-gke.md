@@ -26,9 +26,18 @@ These clusters can be created with different GKE Cluster types:
 5. GKE Alpha Cluster
 6. GKE Cluster using Windows Node
 
-## Create GKE standard vs Autopilot cluster.
+## GKE standard vs Autopilot cluster.
 
 ![GKE Standard vs Autopilot cluster Architecture.](../images/gke-standard-vs-autopilot-architecture.png)
 
 In the standard architecture, only the control plane is managed by Google.
 However in Autopilot mode, both data & control plane is managed by Google.
+
+### Create a Standard GKE Cluster
+
+- via Console:
+  1. In the consoleGo to Kubernetes Engine > Clusters > Create
+  2. Select GKE Standard > Configure
+  3. Fill in the Cluster Basics details.
+  4. Fill the node pool details. i.e. no. of nodes, machine type, boot size,
+     spot VMs.

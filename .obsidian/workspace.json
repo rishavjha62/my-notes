@@ -181,6 +181,7 @@
   },
   "active": "35dfde7aefd09de8",
   "lastOpenFiles": [
+    "images",
     "inbox/2025-05-28_master-gcp-gke.md~",
     "inbox/4913",
     "(https/cloud.google.com/static/kubernetes-engine/images",
@@ -196,7 +197,6 @@
     "hubs/istio.md",
     "https/www.udemy.com/course/istio-hands-on-for-kubernetes",
     "https/www.udemy.com/course",
-    "https/www.udemy.com",
     "hubs/web-dev.md",
     "hubs/tmux.md",
     "hubs/system-design.md",

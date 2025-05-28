@@ -1,7 +1,7 @@
 ---
 date: 2025-05-26
 tags:
-  - notes
+  - course
 hubs:
   - "[[istio]]"
   - "[[devops-notes]]"

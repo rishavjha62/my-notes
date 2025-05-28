@@ -41,3 +41,4 @@ However in Autopilot mode, both data & control plane is managed by Google.
   3. Fill in the Cluster Basics details.
   4. Fill the node pool details. i.e. no. of nodes, machine type, boot size,
      spot VMs.
+  5.

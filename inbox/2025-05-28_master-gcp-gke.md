@@ -40,5 +40,6 @@ However in Autopilot mode, both data & control plane is managed by Google.
   2. Select GKE Standard > Configure
   3. Fill in the Cluster Basics details.
   4. Fill the node pool details. i.e. no. of nodes, machine type, boot size,
-     spot VMs.
-  5.
+     spot VMs, network and everything is left at default.
+  5. In cluster, choose public network access, enable dataplane v2 if not done
+     by default, all is left at default.

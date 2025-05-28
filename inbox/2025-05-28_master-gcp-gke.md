@@ -26,7 +26,6 @@ These clusters can be created with different GKE Cluster types:
 5. GKE Alpha Cluster
 6. GKE Cluster using Windows Node
 
-## Create GKE standard public cluster.
+## Create GKE standard cluster.
 
-GKE Standard cluster Architecture.
-[https://cloud.google.com/static/kubernetes-engine/images/gke-architecture.svg]
+![GKE Standard cluster Architecture.](https://cloud.google.com/static/kubernetes-engine/images/gke-architecture.svg)

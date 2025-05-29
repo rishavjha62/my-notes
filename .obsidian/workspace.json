@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5dc8118b7b9b042c",
+        "id": "0b6a166e225f4ab2",
         "type": "tabs",
         "children": [
           {
-            "id": "35dfde7aefd09de8",
+            "id": "6514ab9186ad493e",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -175,7 +175,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "35dfde7aefd09de8",
+  "active": "6514ab9186ad493e",
   "lastOpenFiles": [
     "inbox/2025-05-28_master-gcp-gke.md",
     "inbox/2025-05-26_istio-notes.md~",

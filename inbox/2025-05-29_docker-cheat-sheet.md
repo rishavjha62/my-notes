@@ -141,3 +141,42 @@ docker logout
 
 
 ```
+
+| command            | description                                           |
+| ------------------ | ----------------------------------------------------- |
+| FROM image/scratch | base image for the build                              |
+| MAINTAINER email   | name of the maintainer (metadata)                     |
+| COPY path dst      | copy from host to location in container               |
+| ADD src dst        | same as COPY but untar archives and accepts http urls |
+| RUN args...        | run an arbitrary command inside the container         |
+| USER name          | set the default username                              |
+| WORKDIR path       | set the default working directory                     |
+| CMD args...        | set the default command                               |
+| ENV name value     | set the environment variable                          |
+
+i.e. an example from practice that creates a fastapi app container.
+
+```Dockerfile
+FROM ubuntu:latest
+
+RUN apt-get update -y && \
+    apt-get install -y python3 python3-pip python3-venv
+
+# Create and activate a virtual environment
+RUN python3 -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+COPY ./assessment/requirements.txt /tmp/
+
+
+# Upgrade pip inside venv and install packages
+
+RUN /opt/venv/bin/pip install --upgrade pip && \
+    /opt/venv/bin/pip install -r /tmp/requirements.txt
+
+
+COPY ./assessment /opt/assessment
+WORKDIR /opt/assessment
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+```

@@ -48,19 +48,25 @@ or
 `docker container ls -a`
 
 To pull an image:  
-`docker pull <image-name>`
-
+`docker pull <image-name>`  
+i.e.  
 `docker pull ubuntu`
 
 To list all the images available locally:  
-`docker images` or `docker image ls`
+`docker images`  
+or  
+`docker image ls`
+
+To remove image:  
+`docker rmi <image-name>`
 
 To run a container:
 
-> [!NOTE] Docker will run the container if the image already exists lcoally,  
+> [!NOTE] Docker will run the container if the image already exists lcoally,
 > otherwiser it will first download it from dockerhub
 
-`docker run <image-name>` i.e.
+`docker run <image-name>`  
+i.e.
 
 ```bash
 docker run ubuntu

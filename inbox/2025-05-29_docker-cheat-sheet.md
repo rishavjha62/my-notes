@@ -79,3 +79,20 @@ docker run -p 5000:8080 -v jenkins:/var/jenkins_home jenkins/jenkins
 # combined all above
 docker run --name fastapi-postgres -e POSTGRES_PASSWORD=password -d -p 5432:5432 -v fastapi-app-data:/var/lib/postgresql/data  postgres:alpine
 ```
+
+To gracefully stop a contaner:  
+`docker stop <container-name>`
+
+To kill a container  
+`docker kill <container-name>`
+
+To restart a container  
+`docker restart <container-name>`
+
+To suspend & resume the container:
+
+```bash
+docker pause <container-name>
+#or
+docker unpause <container-name>
+```

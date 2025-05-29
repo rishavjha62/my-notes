@@ -57,8 +57,8 @@ To remove image:
 
 To run a container:
 
-> [!NOTE] Docker will run the container if the image already exists lcoally,
-> otherwiser it will first download it from dockerhub
+> [!NOTE] Docker will run the container if the image already exists locally,
+> otherwise it will first download it from dockerhub
 
 `docker run <image-name>`  
 i.e.
@@ -81,7 +81,7 @@ docker run -p 5000:8080 -v jenkins:/var/jenkins_home jenkins/jenkins
 docker run --name fastapi-postgres -e POSTGRES_PASSWORD=password -d -p 5432:5432 -v fastapi-app-data:/var/lib/postgresql/data  postgres:alpine
 ```
 
-To gracefully stop a contaner:  
+To gracefully stop a container:  
 `docker stop <container-name>`
 
 To kill a container  

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/2025-05-28_master-gcp-gke.md",
-                "mode": "source",
+                "file": "inbox/2025-05-26_istio-notes.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-05-28_master-gcp-gke"
+              "title": "2025-05-26_istio-notes"
             }
           }
         ]
@@ -181,6 +181,10 @@
   },
   "active": "35dfde7aefd09de8",
   "lastOpenFiles": [
+    "inbox/2025-05-28_gke-cheat-sheet.md",
+    "inbox/2025-05-28_master-gcp-gke.md",
+    "hubs/gcp.md",
+    "hubs/postgresql.md",
     "inbox/2025-05-28_master-gcp-gke.md~",
     "inbox/4913",
     "images/gke-standard-vs-autopilot-architecture.png",
@@ -202,7 +206,6 @@
     "hubs/system-design.md",
     "hubs/python.md",
     "hubs/prometheus.md",
-    "hubs/postgresql.md",
     "hubs/nvim.md",
     "hubs/markdown.md",
     "hubs/linux.md",
@@ -210,12 +213,10 @@
     "hubs/javascript.md",
     "hubs/graphana.md",
     "hubs/git.md",
-    "hubs/gcp.md",
     "hubs/docker.md",
     "hubs/devops-concept.md",
     "hubs/database-concept.md",
     "hubs/ci-cd.md",
-    "hubs/algorithms.md",
-    "inbox/2025-05-25_testfile-for-script.md"
+    "hubs/algorithms.md"
   ]
 }

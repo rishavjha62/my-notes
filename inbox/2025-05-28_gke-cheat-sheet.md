@@ -1,12 +1,9 @@
 ---
 date: 2025-05-28
-tags:
-  -  #cheat-sheet
+tags: 
 hubs:
-  - "[[gke]]"
   - "[[gcp]]"
 urls:
-  -
 ---
 
 # gke cheat sheet

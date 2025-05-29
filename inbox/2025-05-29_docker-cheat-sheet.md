@@ -47,11 +47,6 @@ To list all containers running and stopped:
 or  
 `docker container ls -a`
 
-To pull an image:  
-`docker pull <image-name>`  
-i.e.  
-`docker pull ubuntu`
-
 To list all the images available locally:  
 `docker images`  
 or  
@@ -116,4 +111,33 @@ To inspect the container:
 ```bash
 docker logs -f <container-name or container-hash>
 docker top <container-name or container hash>
+docker inspect <container-name or container hash>
+```
+
+To interact with the container:
+
+```bash
+docker attach <container-name or container hash>
+docker exec <container-name or container hash> args ...
+```
+
+Image management :
+
+```bash
+# To pull an image:
+docker pull repo[:tag]
+
+# To push an image:
+docker push repo[:tag]
+
+# Search for an image on dockerhub
+docker search <text>
+
+# login to a registry
+docker login
+
+# logout from a regsitry
+docker logout
+
+
 ```

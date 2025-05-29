@@ -1,7 +1,7 @@
 ---
 date: 2025-05-29
 tags:
-  -  #chat-sheet
+  -  #cheat-sheet
 hubs:
   - "[[docker]]"
 urls:

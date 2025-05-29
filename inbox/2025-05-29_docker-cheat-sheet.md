@@ -180,3 +180,11 @@ WORKDIR /opt/assessment
 
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
 ```
+
+To build a docker image locally:
+
+```bash
+docker build [options] -t <container-name> # -t to name the container
+docker build . -t <container-name> # from the Dockerfile in current path
+docker build -f Dockerfile -t test/my-app:latest --no-cache #build with no cache
+```

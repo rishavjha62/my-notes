@@ -103,10 +103,17 @@ docker pause <container-name>
 docker unpause <container-name>
 ```
 
-To destroy the container
+To destroy the container:
 
 ```bash
 docker rm <image-name>
 or
 docker rm <image-hash> # don't need to enter the complete hash just enough to seperate it from others
+```
+
+To inspect the container:
+
+```bash
+docker logs -f <container-name or container-hash>
+docker top <container-name or container hash>
 ```

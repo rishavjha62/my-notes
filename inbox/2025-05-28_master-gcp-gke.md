@@ -4,6 +4,7 @@ tags:
   - course
 hubs:
   - "[[gcp]]"
+  - "[[devops-concept]]"
 urls:
   - https://www.udemy.com/course/gcp-google-kubernetes-engine-gke-with-devops/
 ---

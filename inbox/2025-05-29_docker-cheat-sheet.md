@@ -11,26 +11,31 @@ urls:
 
 # docker cheat sheet
 
-##Collection of Docker commands
+## Collection of Docker commands
 
 To install Docker:
 
-Requirements:
+- Requirements:
 
 ```bash
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 ```
 
-```bash
+- Installation:
 
+```bash
 # get the docker file
 curl -fsSL https://get.docker.com -o get-docker.sh
 chmod +x get-docker
 sudo usermod -aG docker $USER  # to add current user to docker group
-
 ```
 
 To restart or enable docker service:
+
+```bash
+sudo systemctl restart docker.service
+sudo systemctl enable docker.service
+```
 
 To list all running containers:  
 `docker ps`  

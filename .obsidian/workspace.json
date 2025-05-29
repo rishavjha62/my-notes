@@ -179,14 +179,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "35dfde7aefd09de8",
+  "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "inbox/2025-05-28_master-gcp-gke.md~",
+    "inbox/4913",
     "inbox/2025-05-28_gke-cheat-sheet.md",
     "inbox/2025-05-28_master-gcp-gke.md",
     "hubs/gcp.md",
     "hubs/postgresql.md",
-    "inbox/2025-05-28_master-gcp-gke.md~",
-    "inbox/4913",
     "images/gke-standard-vs-autopilot-architecture.png",
     "images",
     "(https/cloud.google.com/static/kubernetes-engine/images",
@@ -216,7 +216,6 @@
     "hubs/docker.md",
     "hubs/devops-concept.md",
     "hubs/database-concept.md",
-    "hubs/ci-cd.md",
-    "hubs/algorithms.md"
+    "hubs/ci-cd.md"
   ]
 }

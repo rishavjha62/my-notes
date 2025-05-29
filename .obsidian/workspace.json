@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0b6a166e225f4ab2",
+        "id": "d7088570a357aa94",
         "type": "tabs",
         "children": [
           {
-            "id": "6514ab9186ad493e",
+            "id": "0cd99e26b65ece54",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "inbox/2025-05-29_docker-cheat-sheet.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-05-29_docker-cheat-sheet"
             }
           }
         ]
@@ -175,12 +179,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6514ab9186ad493e",
+  "active": "0cd99e26b65ece54",
   "lastOpenFiles": [
-    "inbox/2025-05-28_master-gcp-gke.md",
-    "inbox/2025-05-26_istio-notes.md~",
     "inbox/2025-05-29_docker-cheat-sheet.md~",
     "inbox/4913",
+    "inbox/2025-05-29_docker-cheat-sheet.md",
+    "inbox/2025-05-28_master-gcp-gke.md",
+    "inbox/2025-05-26_istio-notes.md~",
     "inbox/2025-05-28_master-gcp-gke.md~",
     "inbox/2025-05-28_gke-cheat-sheet.md~",
     "inbox/2025-05-26_istio-notes.md",
@@ -211,7 +216,6 @@
     "hubs/git.md",
     "hubs/docker.md",
     "hubs/devops-concept.md",
-    "hubs/database-concept.md",
-    "hubs/ci-cd.md"
+    "hubs/database-concept.md"
   ]
 }

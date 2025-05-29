@@ -52,3 +52,10 @@ To pull an image:
 
 To list all the images available locally:  
 `docker images` or `docker image ls`
+
+To run a container:
+
+> [!NOTE] Docker will run the container if the image already exists lcoally,  
+> otherwiser it will first download it from dockerhub
+
+`docker run <image-name>`

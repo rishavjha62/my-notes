@@ -17,7 +17,7 @@ New session
 
 ```bash
 tmux
-tmux new -s myname
+tmux new -s <my-session>
 ```
 
 Attach to existing session
@@ -38,7 +38,7 @@ tmux kill-session -t myname
 ## Inside tmux
 
 Commands below must be proceeded by the bind key. The default is CTRL-b. My bind
-key is "CTRL-a".
+key is "CTRL-b".
 
 ### General
 
@@ -50,8 +50,8 @@ key is "CTRL-a".
 ### Panes
 
 ```
-%   vertical split
-"   horizontal split
+|   vertical split
+-   horizontal split
 o   swap panes
 ;   toggle last active pane
 q   show pane numbers

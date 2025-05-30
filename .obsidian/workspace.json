@@ -181,12 +181,16 @@
   },
   "active": "88e035a0bd3a7c68",
   "lastOpenFiles": [
+    "2025-05-30_tmux-notes.md",
+    "2025-05-30_dev-env-notes.md~",
+    "4913",
+    "2025-05-30_dev-env-notes.md",
+    "inbox/4913",
     "zettelkasten/2025-05-30_tmux-cheat-sheet.md",
     "inbox/2025-05-30_tmux-cheat-sheet.md",
     "hubs/dev-env.md",
     "dev-env.md",
     "inbox/2025-05-30_tmux-cheat-sheet.md~",
-    "inbox/4913",
     "inbox/2025-05-29_docker-cheat-sheet.md",
     "inbox/2025-05-29_docker-cheat-sheet.md~",
     "inbox/2025-05-28_master-gcp-gke.md",
@@ -200,8 +204,6 @@
     "images/gke-standard-vs-autopilot-architecture.png",
     "images",
     "(https/cloud.google.com/static/kubernetes-engine/images",
-    "(https/cloud.google.com/static/kubernetes-engine",
-    "(https/cloud.google.com/static",
     "zettelkasten/2025-05-26_istio-notes.md",
     "hubs/notes.md",
     "devops-notes.md",
@@ -215,8 +217,6 @@
     "hubs/markdown.md",
     "hubs/linux.md",
     "hubs/kubernetes.md",
-    "hubs/javascript.md",
-    "hubs/graphana.md",
-    "hubs/git.md"
+    "hubs/javascript.md"
   ]
 }

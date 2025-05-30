@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
+                "file": "inbox/2025-05-30_postgresql-cheat-sheet.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-05-30_tmux-cheat-sheet"
+              "title": "2025-05-30_postgresql-cheat-sheet"
             }
           }
         ]
@@ -179,16 +179,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ec909fcce833e480",
+  "active": "8009121cc405867d",
   "lastOpenFiles": [
-    "inbox/2025-05-28_master-gcp-gke.md",
     "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
+    "inbox/2025-05-30_postgresql-cheat-sheet.md~",
+    "inbox/2025-05-30_postgresql-cheat-sheet.md",
+    "notes/dev-env/2025-05-30_tmux-notes.md~",
+    "notes/dev-env/4913",
+    "inbox/2025-05-28_master-gcp-gke.md",
     "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md~",
     "notes/cheat-sheet/4913",
     "inbox/2025-05-30_tmux-cheat-sheet.md",
     "notes/dev-env/2025-05-30_tmux-notes.md",
-    "notes/dev-env/2025-05-30_tmux-notes.md~",
-    "notes/dev-env/4913",
     "inbox/2025-05-26_istio-notes.md",
     "inbox/2025-05-29_docker-cheat-sheet.md",
     "devops-notes.md",
@@ -200,7 +202,6 @@
     "inbox/4913",
     "inbox/2025-05-28_gke-cheat-sheet.md~",
     "zettelkasten/2025-05-30_tmux-cheat-sheet.md",
-    "notes/hubs",
     "2025-05-30_dev-env-notes.md",
     "hubs/dev-env.md",
     "dev-env.md",
@@ -215,7 +216,6 @@
     "hubs/tmux.md",
     "hubs/system-design.md",
     "hubs/python.md",
-    "hubs/prometheus.md",
-    "hubs/nvim.md"
+    "hubs/prometheus.md"
   ]
 }

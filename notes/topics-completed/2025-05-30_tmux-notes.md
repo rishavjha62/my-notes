@@ -1,7 +1,7 @@
 ---
 date: 2025-05-30
 tags:
-  - dev-env
+  -  #topics-completed
 hubs:
   - "[[tmux]]"
   - "[[linux]]"

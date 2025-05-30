@@ -181,6 +181,11 @@
   },
   "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "notes/topics-completed/2025-05-30_tmux-notes.md~",
+    "notes/topics-completed/4913",
+    "notes/dev-env/temp",
+    "notes/topics-completed/2025-05-30_tmux-notes.md",
+    "notes/topics-completed",
     "2025-05-18-markdown_notes.md~",
     "4913",
     "2025-05-18-markdown_notes.md",
@@ -202,11 +207,7 @@
     "inbox/2025-05-29_docker-cheat-sheet.md",
     "devops-notes.md",
     "inbox/2025-05-30_tmux-notes.md",
-    "notes/dev-env",
     "zettelkasten/2025-05-30_tmux-notes.md",
-    "inbox/2025-05-30_tmux-notes.md~",
-    "inbox/2025-05-30_tmux-cheat-sheet.md~",
-    "inbox/4913",
     "zettelkasten/2025-05-30_tmux-cheat-sheet.md",
     "2025-05-30_dev-env-notes.md",
     "hubs/dev-env.md",
@@ -216,7 +217,6 @@
     "hubs/postgresql.md",
     "images/gke-standard-vs-autopilot-architecture.png",
     "zettelkasten/2025-05-26_istio-notes.md",
-    "hubs/notes.md",
-    "hubs/istio.md"
+    "hubs/notes.md"
   ]
 }

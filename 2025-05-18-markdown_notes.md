@@ -1,11 +1,12 @@
 ---
 date: 2025-05-30
 tags:
-  -
+  - course
 hubs:
-  - "[[]]"
+  - "[[dev-env]]"
+  - "[[markdown]]"
 urls:
-  -
+  - https://www.udemy.com/course/markdown
 ---
 
 # markdown notes

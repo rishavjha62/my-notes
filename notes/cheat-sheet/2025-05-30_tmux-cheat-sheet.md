@@ -3,6 +3,7 @@ date: 2025-05-30
 tags:
   - cheat-sheet
 hubs:
+  - "[[tmux]]"
   - "[[linux]]"
 urls:
   - https://gist.github.com/MohamedAlaa/2961058

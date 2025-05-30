@@ -6,7 +6,7 @@ hubs:
   - "[[tmux]]"
   - "[[linux]]"
   - "[[dev-env]]"
-  - "[[2025-05-30_tmux-cheat-sheet|tmux cheat sheet]]""
+  - "[[2025-05-30_tmux-cheat-sheet|tmux cheat sheet]]"
 urls:
   -
 ---

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3a501439e0ef5f86",
+        "id": "f8364c2bb590fab2",
         "type": "tabs",
         "children": [
           {
-            "id": "7a4263f0d5e07e08",
+            "id": "8009121cc405867d",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -175,16 +175,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7a4263f0d5e07e08",
+  "active": "8009121cc405867d",
   "lastOpenFiles": [
+    "notes/cheat-sheet/4913",
+    "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
     "inbox/2025-05-30_tmux-cheat-sheet.md",
-    "inbox/2025-05-26_istio-notes.md",
+    "notes/dev-env/2025-05-30_tmux-notes.md",
+    "notes/dev-env/2025-05-30_tmux-notes.md~",
     "notes/dev-env/4913",
+    "inbox/2025-05-26_istio-notes.md",
     "inbox/2025-05-28_master-gcp-gke.md",
     "inbox/2025-05-29_docker-cheat-sheet.md",
     "devops-notes.md",
     "inbox/2025-05-30_tmux-notes.md",
-    "notes/dev-env/2025-05-30_tmux-notes.md",
     "notes/dev-env",
     "zettelkasten/2025-05-30_tmux-notes.md",
     "inbox/2025-05-30_tmux-notes.md~",
@@ -192,11 +195,8 @@
     "inbox/4913",
     "inbox/2025-05-28_gke-cheat-sheet.md~",
     "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md~",
-    "notes/cheat-sheet/4913",
     "zettelkasten/2025-05-30_tmux-cheat-sheet.md",
-    "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
     "notes/hubs",
-    "2025-05-30_tmux-notes.md~",
     "2025-05-30_dev-env-notes.md",
     "hubs/dev-env.md",
     "dev-env.md",

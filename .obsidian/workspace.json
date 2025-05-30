@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/2025-05-30_postgresql-cheat-sheet.md",
+                "file": "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-05-30_postgresql-cheat-sheet"
+              "title": "2025-05-30_tmux-cheat-sheet"
             }
           }
         ]
@@ -181,9 +181,11 @@
   },
   "active": "8009121cc405867d",
   "lastOpenFiles": [
+    "notes/cheat-sheet/2025-05-30_postgresql-cheat-sheet.md",
+    "inbox/2025-05-30_postgresql-cheat-sheet.md",
+    "zettelkasten/2025-05-30_postgresql-cheat-sheet.md",
     "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
     "inbox/2025-05-30_postgresql-cheat-sheet.md~",
-    "inbox/2025-05-30_postgresql-cheat-sheet.md",
     "notes/dev-env/2025-05-30_tmux-notes.md~",
     "notes/dev-env/4913",
     "inbox/2025-05-28_master-gcp-gke.md",
@@ -215,7 +217,6 @@
     "hubs/web-dev.md",
     "hubs/tmux.md",
     "hubs/system-design.md",
-    "hubs/python.md",
-    "hubs/prometheus.md"
+    "hubs/python.md"
   ]
 }

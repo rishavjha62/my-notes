@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/2025-05-30_tmux-notes.md",
+                "file": "inbox/2025-05-30_tmux-cheat-sheet.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-05-30_tmux-notes"
+              "title": "2025-05-30_tmux-cheat-sheet"
             }
           }
         ]
@@ -181,6 +181,13 @@
   },
   "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "zettelkasten/2025-05-30_tmux-notes.md",
+    "inbox/2025-05-30_tmux-notes.md~",
+    "inbox/2025-05-30_tmux-cheat-sheet.md~",
+    "inbox/4913",
+    "inbox/2025-05-28_gke-cheat-sheet.md~",
+    "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md~",
+    "notes/cheat-sheet/4913",
     "inbox/2025-05-30_tmux-cheat-sheet.md",
     "inbox/2025-05-30_tmux-notes.md",
     "zettelkasten/2025-05-30_tmux-cheat-sheet.md",
@@ -190,16 +197,10 @@
     "4913",
     "2025-05-30_dev-env-notes.md~",
     "2025-05-30_dev-env-notes.md",
-    "inbox/4913",
     "hubs/dev-env.md",
     "dev-env.md",
-    "inbox/2025-05-30_tmux-cheat-sheet.md~",
     "inbox/2025-05-29_docker-cheat-sheet.md",
-    "inbox/2025-05-29_docker-cheat-sheet.md~",
     "inbox/2025-05-28_master-gcp-gke.md",
-    "inbox/2025-05-26_istio-notes.md~",
-    "inbox/2025-05-28_master-gcp-gke.md~",
-    "inbox/2025-05-28_gke-cheat-sheet.md~",
     "inbox/2025-05-26_istio-notes.md",
     "inbox/2025-05-28_gke-cheat-sheet.md",
     "hubs/gcp.md",
@@ -216,7 +217,6 @@
     "hubs/prometheus.md",
     "hubs/nvim.md",
     "hubs/markdown.md",
-    "hubs/linux.md",
-    "hubs/kubernetes.md"
+    "hubs/linux.md"
   ]
 }

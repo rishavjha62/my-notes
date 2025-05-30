@@ -1,6 +1,7 @@
 ---
 date: 2025-05-28
-tags: cheat-sheet
+tags:
+  - cheat-sheet
 hubs:
   - "[[gcp]]"
   - "[[devops-concept]]"

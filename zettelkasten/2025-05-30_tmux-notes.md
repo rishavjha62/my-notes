@@ -1,6 +1,7 @@
 ---
 date: 2025-05-30
-tags: #dev-env
+tags:
+  - dev-env
   -
 hubs:
   - "[[tmux]]"

@@ -1,6 +1,7 @@
 ---
 date: 2025-05-30
-tags: cheat-sheet
+tags:
+  - cheat-sheet
 hubs:
   - "[[linux]]"
   - "[[dev-env]]"

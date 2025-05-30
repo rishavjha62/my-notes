@@ -179,12 +179,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8009121cc405867d",
+  "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "2025-05-18-markdown_notes.md~",
+    "4913",
+    "2025-05-18-markdown_notes.md",
+    "2025-05-18-devops_notes.md",
+    "2025-05-30-devops_notes.md",
+    "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
     "notes/cheat-sheet/2025-05-30_postgresql-cheat-sheet.md",
     "inbox/2025-05-30_postgresql-cheat-sheet.md",
     "zettelkasten/2025-05-30_postgresql-cheat-sheet.md",
-    "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
     "inbox/2025-05-30_postgresql-cheat-sheet.md~",
     "notes/dev-env/2025-05-30_tmux-notes.md~",
     "notes/dev-env/4913",
@@ -202,7 +207,6 @@
     "inbox/2025-05-30_tmux-notes.md~",
     "inbox/2025-05-30_tmux-cheat-sheet.md~",
     "inbox/4913",
-    "inbox/2025-05-28_gke-cheat-sheet.md~",
     "zettelkasten/2025-05-30_tmux-cheat-sheet.md",
     "2025-05-30_dev-env-notes.md",
     "hubs/dev-env.md",
@@ -213,10 +217,6 @@
     "images/gke-standard-vs-autopilot-architecture.png",
     "zettelkasten/2025-05-26_istio-notes.md",
     "hubs/notes.md",
-    "hubs/istio.md",
-    "hubs/web-dev.md",
-    "hubs/tmux.md",
-    "hubs/system-design.md",
-    "hubs/python.md"
+    "hubs/istio.md"
   ]
 }

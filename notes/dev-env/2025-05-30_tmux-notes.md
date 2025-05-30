@@ -2,11 +2,11 @@
 date: 2025-05-30
 tags:
   - dev-env
-  -
 hubs:
   - "[[tmux]]"
   - "[[linux]]"
   - "[[dev-env]]"
+  - "[[2025-05-30_tmux-cheat-sheet|tmux cheat sheet]]""
 urls:
   -
 ---

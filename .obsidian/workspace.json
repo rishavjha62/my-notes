@@ -179,8 +179,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ec909fcce833e480",
+  "active": "8009121cc405867d",
   "lastOpenFiles": [
+    "notes/course/2025-05-18-markdown_notes.md",
+    "zettelkasten/2025-05-18-markdown_notes.md",
+    "devops-notes.md",
     "notes/course/2025-05-30_tmux-notes.md",
     "notes/lessons/2025-05-30_tmux-notes.md~",
     "notes/lessons/4913",
@@ -206,7 +209,6 @@
     "notes/dev-env/2025-05-30_tmux-notes.md",
     "inbox/2025-05-26_istio-notes.md",
     "inbox/2025-05-29_docker-cheat-sheet.md",
-    "devops-notes.md",
     "inbox/2025-05-30_tmux-notes.md",
     "zettelkasten/2025-05-30_tmux-notes.md",
     "zettelkasten/2025-05-30_tmux-cheat-sheet.md",
@@ -215,8 +217,6 @@
     "dev-env.md",
     "inbox/2025-05-28_gke-cheat-sheet.md",
     "hubs/gcp.md",
-    "hubs/postgresql.md",
-    "images/gke-standard-vs-autopilot-architecture.png",
-    "zettelkasten/2025-05-26_istio-notes.md"
+    "images/gke-standard-vs-autopilot-architecture.png"
   ]
 }

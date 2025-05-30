@@ -58,9 +58,8 @@ o   swap panes
 q   show pane numbers
 x   kill pane
 ⍽   space - toggle between layouts
-{   move the current pane left
-}   move the current pane right
-z   toggle pane zoom
+h   move the current pane left
+l   move the current pane right
 
 <C-c>↕/↔            resize pane
 :break-pane -t :    break pane into new window
@@ -75,7 +74,7 @@ n   next window
 p   previous window
 f   find window
 ,   name window
-.   re-number window (change order)
+.   move window or reorder
 &   kill window
 ```
 
@@ -93,5 +92,5 @@ h   move to left pane
 j   move to lower pane
 k   move to upper pane
 l   move to right pane
--   send pane to new window
+-   re-number windows (change order)
 ```

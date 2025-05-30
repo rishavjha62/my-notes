@@ -11,10 +11,14 @@
             "id": "8009121cc405867d",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-05-30_tmux-cheat-sheet"
             }
           }
         ]
@@ -175,17 +179,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "81915fc470bb4782",
+  "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "inbox/2025-05-28_master-gcp-gke.md",
+    "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
     "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md~",
     "notes/cheat-sheet/4913",
-    "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
     "inbox/2025-05-30_tmux-cheat-sheet.md",
     "notes/dev-env/2025-05-30_tmux-notes.md",
     "notes/dev-env/2025-05-30_tmux-notes.md~",
     "notes/dev-env/4913",
     "inbox/2025-05-26_istio-notes.md",
-    "inbox/2025-05-28_master-gcp-gke.md",
     "inbox/2025-05-29_docker-cheat-sheet.md",
     "devops-notes.md",
     "inbox/2025-05-30_tmux-notes.md",

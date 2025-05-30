@@ -1,16 +1,16 @@
 ---
 date: 2025-05-30
-tags:
+tags: #dev-env
   -
 hubs:
-  - "[[]]"
+  - "[[tmux]]"
+  - "[[linux]]"
+  - "[[dev-env]]"
 urls:
   -
 ---
 
-# Tmux: Terminal Multiplexer
-
-# Tmux: Terminal Multiplexer
+# tmux-notes
 
 ## Session, Windows and Panes inside tmux
 

@@ -181,6 +181,7 @@
   },
   "active": "8009121cc405867d",
   "lastOpenFiles": [
+    "notes/course/2025-05-18-markdown_notes.md~",
     "notes/course/2025-05-18-markdown_notes.md",
     "zettelkasten/2025-05-18-markdown_notes.md",
     "devops-notes.md",
@@ -216,7 +217,6 @@
     "hubs/dev-env.md",
     "dev-env.md",
     "inbox/2025-05-28_gke-cheat-sheet.md",
-    "hubs/gcp.md",
     "images/gke-standard-vs-autopilot-architecture.png"
   ]
 }

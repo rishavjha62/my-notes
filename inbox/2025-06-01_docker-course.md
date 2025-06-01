@@ -5,7 +5,6 @@ tags:
 hubs:
   - "[[docker]]"
   - "[[devops-concept]]"
-  - "[[2025-05-29_docker-cheat-sheet]]"
 urls:
   -
 ---
@@ -29,7 +28,7 @@ Daemon.
 > [!Note]Docker CLI doesn't necessarliy needs to be on the same host. We can
 > have the cli remotely and manage the docker daemon on a remote machine.
 
-i.e. we can run all the commands remotely by specifiying the -H flag as shown
+i.e. we can run all the commands remotely by specifying the `-H` flag as shown
 below.
 
 ```bash

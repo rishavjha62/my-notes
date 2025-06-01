@@ -33,8 +33,7 @@
               "title": "docker-layers.excalidraw"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -193,13 +192,13 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "166f0301db561cba",
+  "active": "ad653ebd9196ce69",
   "lastOpenFiles": [
-    "Pasted Image 20250601173844_295.png",
+    "Excalidraw/docker-layers.excalidraw.md",
     "inbox/2025-06-01_docker-course.md~",
+    "Pasted Image 20250601173844_295.png",
     "inbox/4913",
     "inbox/2025-06-01_docker-course.md",
-    "Excalidraw/docker-layers.excalidraw.md",
     "Excalidraw",
     "inbox/1748774622-KTQM.md",
     "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",

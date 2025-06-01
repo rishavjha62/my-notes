@@ -72,3 +72,5 @@ image, docker creates a new writable layer on top of the image layers. This
 writable layers is used to store data created by the container such as log
 files, temp files or files modified by the user. The life of this layer ends
 whenever the contianer is destroyed.
+
+![Layers-representation](../Excalidraw/docker-layers.excalidraw.md)

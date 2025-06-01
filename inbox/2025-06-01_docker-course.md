@@ -48,9 +48,6 @@ host PID which could be same or different.
 Docker uses _cgroups_ know as control groups to control how much resources each
 container could use.
 
-    - This can be done by providing `--cpus=0.5` flag to ensure that container could
+    - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.
 
-only use 50% of the host cpu resource.
-
-- For memory we could use the `memory=100m` flag to limit the memory to 100
-  Megabytes.
+    - For memory we could use the `memory=100m` flag to limit the memory to 100 Megabytes.

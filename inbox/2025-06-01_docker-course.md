@@ -43,3 +43,10 @@ isolation between containers.
 i.e. Every Linux system starts with a PID of 1 and so on for other processes'
 that it runs, however a container inside the system could also have a process
 with PID of 1 under it's unique namespace.
+
+Docker uses _cgroups_ know as control groups to control how much resources each
+container could use.
+
+- This can be done by providing `--cpus=0.5` flag to ensure that container could
+  only use 50% of the host cpu resource.
+- For memory we could use the `memory=100m` flag.

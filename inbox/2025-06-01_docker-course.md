@@ -34,3 +34,9 @@ below.
 ```bash
 docker -H=10.123.2.1:2375 run nginx
 ```
+
+## How does a application gets containerized?
+
+Docker uses namespaces to isolate workspace, PIDs, Unix Timesharing, Network,
+Interprocess, Mounts, are creating in their own namespaces thereby providing
+isolation between containers.

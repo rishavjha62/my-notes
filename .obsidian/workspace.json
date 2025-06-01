@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f8364c2bb590fab2",
+        "id": "dd0e08dc30c3e474",
         "type": "tabs",
         "children": [
           {
-            "id": "8009121cc405867d",
+            "id": "ad653ebd9196ce69",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
+                "file": "inbox/2025-06-01_docker-course.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-05-30_tmux-cheat-sheet"
+              "title": "2025-06-01_docker-course"
             }
           }
         ]
@@ -179,12 +179,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8009121cc405867d",
+  "active": "ec909fcce833e480",
   "lastOpenFiles": [
-    "inbox/1748774622-KTQM.md",
+    "inbox/2025-06-01_docker-course.md",
     "inbox/2025-06-01_docker-course.md~",
     "inbox/4913",
-    "inbox/2025-06-01_docker-course.md",
+    "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
+    "inbox/1748774622-KTQM.md",
     "notes/course/2025-05-18-markdown_notes.md~",
     "notes/course/2025-05-18-markdown_notes.md",
     "zettelkasten/2025-05-18-markdown_notes.md",
@@ -202,7 +203,6 @@
     "2025-05-18-markdown_notes.md",
     "2025-05-18-devops_notes.md",
     "2025-05-30-devops_notes.md",
-    "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
     "notes/cheat-sheet/2025-05-30_postgresql-cheat-sheet.md",
     "inbox/2025-05-30_postgresql-cheat-sheet.md",
     "zettelkasten/2025-05-30_postgresql-cheat-sheet.md",
@@ -216,7 +216,6 @@
     "zettelkasten/2025-05-30_tmux-cheat-sheet.md",
     "2025-05-30_dev-env-notes.md",
     "hubs/dev-env.md",
-    "dev-env.md",
     "images/gke-standard-vs-autopilot-architecture.png"
   ]
 }

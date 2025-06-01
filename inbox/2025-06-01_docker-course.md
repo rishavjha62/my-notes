@@ -25,3 +25,13 @@ Daemon.
 
 - Docker CLI: It is the command line interface that that we can use to perform
   actions such as running a new container, destroying it, etc.
+
+> [!Note]Docker CLI doesn't necessarliy needs to be on the same host. We can
+> have the cli remotely and manage the docker daemon on a remote machine.
+
+i.e. we can run all the commands remotely by specifiying the -H flag as shown
+below.
+
+```bash
+docker -H=10.123.2.1:2375 run nginx
+```

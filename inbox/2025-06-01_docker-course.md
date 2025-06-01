@@ -52,3 +52,13 @@ container could use.
 
     - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.
     - For memory we could use the `memory=100m` flag to limit the memory to 100 Megabytes.
+
+## Where and How does docker stores data?
+
+Docker stores all it's data by default inside `/var/lib/docker`.
+
+### Layered Architecture:
+
+When docker builds images, it builds them in a layered way. Each line of
+instructions in the dockerfile creates a new layer in the docker image with just
+the changes from previous layer.

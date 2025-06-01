@@ -61,4 +61,7 @@ Docker stores all it's data by default inside `/var/lib/docker`.
 
 When docker builds images, it builds them in a layered way. Each line of
 instructions in the dockerfile creates a new layer in the docker image with just
-the changes from previous layer.
+the changes from previous layer.  
+This caching mechanism helps with saving space and time when you update your
+application code or build a new container that uses the same base image/steps
+which is cached.

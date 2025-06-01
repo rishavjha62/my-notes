@@ -38,16 +38,17 @@ docker -H=10.123.2.1:2375 run nginx
 ## How does a application gets containerized?
 
 Docker uses namespaces to isolate workspace, PIDs, Unix Timesharing, Network,
-Interprocess, Mounts, are created in their own namespaces thereby providing
-isolation between containers.  
-i.e. Every Linux system starts with a PID of 1 and so on for other processes'
-that it runs, however a container inside the system could also have a process
-with PID of 1 under it's unique namespace. The container's PID of 1 mapped to
-host PID which could be same or different.
+Interprocess, Mounts. i.e. Every Linux system starts with a PID of 1 and so on
+for other processes' that it runs. The container could have 1 process running
+with a PID of 1 in it's own namespace, and it will be mapped to hosts unique
+PID.
+
+```bash
+docker exec <container-name> ps -eaf
+```
 
 Docker uses _cgroups_ know as control groups to control how much resources each
 container could use.
 
     - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.
-
     - For memory we could use the `memory=100m` flag to limit the memory to 100 Megabytes.

@@ -65,3 +65,10 @@ the changes from previous layer.
 This caching mechanism helps with saving space and time when you update your
 application code or build a new container that uses the same base image/steps
 which is cached.
+
+Once you build the image from the dockerfile, they are read only and can't be
+changed unless you create a new build. when a container is created using the
+image, docker creates a new writable layer on top of the image layers. This
+writable layers is used to store data created by the container such as log
+files, temp files or files modified by the user. The life of this layer ends
+whenever the contianer is destroyed.

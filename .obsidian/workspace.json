@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "2025-06-01_docker-course"
             }
+          },
+          {
+            "id": "166f0301db561cba",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-06-01 17.34.49.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-06-01 17.34.49.excalidraw"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -176,15 +189,18 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ad653ebd9196ce69",
+  "active": "166f0301db561cba",
   "lastOpenFiles": [
+    "inbox/2025-06-01_docker-course.md",
+    "Excalidraw/Drawing 2025-06-01 17.34.49.excalidraw.md",
+    "Excalidraw",
     "inbox/2025-06-01_docker-course.md~",
     "inbox/4913",
     "inbox/1748774622-KTQM.md",
-    "inbox/2025-06-01_docker-course.md",
     "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
     "notes/course/2025-05-18-markdown_notes.md~",
     "notes/course/2025-05-18-markdown_notes.md",
@@ -199,7 +215,6 @@
     "notes/topics-completed/4913",
     "notes/dev-env/temp",
     "notes/topics-completed/2025-05-30_tmux-notes.md",
-    "notes/topics-completed",
     "2025-05-18-markdown_notes.md",
     "2025-05-18-devops_notes.md",
     "2025-05-30-devops_notes.md",

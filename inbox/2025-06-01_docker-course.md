@@ -38,5 +38,8 @@ docker -H=10.123.2.1:2375 run nginx
 ## How does a application gets containerized?
 
 Docker uses namespaces to isolate workspace, PIDs, Unix Timesharing, Network,
-Interprocess, Mounts, are creating in their own namespaces thereby providing
-isolation between containers.
+Interprocess, Mounts, are created in their own namespaces thereby providing
+isolation between containers.  
+i.e. Every Linux system starts with a PID of 1 and so on for other processes'
+that it runs, however a container inside the system could also have a process
+with PID of 1 under it's unique namespace.

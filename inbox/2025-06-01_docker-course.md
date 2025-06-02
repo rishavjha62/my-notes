@@ -79,5 +79,28 @@ When you modify your app, the changes take place in a copy present in the read-
 write layer. This is called _Copy on Write_ mechanism.  
 To persist this data, we need to mount a persistent volume on the container. We
 can use the `docker volume create <volume-name>` command to create a volume and
-then mount it when running the docker container using the
-`-v /path/on/host:/path/on/container` command
+then mount it when running the docker container using the flag
+`-v /path/on/host:/path/on/container` command. This is called _Bind Mounting_.  
+Similary we can use the _Volume mount_ to mount the volume we created above.
+
+> [!NOTE] Using the -v flag is the old way and is replaced with --mount.
+
+example:
+
+```bash
+docker run --mount type=bind,source=/data/mysql,target=/var/lib/mysql mysql
+```
+
+### Who is responsible for doing all the storage operations?
+
+The _Storage Drivers_ are responsible for tasks such as maintaing the layered
+Architecture, creating the writable layer, moving files across layers to enable
+copy on write, etc.  
+Some of the common storage drivers are:
+
+1. AUFS
+2. ZFS
+3. BTRFS
+4. Device Mapper
+5. Overlay
+6. Overlay2

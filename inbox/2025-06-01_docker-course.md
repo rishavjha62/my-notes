@@ -74,3 +74,10 @@ files, temp files or files modified by the user. The life of this layer ends
 whenever the contianer is destroyed.
 
 ![Layers-representation](../Excalidraw/docker-layers.excalidraw.md)
+
+When you modify your app, the changes take place in a copy present in the read-
+write layer. This is called _Copy on Write_ mechanism.  
+To persist this data, we need to mount a persistent volume on the container. We
+can use the `docker volume create <volume-name>` command to create a volume and
+then mount it when running the docker container using the
+`-v /path/on/host:/path/on/container` command

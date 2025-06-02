@@ -104,3 +104,6 @@ Some of the common storage drivers are:
 4. Device Mapper
 5. Overlay
 6. Overlay2
+
+> [!NOTE] The storage drivers are choosen based on the underlying OS. i.e.  
+> AUFS is used for Ubuntu.

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/2025-06-01_docker-course.md",
+                "file": "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-01_docker-course"
+              "title": "2025-05-30_tmux-cheat-sheet"
             }
           },
           {
@@ -194,10 +194,13 @@
   },
   "active": "ad653ebd9196ce69",
   "lastOpenFiles": [
+    "notes/course/2025-05-30_tmux-notes.md",
+    "inbox/2025-06-01_docker-course.md",
+    "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md~",
+    "notes/cheat-sheet/4913",
     "inbox/2025-06-01_docker-course.md~",
     "inbox/4913",
     "Excalidraw/docker-layers.excalidraw.md",
-    "inbox/2025-06-01_docker-course.md",
     "Pasted Image 20250601173844_295.png",
     "Excalidraw",
     "inbox/1748774622-KTQM.md",
@@ -206,14 +209,11 @@
     "notes/course/2025-05-18-markdown_notes.md",
     "zettelkasten/2025-05-18-markdown_notes.md",
     "devops-notes.md",
-    "notes/course/2025-05-30_tmux-notes.md",
     "notes/lessons/2025-05-30_tmux-notes.md~",
     "notes/lessons/4913",
     "notes/lessons/2025-05-30_tmux-notes.md",
     "notes/lessons",
     "notes/topics-completed/2025-05-30_tmux-notes.md~",
-    "notes/topics-completed/4913",
-    "notes/dev-env/temp",
     "notes/topics-completed/2025-05-30_tmux-notes.md",
     "2025-05-18-markdown_notes.md",
     "2025-05-18-devops_notes.md",

@@ -29,11 +29,13 @@ tmux a -t myname
 tmux a -t myname -c /path/to/workdir
 ```
 
-List, kill sessions
+List, kill, detach sessions
 
 ```bash
 tmux ls
 tmux kill-session -t myname
+
+tmux detach
 ```
 
 ## Inside tmux
@@ -83,6 +85,7 @@ f   find window
 ```
 s   list sessions
 $   name session
+d   detach session
 ```
 
 ### Custom bindings (`~/.tmux.conf`)

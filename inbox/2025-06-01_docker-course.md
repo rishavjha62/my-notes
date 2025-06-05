@@ -67,12 +67,19 @@ It's a Linux kernel feature which allow processes to be organized into
 hierarchical group whose usage of various types of resource can then be limited
 and monitored.
 
+```bash
+# to see all available cgroups
+cat /proc/cgrous
+```
+
     - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.
     - For memory we could use the `memory=100m` flag to limit the memory to 100 Megabytes.
 
-## Where and How does docker stores data?
+3. **Union Mount Filesystems (overlayfs)**
 
 Docker stores all it's data by default inside `/var/lib/docker`.
+
+Allows files and directories of separate file systems knows as branches
 
 ### Layered Architecture:
 

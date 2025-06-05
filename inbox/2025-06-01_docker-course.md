@@ -41,7 +41,7 @@ Linux building blocks that make up the core of a container:
 
 1. **Namespaces**:
 
-Docker uses namespaces to isolate workspace PIDs, Unix Timesharing, Network,
+Docker uses _namespaces_ to isolate workspace PIDs, Unix Timesharing, Network,
 Interprocess, Mounts, User, UTS, IPC, Cgroup. i.e. Every Linux system starts
 with a PID of 1 and so on for other processes' that it runs. The container could
 have 1 process running with a PID of 1 in it's own namespace, and it will be
@@ -54,6 +54,7 @@ Changes to the global resource are visible to other processes that are members
 of the namespace, but are invisible to other processes.
 
 ```bash
+# shows all the processes running inside the container
 docker exec <container-name> ps -eaf
 ```
 
@@ -61,6 +62,10 @@ docker exec <container-name> ps -eaf
 
 Docker uses _cgroups_ know as control groups to control how much resources each
 container could use.
+
+It's a Linux kernel feature which allow processes to be organized into
+hierarchical group whose usage of various types of resource can then be limited
+and monitored.
 
     - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.
     - For memory we could use the `memory=100m` flag to limit the memory to 100 Megabytes.

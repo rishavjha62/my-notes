@@ -97,9 +97,9 @@ which is cached.
 Once you build the image from the dockerfile, they are read only and can't be
 changed unless you create a new build. when a container is created using the
 image, docker creates a new writable layer on top of the image layers. This
-writable layers is used to store data created by the container such as log
-files, temp files or files modified by the user. The life of this layer ends
-whenever the contianer is destroyed.
+writable layer is used to store data created by the container such as log files,
+temp files or files modified by the user. The life of this layer ends whenever
+the contianer is destroyed.
 
 ![Layers-representation](../Excalidraw/docker-layers.excalidraw.md)
 

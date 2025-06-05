@@ -77,9 +77,13 @@ cat /proc/cgrous
 
 3. **Union Mount Filesystems (overlayfs)**
 
-Docker stores all it's data by default inside `/var/lib/docker`.
+Allows files and directories of separate file systems, knows as branches, to be
+transparently overlaid, forming a single coherent file system.  
+Contents of directories which have the same path within the merged braches will
+be seen together in a single merged directory, within the new, virtual
+filesystem.
 
-Allows files and directories of separate file systems knows as branches
+Docker stores all it's data by default inside `/var/lib/docker`.
 
 ### Layered Architecture:
 

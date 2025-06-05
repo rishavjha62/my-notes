@@ -43,6 +43,10 @@ for other processes' that it runs. The container could have 1 process running
 with a PID of 1 in it's own namespace, and it will be mapped to hosts unique
 PID.
 
+**Namespaces**: A namespace wraps a global system resource in an abstraction
+that makes it appear to the processes within the namespace that they have their
+own isolated instance of the global resource.
+
 ```bash
 docker exec <container-name> ps -eaf
 ```

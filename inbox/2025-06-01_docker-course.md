@@ -85,7 +85,7 @@ filesystem.
 
 Docker stores all it's data by default inside `/var/lib/docker`.
 
-### Layered Architecture:
+## Layered Architecture:
 
 When docker builds images, it builds them in a layered way. Each line of
 instructions in the dockerfile creates a new layer in the docker image with just

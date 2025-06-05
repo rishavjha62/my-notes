@@ -113,6 +113,9 @@ Similary we can use the _Volume mount_ to mount the volume we created above.
 
 > [!NOTE] Using the -v flag is the old way and is replaced with --mount.
 
+> [!NOTE] Docker suggests to use _Volume mount_ as it is efficient due to read
+> write operations.
+
 example:
 
 ```bash

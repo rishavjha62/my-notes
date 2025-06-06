@@ -197,3 +197,5 @@ Storage:
 To view storage used by docker: `docker system df`
 
 To remove all build cache: `docker builder prune`
+
+To remove all unused storage volume: `docker volume prune`

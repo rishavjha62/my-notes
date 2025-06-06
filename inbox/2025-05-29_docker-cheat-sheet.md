@@ -6,7 +6,7 @@ hubs:
   - "[[docker]]"
   - "[[devops-concept]]"
 urls:
-  -
+  - https://docs.docker.com/reference/cli/docker/
 ---
 
 # docker cheat sheet
@@ -112,6 +112,9 @@ To inspect the container:
 docker logs -f <container-name or container-hash>
 docker top <container-name or container hash>
 docker inspect <container-name or container hash>
+
+# to check image history
+docker history <image-name or hash>
 ```
 
 To interact with the container:
@@ -188,3 +191,9 @@ docker build [options] -t <container-name> # -t to name the container
 docker build . -t <container-name> # from the Dockerfile in current path
 docker build -f Dockerfile -t test/my-app:latest --no-cache #build with no cache
 ```
+
+Storage:
+
+To view storage used by docker: `docker system df`
+
+To remove all build cache: `docker builder prune`

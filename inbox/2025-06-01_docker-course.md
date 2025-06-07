@@ -59,7 +59,14 @@ of the namespace, but are invisible to other processes.
   To create a new PID namespace.
 
 ```bash
+# to create a newnamespce
 sudo unshare -p --fork --mount-proc
+
+# to check all namespaces
+lsns  # -t pid -> to view PIDs
+
+# to run commands from parent namespace
+sudo nsenter -t <pid> -pr <command>
 ```
 
 ```bash

@@ -69,6 +69,20 @@ lsns  # -t pid -> to view PIDs
 sudo nsenter -t <pid> -pr <command>
 ```
 
+- Mount namespaces :  
+  A directory of drive could be mounted(superimposed) on another directory.
+
+```bash
+# to mount a directory on another
+sudo mount --bind <dir_to_mount> <mount_dir>
+
+# to show all mounted directories
+df -a
+
+# to unmount
+sudo umount -l <mount_dir>
+```
+
 ```bash
 # shows all the processes running inside the container
 docker exec <container-name> ps -eaf

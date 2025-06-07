@@ -55,6 +55,13 @@ instance of the global resource.
 Changes to the global resource are visible to other processes that are members
 of the namespace, but are invisible to other processes.
 
+- PID namespace :  
+  To create a new PID namespace.
+
+```bash
+sudo unshare -p --fork --mount-proc
+```
+
 ```bash
 # shows all the processes running inside the container
 docker exec <container-name> ps -eaf

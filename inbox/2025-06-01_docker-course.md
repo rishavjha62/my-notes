@@ -6,7 +6,9 @@ hubs:
   - "[[docker]]"
   - "[[devops-concept]]"
 urls:
-  -
+  - udemy.com/course/learn-docker
+  - youtube.com/watch?v=RqTEHSBrYFw
+  - udemy.com/course/containers-under-the-hood
 ---
 
 # docker course

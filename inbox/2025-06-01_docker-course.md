@@ -85,6 +85,7 @@ sudo umount -l <mount_dir>
 #to create a new namespace for mount & PID
 sudo unshare -pfm --mount-proc
 
+#to make a certain directory as the root directory but ensure it's mounted
 pivot_root <new_location> <backup_for_old_root>
 ```
 

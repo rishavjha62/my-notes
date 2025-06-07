@@ -59,7 +59,7 @@ of the namespace, but are invisible to other processes.
   To create a new PID namespace.
 
 ```bash
-# to create a newnamespce
+# to create a new namespce
 sudo unshare -p --fork --mount-proc
 
 # to check all namespaces
@@ -81,6 +81,11 @@ df -a
 
 # to unmount
 sudo umount -l <mount_dir>
+
+#to create a new namespace for mount & PID
+sudo unshare -pfm --mount-proc
+
+pivot_root <new_location> <backup_for_old_root>
 ```
 
 ```bash

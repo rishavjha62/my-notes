@@ -138,6 +138,28 @@ ipcs -q  # or ipcs to view all 3 queues
 ipcmk -Q
 ```
 
+- User namespace:
+
+They enable regular (non-root) users to perform certain operations that
+otherwise require superuser privileges by containing them within the boundaries
+of that namespace.
+
+We can map a non privileged user in the host as a root user in the new User
+namespace.
+
+```bash
+# create a new User namespace
+unshare -U bash
+
+# check id of the user
+id
+
+#check uid_map for the current user
+sudo cat /proc/$$/uid_map
+
+
+```
+
 2. **Control Groups (cgroups)**
 
 Docker uses _cgroups_ know as control groups to control how much resources each

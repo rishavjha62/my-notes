@@ -27,8 +27,8 @@ Daemon.
 - Docker CLI: It is the command line interface that that we can use to perform
   actions such as running a new container, destroying it, etc.
 
-> [!Note]Docker CLI doesn't necessarliy needs to be on the same host. We can
-> have the cli remotely and manage the docker daemon on a remote machine.
+> [!Note] Docker CLI doesn't necessarliy needs to be on the same host.  
+> We can have the cli remotely and manage the docker daemon on a remote machine.
 
 i.e. we can run all the commands remotely by specifying the `-H` flag as shown
 below.
@@ -221,10 +221,9 @@ then mount it when running the docker container using the flag
 `-v /path/on/host:/path/on/container` command. This is called _Bind Mounting_.  
 Similary we can use the _Volume mount_ to mount the volume we created above.
 
-> [!NOTE] Using the -v flag is the old way and is replaced with --mount.
-
-> [!NOTE] Docker suggests to use _Volume mount_ as it is efficient due to read
-> write operations.
+> [!NOTE] Using the -v flag is the old way and is replaced with --mount  
+> Docker suggests to use _Volume mount_ as it is efficient due to read write
+> operations.
 
 example:
 
@@ -246,5 +245,5 @@ Some of the common storage drivers are:
 5. Overlay
 6. Overlay2
 
-> [!NOTE] The storage drivers are choosen based on the underlying OS. i.e.  
-> Overlay2 is used for Ubuntu.
+> [!NOTE] The storage drivers are choosen based on the underlying OS.  
+> i.e. Overlay2 is used for Ubuntu.

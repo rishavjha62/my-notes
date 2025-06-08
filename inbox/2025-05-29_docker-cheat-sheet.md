@@ -57,7 +57,7 @@ To remove image:
 
 To run a container:
 
-> [!NOTE] Docker will run the container if the image already exists locally,
+> Docker will run the container if the image already exists locally,  
 > otherwise it will first download it from dockerhub
 
 `docker run <image-name>`  

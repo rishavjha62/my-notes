@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/2025-06-01_docker-course.md",
+                "file": "inbox/2025-05-29_docker-cheat-sheet.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-01_docker-course"
+              "title": "2025-05-29_docker-cheat-sheet"
             }
           },
           {
@@ -194,12 +194,12 @@
   },
   "active": "ec909fcce833e480",
   "lastOpenFiles": [
-    "inbox/2025-06-01_docker-course.md~",
+    "inbox/2025-05-29_docker-cheat-sheet.md~",
     "inbox/4913",
+    "inbox/2025-06-01_docker-course.md",
+    "inbox/2025-06-01_docker-course.md~",
     "images/Screenshot 2025-06-08 014010.png",
     "inbox/2025-05-29_docker-cheat-sheet.md",
-    "inbox/2025-06-01_docker-course.md",
-    "inbox/2025-05-29_docker-cheat-sheet.md~",
     "4913",
     "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
     "notes/course/2025-05-30_tmux-notes.md",

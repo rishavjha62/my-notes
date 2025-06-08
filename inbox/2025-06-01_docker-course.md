@@ -43,11 +43,15 @@ Linux building blocks that make up the core of a container:
 
 1. **Namespaces**:
 
+A feature of linux kernel that helps with isolating certain system resources so
+that the given set of processes has its own resources that only these processes
+can see and access.
+
 Docker uses _namespaces_ to isolate workspace PIDs, Unix Timesharing, Network,
-Interprocess, Mounts, User, UTS, IPC, Cgroup. i.e. Every Linux system starts
-with a PID of 1 and so on for other processes' that it runs. The container could
-have 1 process running with a PID of 1 in it's own namespace, and it will be
-mapped to hosts unique PID.
+Interprocess, Mounts, User, IPC, Cgroup. i.e. Every Linux system starts with a
+PID of 1 and so on for other processes' that it runs. The container could have 1
+process running with a PID of 1 in it's own namespace, and it will be mapped to
+hosts unique PID.
 
 A namespace wraps a global system resource in an abstraction that makes it
 appear to the processes within the namespace that they have their own isolated
@@ -132,7 +136,6 @@ ipcs -q  # or ipcs to view all 3 queues
 
 # create a message queue
 ipcmk -Q
-
 ```
 
 2. **Control Groups (cgroups)**

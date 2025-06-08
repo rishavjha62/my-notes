@@ -163,7 +163,7 @@ sudo echo "0 <uid_of_the_unpriviledged_user> <gid_of_the_unpriviledged_user> <co
 ```
 
 > [!NOTE] How is all this information useful?  
-> This gives insight how a container uses namespace feature from linux. We can
+> This gives insight on how a container uses namespace feature from linux. We can
 > start our own container(with debug tools) which joins the same namespace as
 > the target contianer for troubleshooting purpose.
 >

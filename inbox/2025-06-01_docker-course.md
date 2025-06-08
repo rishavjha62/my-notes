@@ -120,6 +120,21 @@ affecting rest of the system.
 IPC (Inter process communication) : To isolate different IPC resources like
 message queues, semaphores & shared memory.
 
+```bash
+# to create IPC & UTS namespace
+sudo unshare -fpiu --mount-proc bash
+
+# rename host and reload bash
+hostname <newname>; exec bash
+
+# view message queue
+ipcs -q
+
+# create a message queue
+ipcmk -Q
+
+```
+
 2. **Control Groups (cgroups)**
 
 Docker uses _cgroups_ know as control groups to control how much resources each

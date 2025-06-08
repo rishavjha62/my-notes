@@ -107,7 +107,17 @@ sudo iptables --list-rules
 
 # check entries for routing table
 ip route
+
+# create a new namespace for network
+sudo unshare -pnf --mount-proc bash
 ```
+
+- UTS & IPC namespace:  
+  UTS (Unix Time Sharing) : They let us set hostnames & domain names without
+  affecting rest of the system.
+
+IPC (Inter process communication) : To isolate different IPC resources like
+message queues, semaphores & shared memory.
 
 2. **Control Groups (cgroups)**
 

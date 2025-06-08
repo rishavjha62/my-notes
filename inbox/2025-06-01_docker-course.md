@@ -93,7 +93,10 @@ pivot_root <new_location> <backup_for_old_root>
 ```
 
 - Network namespace:  
-  To provide
+  There are 3 key network resouces in this namespace.
+  - Network Device such as Ethernet, loopback
+  - Rules such as IP Tables
+  - Routing Table
 
 2. **Control Groups (cgroups)**
 

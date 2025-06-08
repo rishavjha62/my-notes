@@ -112,9 +112,10 @@ ip route
 sudo unshare -pnf --mount-proc bash
 ```
 
-- UTS & IPC namespace:  
-  UTS (Unix Time Sharing) : They let us set hostnames & domain names without
-  affecting rest of the system.
+- UTS & IPC namespace:
+
+UTS (Unix Time Sharing) : They let us set hostnames & domain names without
+affecting rest of the system.
 
 IPC (Inter process communication) : To isolate different IPC resources like
 message queues, semaphores & shared memory.

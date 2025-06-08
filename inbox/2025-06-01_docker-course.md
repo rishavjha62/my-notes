@@ -98,6 +98,17 @@ pivot_root <new_location> <backup_for_old_root>
   - Rules such as IP Tables
   - Routing Table
 
+```bash
+#to check all the network devices on the host
+ip link list
+
+# check rules in ip tables
+sudo iptables --list-rules
+
+# check entries for routing table
+ip route
+```
+
 2. **Control Groups (cgroups)**
 
 Docker uses _cgroups_ know as control groups to control how much resources each

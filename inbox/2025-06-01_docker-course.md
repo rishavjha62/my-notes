@@ -73,7 +73,7 @@ docker exec <container-name> ps -eaf
 ```
 
 - Mount namespaces :  
-  A directory of drive could be mounted(superimposed) on another directory.
+  A directory or drive could be mounted(superimposed) on another directory.
 
 ```bash
 # to mount a directory on another
@@ -91,6 +91,9 @@ sudo unshare -pfm --mount-proc
 #to make a certain directory as the root directory but ensure it's mounted
 pivot_root <new_location> <backup_for_old_root>
 ```
+
+- Network namespace:  
+  To provide
 
 2. **Control Groups (cgroups)**
 

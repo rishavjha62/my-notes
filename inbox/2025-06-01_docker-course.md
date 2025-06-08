@@ -67,6 +67,9 @@ lsns  # -t pid -> to view PIDs
 
 # to run commands from parent namespace
 sudo nsenter -t <pid> -pr <command>
+
+# shows all the processes running inside the container
+docker exec <container-name> ps -eaf
 ```
 
 - Mount namespaces :  
@@ -87,11 +90,6 @@ sudo unshare -pfm --mount-proc
 
 #to make a certain directory as the root directory but ensure it's mounted
 pivot_root <new_location> <backup_for_old_root>
-```
-
-```bash
-# shows all the processes running inside the container
-docker exec <container-name> ps -eaf
 ```
 
 2. **Control Groups (cgroups)**

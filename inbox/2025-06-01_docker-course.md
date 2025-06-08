@@ -128,7 +128,7 @@ sudo unshare -fpiu --mount-proc bash
 hostname <newname>; exec bash
 
 # view message queue
-ipcs -q
+ipcs -q  # or ipcs to view all 3 queues
 
 # create a message queue
 ipcmk -Q

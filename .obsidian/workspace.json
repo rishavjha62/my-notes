@@ -19,19 +19,29 @@
               },
               "icon": "lucide-file",
               "title": "2025-06-01_docker-course"
-            }
-          },
+            },
+            "group": "78f1da3548834b3e"
+          }
+        ]
+      },
+      {
+        "id": "b393a1fbf2be512c",
+        "type": "tabs",
+        "children": [
           {
-            "id": "166f0301db561cba",
+            "id": "596d7a61f0205fb2",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/docker-layers.excalidraw.md"
+                "file": "inbox/2025-06-01_docker-course.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "docker-layers.excalidraw"
-            }
+              "icon": "lucide-file",
+              "title": "2025-06-01_docker-course"
+            },
+            "group": "78f1da3548834b3e"
           }
         ]
       }
@@ -192,21 +202,21 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ec909fcce833e480",
+  "active": "596d7a61f0205fb2",
   "lastOpenFiles": [
+    "Excalidraw/docker-layers.excalidraw.md",
+    "inbox/2025-06-01_docker-course.md",
     "inbox/2025-06-01_docker-course.md~",
     "inbox/2025-05-28_master-gcp-gke.md",
     "inbox/2025-05-29_docker-cheat-sheet.md",
     "inbox/2025-05-29_docker-cheat-sheet.md~",
     "inbox/4913",
-    "inbox/2025-06-01_docker-course.md",
     "images/Screenshot 2025-06-08 014010.png",
     "4913",
     "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
     "notes/course/2025-05-30_tmux-notes.md",
     "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md~",
     "notes/cheat-sheet/4913",
-    "Excalidraw/docker-layers.excalidraw.md",
     "Pasted Image 20250601173844_295.png",
     "Excalidraw",
     "inbox/1748774622-KTQM.md",

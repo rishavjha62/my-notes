@@ -162,6 +162,12 @@ sudo echo "0 <uid_of_the_unpriviledged_user> <gid_of_the_unpriviledged_user> <co
 
 ```
 
+> [!NOTE] How is all this information useful?  
+> We can start our own container with debug tools in the same namespace as the
+> target contianer for troubleshooting purpose.
+>
+> `bash docker run -it --name=debug --pid:container:<name_of_target_container> <your_debug_container_location> /bin/bash`
+
 2. **Control Groups (cgroups)**
 
 Docker uses _cgroups_ know as control groups to control how much resources each

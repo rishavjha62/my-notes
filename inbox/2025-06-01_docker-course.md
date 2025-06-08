@@ -157,6 +157,8 @@ id
 #check uid_map for the current user
 sudo cat /proc/$$/uid_map
 
+# to be done from parent namespace
+sudo echo "0 <uid_of_the_unpriviledged_user> <gid_of_the_unpriviledged_user> <count_of_id>
 
 ```
 
@@ -239,4 +241,4 @@ Some of the common storage drivers are:
 6. Overlay2
 
 > [!NOTE] The storage drivers are choosen based on the underlying OS. i.e.  
-> AUFS is used for Ubuntu.
+> Overlay2 is used for Ubuntu.

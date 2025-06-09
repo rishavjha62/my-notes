@@ -211,7 +211,6 @@ directory. This is called _copy on write_. The lower layer is read only layer.
 ```bash
 # create a overlay (union) filesystem
 sudo mount -t overlay -t lowerdir=<your_lower_dir>/,upperdir=<your_upper_dir>/,workdir=<your_work_dir>/ none <your_merged_dir>
-
 ```
 
 > [!NOTE] The upper and the lower layer could be a different filesystem.

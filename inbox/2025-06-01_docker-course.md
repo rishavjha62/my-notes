@@ -191,7 +191,20 @@ Some of the common resources we can control with cgroups:
 ```bash
 # to see all available cgroups
 cat /proc/cgroups
-ls /sys/fs/cgroups
+ls /sys/fs/cgroup
+
+# create memory control groups
+sudo cgcreate -g memory:<limiter-name>
+
+# set the memory limit for the control group
+sudo cgset -r memory.limit_in_bytes=15M mem_lim
+
+# need to also set the swap space with below attribute
+sudo cgset -r memory.memsw.limit_in_bytes=15M mem_lim
+
+# check swap and memory limit
+cat /sys/fs/cgroup/memory/mem_lim/memory.limit_in_bytes
+cat /sys/fs/cgroup/memory/mem_lim/memory.memsw.limit_in_bytes
 ```
 
     - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.

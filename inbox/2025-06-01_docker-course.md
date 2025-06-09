@@ -55,7 +55,7 @@ hosts unique PID.
 
 A namespace wraps a global system resource in an abstraction that makes it
 appear to the processes within the namespace that they have their own isolated
-instance of the global resource.  
+instance of the global resource.
 
 Changes to the global resource are visible to other processes that are members
 of the namespace, but are invisible to other processes.
@@ -98,7 +98,7 @@ pivot_root <new_location> <backup_for_old_root>
 ```
 
 - Network namespace:  
-There are 3 key network resources in this namespace.
+  There are 3 key network resources in this namespace.
   - Network Device such as Ethernet, loopback
   - Rules such as IP Tables
   - Routing Table
@@ -190,7 +190,7 @@ cat /proc/cgroups
 3. **Union Mount Filesystems (overlayfs)**
 
 Allows files and directories of separate file systems, knows as branches, to be
-transparently overlaid, forming a single coherent file system.  
+transparently overlaid, forming a single coherent file system.
 
 Contents of directories which have the same path within the merged branches will
 be seen together in a single merged directory, within the new, virtual
@@ -198,22 +198,25 @@ filesystem.
 
 Overlay filesystem comprises of 3 layers:
 
-- *__Lower Layer__*: A collection of files & directories.
-- *__Upper Layer__*: A collection of files & directories either in the same filesystem
-  or a different filesystem.
-- *__Overlay Layer__*: A union of the files in the lower and the upper layer. In case
-  there are duplicate files, the overlay layer contains duplicate files from the
-  upper layer.
+- _**Lower Layer**_: A collection of files & directories.
+- _**Upper Layer**_: A collection of files & directories either in the same
+  filesystem or a different filesystem.
+- _**Overlay Layer**_: A union of the files in the lower and the upper layer. In
+  case there are duplicate files, the overlay layer contains duplicate files
+  from the upper layer.
+
+Any modifications in the merged layer to a file will create a copy in the upper
+directory. This is called _copy on write_.
 
 ```bash
 # create a overlay (union) filesystem
 sudo mount -t overlay -t lowerdir=<your_lower_dir>/,upperdir=<your_upper_dir>/,workdir=<your_work_dir>/ none <your_merged_dir>
+
 ```
 
 > [!NOTE] The upper and the lower layer could be a different filesystem.
 
 > [!NOTE] Docker stores all it's data by default inside `/var/lib/docker`.
-
 
 ## Layered Architecture:
 

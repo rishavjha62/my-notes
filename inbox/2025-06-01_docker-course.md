@@ -198,10 +198,10 @@ filesystem.
 
 Overlay filesystem comprises of 3 layers:
 
-- _*Lower Layer*_: A collection of files & directories.
-- Upper Layer: A collection of files & directores either in the same filesystem
+- *__Lower Layer__*: A collection of files & directories.
+- *__Upper Layer__*: A collection of files & directories either in the same filesystem
   or a different filesystem.
-- Overlay Layer: A union of the files in the lower and the upper layer. In case
+- *__Overlay Layer__*: A union of the files in the lower and the upper layer. In case
   there are duplicate files, the overlay layer contains duplicate files from the
   upper layer.
 
@@ -212,7 +212,8 @@ sudo mount -t overlay -t lowerdir=<your_lower_dir>/,upperdir=<your_upper_dir>/,w
 
 > [!NOTE] The upper and the lower layer could be a different filesystem.
 
-Docker stores all it's data by default inside `/var/lib/docker`.
+> [!NOTE] Docker stores all it's data by default inside `/var/lib/docker`.
+
 
 ## Layered Architecture:
 
@@ -227,7 +228,7 @@ changed unless you create a new build. when a container is created using the
 image, docker creates a new writable layer on top of the image layers. This
 writable layer is used to store data created by the container such as log files,
 temp files or files modified by the user. The life of this layer ends whenever
-the contianer is destroyed.
+the container is destroyed.
 
 ![Layers-representation](../Excalidraw/docker-layers.excalidraw.md)
 

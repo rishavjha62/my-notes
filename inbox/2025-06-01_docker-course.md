@@ -211,6 +211,18 @@ directory. This is called _copy on write_. The lower layer is read only layer.
 ```bash
 # create a overlay (union) filesystem
 sudo mount -t overlay -t lowerdir=<your_lower_dir>/,upperdir=<your_upper_dir>/,workdir=<your_work_dir>/ none <your_merged_dir>
+
+# create a overlay filesystem with multiple upper & lower layer
+sudo mount -t overlay -t lowerdir=<lower_dir1>:<lower_dir2>:<lower_dir3>/,upperdir=<your_upper_dir>/,workdir=<your_work_dir>/ none <your_merged_dir>
+
+# example for creating an application
+sudo mount -t overlay -o lowerdir=alpine_root_dir/:pacakage_utilities/:application_code,upperdir=copy_on_write_dir,workdir=for_internal none merged_dir
+
+# create a new namespace
+sudo unshare -fpiu --mount-proc bash
+
+# changing root
+pivot_root . old_root
 ```
 
 > [!NOTE] The upper and the lower layer could be a different filesystem.

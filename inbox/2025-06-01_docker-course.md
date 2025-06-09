@@ -191,6 +191,7 @@ Some of the common resources we can control with cgroups:
 ```bash
 # to see all available cgroups
 cat /proc/cgroups
+ls /sys/fs/cgroups
 ```
 
     - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.

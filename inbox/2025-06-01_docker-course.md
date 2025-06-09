@@ -208,6 +208,9 @@ cat /sys/fs/cgroup/memory/mem_lim/memory.memsw.limit_in_bytes
 
 # run the application as part of the control group
 sudo cgexec -g memory:mem_lim python app.py
+
+# create namespace with memory limits
+sudo cgexec -g memory:mem_lim unshare -fp --mount-proc
 ```
 
     - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.

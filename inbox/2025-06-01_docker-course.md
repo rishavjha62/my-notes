@@ -206,7 +206,7 @@ Overlay filesystem comprises of 3 layers:
   from the upper layer.
 
 Any modifications in the merged layer to a file will create a copy in the upper
-directory. This is called _copy on write_.
+directory. This is called _copy on write_. The lower layer is read only layer.
 
 ```bash
 # create a overlay (union) filesystem

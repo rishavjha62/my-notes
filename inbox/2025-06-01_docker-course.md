@@ -172,12 +172,21 @@ sudo echo "0 <uid_of_the_unpriviledged_user> <gid_of_the_unpriviledged_user> <co
 
 2. **Control Groups (cgroups)**
 
-Docker uses _cgroups_ know as control groups to control how much resources each
-container could use.
+A mechanism provided by linux kernel to control how much of a certain
+resource(s) can be consumed by a given process(es).
+
+Docker uses _cgroups_ to control how much resources each container could use.
 
 It's a Linux kernel feature which allow processes to be organized into
 hierarchical group whose usage of various types of resource can then be limited
 and monitored.
+
+Some of the common resources we can control with cgroups:
+
+- Memory
+- Network
+- CPU
+- I/Ops
 
 ```bash
 # to see all available cgroups

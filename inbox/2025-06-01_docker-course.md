@@ -194,6 +194,14 @@ Contents of directories which have the same path within the merged braches will
 be seen together in a single merged directory, within the new, virtual
 filesystem.
 
+Overlay filesystem comprises of 3 layers:
+
+- Lower Layer: A collection of directories
+- Upper Layer
+- Overlay Layer
+
+> [!NOTE] The upper and the lower layer could be a different filesystem.
+
 Docker stores all it's data by default inside `/var/lib/docker`.
 
 ## Layered Architecture:

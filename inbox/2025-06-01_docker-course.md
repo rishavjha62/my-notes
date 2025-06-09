@@ -163,9 +163,9 @@ sudo echo "0 <uid_of_the_unpriviledged_user> <gid_of_the_unpriviledged_user> <co
 ```
 
 > [!NOTE] How is all this information useful?  
-> This gives insight on how a container uses namespace feature from linux. We can
-> start our own container(with debug tools) which joins the same namespace as
-> the target contianer for troubleshooting purpose.
+> This gives insight on how a container uses namespace feature from linux. We
+> can start our own container(with debug tools) which joins the same namespace
+> as the target contianer for troubleshooting purpose.
 >
 > `bash docker run -it --name=debug --pid:container:<name_of_target_container> <your_debug_container_location> /bin/bash`
 
@@ -180,7 +180,7 @@ and monitored.
 
 ```bash
 # to see all available cgroups
-cat /proc/cgrous
+cat /proc/cgroups
 ```
 
     - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.

@@ -224,6 +224,10 @@ sudo cgset -r cpu.cfs_quota_us=25000
 # check the cpu quota fields and periods
 cat /sys/fs/cgroup/cpu/cpu_limiter/cpu.cfs_quota_us
 cat /sys/fs/cgroup/cpu/cpu_limiter/cpu.cfs_period_us
+
+# create namespace with cpu limits or run app
+sudo cgexec -g cpu:cpu_limiter unshare -fp --mount-proc
+sudo cgexec -g cpu:cpu_limiter python app.py
 ```
 
     - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.

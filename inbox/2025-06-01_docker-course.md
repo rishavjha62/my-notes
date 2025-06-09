@@ -211,6 +211,19 @@ sudo cgexec -g memory:mem_lim python app.py
 
 # create namespace with memory limits
 sudo cgexec -g memory:mem_lim unshare -fp --mount-proc
+
+# create cpu control groups
+sudo cgcreate -g cpu:<limiter-name>
+
+# view all cpu control groups
+ls /sys/fs/cgroup/cpu
+
+# set the cpu limits for cpu control group
+sudo cgset -r cpu.cfs_quota_us=25000
+
+# check the cpu quota fields and periods
+cat /sys/fs/cgroup/cpu/cpu_limiter/cpu.cfs_quota_us
+cat /sys/fs/cgroup/cpu/cpu_limiter/cpu.cfs_period_us
 ```
 
     - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.

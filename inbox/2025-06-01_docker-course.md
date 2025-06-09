@@ -203,6 +203,11 @@ Overlay filesystem comprises of 3 layers:
   there are duplicate files, the overlay layer contains duplicate files from the
   upper layer.
 
+```bash
+# create a overlay (union) filesystem
+sudo mount -t overlay -t lowerdir=<your_lower_dir>/,upperdir=<your_upper_dir>/,workdir=<your_work_dir>/ none <your_merged_dir>
+```
+
 > [!NOTE] The upper and the lower layer could be a different filesystem.
 
 Docker stores all it's data by default inside `/var/lib/docker`.
@@ -211,10 +216,9 @@ Docker stores all it's data by default inside `/var/lib/docker`.
 
 When docker builds images, it builds them in a layered way. Each line of
 instructions in the dockerfile creates a new layer in the docker image with just
-the changes from previous layer.  
-This caching mechanism helps with saving space and time when you update your
-application code or build a new container that uses the same base image/steps
-which is cached.
+the changes from previous layer. This caching mechanism helps with saving space
+and time when you update your application code or build a new container that
+uses the same base image/steps which is cached.
 
 Once you build the image from the dockerfile, they are read only and can't be
 changed unless you create a new build. when a container is created using the
@@ -226,15 +230,15 @@ the contianer is destroyed.
 ![Layers-representation](../Excalidraw/docker-layers.excalidraw.md)
 
 When you modify your app, the changes take place in a copy present in the read-
-write layer. This is called _Copy on Write_ mechanism.  
-To persist this data, we need to mount a persistent volume on the container. We
-can use the `docker volume create <volume-name>` command to create a volume and
-then mount it when running the docker container using the flag
-`-v /path/on/host:/path/on/container` command. This is called _Bind Mounting_.  
+write layer. This is called _Copy on Write_ mechanism. To persist this data, we
+need to mount a persistent volume on the container. We can use the
+`docker volume create <volume-name>` command to create a volume and then mount
+it when running the docker container using the flag
+`-v /path/on/host:/path/on/container` command. This is called _Bind Mounting_.
 Similary we can use the _Volume mount_ to mount the volume we created above.
 
-> [!NOTE] Using the -v flag is the old way and is replaced with --mount  
-> Docker suggests to use _Volume mount_ as it is efficient due to read write
+> [!NOTE] Using the -v flag is the old way and is replaced with --mount Docker
+> suggests to use _Volume mount_ as it is efficient due to read write
 > operations.
 
 example:

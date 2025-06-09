@@ -194,10 +194,10 @@ cat /proc/cgroups
 ls /sys/fs/cgroup
 
 # create memory control groups
-sudo cgcreate -g memory:<limiter-name>
+sudo cgcreate -g memory:<limiter_name>
 
 # set the memory limit for the control group
-sudo cgset -r memory.limit_in_bytes=15M mem_lim
+sudo cgset -r memory.limit_in_bytes=15M <limiter_name>
 
 # need to also set the swap space with below attribute
 sudo cgset -r memory.memsw.limit_in_bytes=15M mem_lim

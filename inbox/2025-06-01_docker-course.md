@@ -48,14 +48,15 @@ that the given set of processes has its own resources that only these processes
 can see and access.
 
 Docker uses _namespaces_ to isolate workspace PIDs, Unix Timesharing, Network,
-Interprocess, Mounts, User, IPC, Cgroup. i.e. Every Linux system starts with a
-PID of 1 and so on for other processes' that it runs. The container could have 1
+Inter process, Mounts, User, IPC, Cgroup. i.e. Every Linux system starts with a
+PID of 1 and so on for other processes that it runs. The container could have 1
 process running with a PID of 1 in it's own namespace, and it will be mapped to
 hosts unique PID.
 
 A namespace wraps a global system resource in an abstraction that makes it
 appear to the processes within the namespace that they have their own isolated
 instance of the global resource.  
+
 Changes to the global resource are visible to other processes that are members
 of the namespace, but are invisible to other processes.
 
@@ -97,7 +98,7 @@ pivot_root <new_location> <backup_for_old_root>
 ```
 
 - Network namespace:  
-  There are 3 key network resouces in this namespace.
+There are 3 key network resources in this namespace.
   - Network Device such as Ethernet, loopback
   - Rules such as IP Tables
   - Routing Table
@@ -190,13 +191,14 @@ cat /proc/cgroups
 
 Allows files and directories of separate file systems, knows as branches, to be
 transparently overlaid, forming a single coherent file system.  
-Contents of directories which have the same path within the merged braches will
+
+Contents of directories which have the same path within the merged branches will
 be seen together in a single merged directory, within the new, virtual
 filesystem.
 
 Overlay filesystem comprises of 3 layers:
 
-- Lower Layer: A collection of files & directories.
+- _*Lower Layer*_: A collection of files & directories.
 - Upper Layer: A collection of files & directores either in the same filesystem
   or a different filesystem.
 - Overlay Layer: A union of the files in the lower and the upper layer. In case

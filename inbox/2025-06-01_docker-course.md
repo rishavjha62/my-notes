@@ -196,9 +196,12 @@ filesystem.
 
 Overlay filesystem comprises of 3 layers:
 
-- Lower Layer: A collection of directories
-- Upper Layer
-- Overlay Layer
+- Lower Layer: A collection of files & directories.
+- Upper Layer: A collection of files & directores either in the same filesystem
+  or a different filesystem.
+- Overlay Layer: A union of the files in the lower and the upper layer. In case
+  there are duplicate files, the overlay layer contains duplicate files from the
+  upper layer.
 
 > [!NOTE] The upper and the lower layer could be a different filesystem.
 

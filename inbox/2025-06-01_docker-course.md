@@ -238,8 +238,8 @@ sudo cgexec -g cpu:cpu_limiter1 -g cpuset:cpu_limiter_set python app1.py
 sudo cgexec -g cpu:cpu_limiter2 -g cpuset:cpu_limiter_set python app2.py
 ```
 
-> [!NOTE] Control group cfs_quota_us v cpu.shares cpu.cfs_quota_us applies hard
-> limit but cpu.shares don't.
+> [!NOTE] Control group cfs_quota_us v cpu.shares  
+> cpu.cfs_quota_us applies hard limit but cpu.shares don't.
 
     - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.
     - For memory we could use the `memory=100m` flag to limit the memory to 100 Megabytes.

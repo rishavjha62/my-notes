@@ -219,7 +219,7 @@ sudo cgcreate -g cpu:<limiter-name>
 ls /sys/fs/cgroup/cpu
 
 # set the cpu limits for cpu control group
-sudo cgset -r cpu.cfs_quota_us=25000
+sudo cgset -r cpu.cfs_quota_us=25000 <limit_group_name>
 
 # check the cpu quota fields and periods
 cat /sys/fs/cgroup/cpu/cpu_limiter/cpu.cfs_quota_us
@@ -228,7 +228,18 @@ cat /sys/fs/cgroup/cpu/cpu_limiter/cpu.cfs_period_us
 # create namespace with cpu limits or run app
 sudo cgexec -g cpu:cpu_limiter unshare -fp --mount-proc
 sudo cgexec -g cpu:cpu_limiter python app.py
+
+# set the cpu share via cpu.shares & ensure process run on same core
+sudo cgset -r cpu.shares=768 <limit_group_name> # 75% for 1024
+sudo cgcreate -g cpuset:<cpu_limiter_set>
+sudo cgset -r cpuset.cpus=0 cpu_limiter_set
+sudo cgset -r cpuset.mems=0 cpu_limiter_set
+sudo cgexec -g cpu:cpu_limiter1 -g cpuset:cpu_limiter_set python app1.py
+sudo cgexec -g cpu:cpu_limiter2 -g cpuset:cpu_limiter_set python app2.py
 ```
+
+> [!NOTE] Control group cfs_quota_us v cpu.shares cpu.cfs_quota_us applies hard
+> limit but cpu.shares don't.
 
     - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.
     - For memory we could use the `memory=100m` flag to limit the memory to 100 Megabytes.

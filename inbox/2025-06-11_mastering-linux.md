@@ -1,12 +1,12 @@
 ---
 date: 2025-06-11
 tags:
-    - course
+  - course
 hubs:
-    - "[[linux]]"
-    - "[[dev]]
+  - "[[linux]]"
+  - "[[dev]]"
 urls:
-    - udemy.com/course/mastering-linux
+  - udemy.com/course/mastering-linux
 ---
 
 # mastering linux

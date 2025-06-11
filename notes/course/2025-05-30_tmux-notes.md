@@ -68,7 +68,7 @@ whole command.
 - Pane : A pane is a split region inside a tmux window where a shell runs.
   Splits can be done in horizontally or vertically.
 
-* Creatin a new split
+* Creating a new split
   - Type `split-window -h` in command mode to split window horizontally or press
     `Ctrl+b+-`.
   - Type `split-window -v` in command mode to split window vertically or press

@@ -70,7 +70,7 @@ sudo unshare -p --fork --mount-proc
 # to check all namespaces
 lsns  # -t pid -> to view PIDs
 
-# to run commands from parent namespace
+# to run commands from parent namespace inside the given container
 sudo nsenter -t <pid> -pr <command>
 
 # shows all the processes running inside the container

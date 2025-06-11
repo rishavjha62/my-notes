@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/2025-06-01_docker-course.md",
+                "file": "inbox/2025-06-11_mastering-linux.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-01_docker-course"
+              "title": "2025-06-11_mastering-linux"
             }
           }
         ]
@@ -180,8 +180,9 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "596d7a61f0205fb2",
+  "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "inbox/2025-06-01_docker-course.md",
     "inbox/2025-06-11_mastering-linux.md~",
     "inbox/4913",
     "inbox/2025-06-11_mastering-linux.md",
@@ -189,7 +190,6 @@
     "inbox/2025-06-01_docker-course.md~",
     "my-notes",
     "Excalidraw/docker-layers.excalidraw.md",
-    "inbox/2025-06-01_docker-course.md",
     "inbox/2025-05-28_master-gcp-gke.md",
     "inbox/2025-05-29_docker-cheat-sheet.md",
     "inbox/2025-05-29_docker-cheat-sheet.md~",
@@ -206,7 +206,6 @@
     "notes/course/2025-05-18-markdown_notes.md",
     "zettelkasten/2025-05-18-markdown_notes.md",
     "devops-notes.md",
-    "notes/lessons/2025-05-30_tmux-notes.md~",
     "notes/lessons/2025-05-30_tmux-notes.md",
     "notes/topics-completed/2025-05-30_tmux-notes.md",
     "2025-05-18-markdown_notes.md",

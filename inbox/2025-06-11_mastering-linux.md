@@ -45,18 +45,25 @@ Files:
 Operators:
 
 - output redirection with ">" or "1>"
-  - ">" is used to redirect output to a file.
+  - ">" or "1>" is used to redirect output to a file.
   - If the file doesn't exist, it willbe created.
   - Otherwise, the file will be overwritten.
-- out redirection with "1>>"
+- output redirection with ">>" or "1>>"
   - Used to append to a file.
   - If the file doesn't exist, we get error ": No such file or directory" & this
     error is not appended to the file.
 - error redirection with "2>" or "2>>"
 
-```bash
-du -h file1.txt file2.txt 1> output.txt 2> error.txt
-```
+  - "2>" is used to redirect errors to a file.
+  - to omit errors from the terminal in chained commands or scripts.
+
+  ```bash
+  # input and error redirection
+  du -h file1.txt file2.txt 1> output.txt 2> error.txt
+
+  # redirection or erro to /dev/null
+  du -h file1.txt file2.txt 2> /dev/null
+  ```
 
 Concepts:
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/2025-06-11_mastering-linux.md",
+                "file": "inbox/2025-06-01_docker-course.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-11_mastering-linux"
+              "title": "2025-06-01_docker-course"
             }
           }
         ]
@@ -164,8 +164,8 @@
   },
   "active": "860837c690c6c9ac",
   "lastOpenFiles": [
-    "inbox/2025-06-01_docker-course.md",
     "inbox/2025-06-11_mastering-linux.md",
+    "inbox/2025-06-01_docker-course.md",
     "/notes/course/2025-05-30_tmux-notes.md",
     "/notes/course",
     "/notes",

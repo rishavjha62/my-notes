@@ -164,13 +164,13 @@
   "lastOpenFiles": [
     "Excalidraw/docker-layers.excalidraw.md",
     "inbox/2025-06-11_mastering-linux.md",
+    "/inbox/2025-06-11_mastering-linux.md",
+    "/inbox",
     "inbox/2025-06-01_docker-course.md",
     "/notes/course/2025-05-30_tmux-notes.md",
     "/notes/course",
     "/notes",
-    "/inbox/2025-06-11_mastering-linux.md",
     "/inbox/2025-06-01_docker-course.md",
-    "/inbox",
     "Test.md",
     "templates/note.md",
     "inbox/2025-05-29_docker-cheat-sheet.md",
@@ -198,7 +198,6 @@
     "/inbox/2025-05-26_istio-notes.md",
     "/images/gke-standard-vs-autopilot-architecture.png",
     "images",
-    "dev-env-notes.md",
-    "zettelkasten/2025-05-26_istio-notes.md"
+    "dev-env-notes.md"
   ]
 }

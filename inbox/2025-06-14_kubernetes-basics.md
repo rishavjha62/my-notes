@@ -39,3 +39,8 @@ How does a container runs pod?
 
 1. We've some client (using kubectl) that run `kubectl apply -f pod.yml`
 2. kubectl is sending a POST request to a endpoint in the API server.
+3. The API server will persist the file/document in etcd.
+4. The API Server will then send the pod to any client(node) that has open watch
+   mechanism(via kubelet).
+5. The node will have a container runtime which will check if the pod is already
+   running, if not it will create a new pod on the node.

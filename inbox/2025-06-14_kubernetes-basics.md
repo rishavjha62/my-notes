@@ -37,12 +37,16 @@ When you install kubernetes on a system, the following components are installed:
 
 How does a container runs pod?
 
-1. We've some client (using kubectl) that run `kubectl apply -f pod.yml`
+1. We've some client (using _kubectl_) that run `kubectl apply -f pod.yml`
 2. kubectl is sending a POST request to a endpoint in the API server.
-3. The API server will persist the file/document in etcd.
+3. The _API server_ will persist the file/document in etcd.
 4. The API Server will then send the pod to any client(node) that has open watch
-   mechanism(via kubelet).
-5. The node will have a container runtime(docker) which will check if the pod is
-   already running, if not it will create a new pod on the node.
-6. There is a scheduler which orchestrates the pods on the nodes. This scheduler
-   has a watch mechanism for both pods and the nodes.
+   mechanism(via _kubelet_).
+5. The node will have a _container runtime_(docker) which will check if the pod
+   is already running, if not it will create a new pod on the node.
+6. There is a _scheduler_ which orchestrates the pods on the nodes. This
+   scheduler has a watch mechanism for both pods and the nodes. It will watch
+   for pods that don't have any node name specified and look for the right node
+   to put it on as efficiently as possible.
+7. The _controller_ will watch for replicasets and pods. It will look for the
+   number of pods that corresponds to the replicasets

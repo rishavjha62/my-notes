@@ -11,9 +11,12 @@ urls:
 
 # kubernetes basics
 
-- **Pods**: A container is encapsulated in to a kubernetes object known as pods.
-  A pod is single instance of an application. It is smallest object you can
-  create in kubernetes.
+- **Pods**: A pod is single instance of an application. It is smallest object
+  you can create in kubernetes. A container is encapsulated in to a kubernetes
+  object known as pods.
+
+> [!NOTE] A pod can have multiple containers.  
+> These containers are usually not of the same kind.
 
 - **Cluster**: A cluster is a set of nodes grouped together.
 

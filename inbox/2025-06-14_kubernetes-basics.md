@@ -42,5 +42,7 @@ How does a container runs pod?
 3. The API server will persist the file/document in etcd.
 4. The API Server will then send the pod to any client(node) that has open watch
    mechanism(via kubelet).
-5. The node will have a container runtime which will check if the pod is already
-   running, if not it will create a new pod on the node.
+5. The node will have a container runtime(docker) which will check if the pod is
+   already running, if not it will create a new pod on the node.
+6. There is a scheduler as which will schedule orchestrate the pods on the
+   nodes.

@@ -28,9 +28,14 @@ urls:
 
 When you install kubernetes on a system, the following components are installed:
 
-- API Server
-- etcd keystore
+- API Server -> REST API
+- etcd keystore -> database
 - scheduler
 - controller
 - container runtime
 - kubelet
+
+How does a container runs pod?
+
+1. We've some client (using kubectl) that run `kubectl apply -f pod.yml`
+2. kubectl is sending a POST request to a endpoint in the API server.

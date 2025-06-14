@@ -23,12 +23,14 @@
             "id": "413a8acf6f72172a",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/docker-layers.excalidraw.md"
+                "file": "inbox/2025-06-01_docker-course.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "docker-layers.excalidraw"
+              "icon": "lucide-file",
+              "title": "2025-06-01_docker-course"
             }
           }
         ],
@@ -193,15 +195,16 @@
   },
   "active": "413a8acf6f72172a",
   "lastOpenFiles": [
-    "inbox/2025-06-01_docker-course.md",
     "inbox/2025-06-01_docker-course.md~",
     "inbox/4913",
-    "inbox/2025-05-29_docker-cheat-sheet.md",
+    "Excalidraw/docker-layers.excalidraw.md",
+    "images/dark-docker-layers.excalidraw.svg",
+    "Excalidraw/kubernetes-architecture.excalidraw.md",
     "images/docker-layers.excalidraw.svg",
+    "inbox/2025-06-01_docker-course.md",
+    "inbox/2025-05-29_docker-cheat-sheet.md",
     "images/gke-standard-vs-autopilot-architecture.png",
     "images/sample-Dockerfile.png",
-    "Excalidraw/docker-layers.excalidraw.md",
-    "Excalidraw/kubernetes-architecture.excalidraw.md",
     "inbox/2025-06-14_kubernetes-basics.md",
     "inbox/2025-06-14_kubernetes-basics.md~",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md",

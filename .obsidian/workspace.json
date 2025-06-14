@@ -182,11 +182,12 @@
   },
   "active": "596d7a61f0205fb2",
   "lastOpenFiles": [
+    "inbox/2025-06-14_kubernetes-basics.md~",
+    "inbox/4913",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md",
     "inbox/2025-06-11_mastering-linux.md",
     "inbox/2025-06-01_docker-course.md",
     "inbox/2025-06-11_mastering-linux.md~",
-    "inbox/4913",
     "Test.md",
     "inbox/2025-06-01_docker-course.md~",
     "my-notes",
@@ -219,7 +220,6 @@
     "notes/dev-env/2025-05-30_tmux-notes.md",
     "inbox/2025-05-26_istio-notes.md",
     "inbox/2025-05-30_tmux-notes.md",
-    "zettelkasten/2025-05-30_tmux-notes.md",
     "images/gke-standard-vs-autopilot-architecture.png"
   ]
 }

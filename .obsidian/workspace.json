@@ -25,10 +25,10 @@
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/kubernetes-architecture.excalidraw.md"
+                "file": "Excalidraw/docker-layers.excalidraw.md"
               },
               "icon": "excalidraw-icon",
-              "title": "kubernetes-architecture.excalidraw"
+              "title": "docker-layers.excalidraw"
             }
           }
         ],
@@ -191,22 +191,25 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ec909fcce833e480",
+  "active": "413a8acf6f72172a",
   "lastOpenFiles": [
+    "inbox/2025-06-01_docker-course.md",
+    "inbox/2025-06-01_docker-course.md~",
+    "inbox/4913",
+    "inbox/2025-05-29_docker-cheat-sheet.md",
+    "images/docker-layers.excalidraw.svg",
+    "images/gke-standard-vs-autopilot-architecture.png",
+    "images/sample-Dockerfile.png",
     "Excalidraw/docker-layers.excalidraw.md",
     "Excalidraw/kubernetes-architecture.excalidraw.md",
     "inbox/2025-06-14_kubernetes-basics.md",
-    "inbox/4913",
     "inbox/2025-06-14_kubernetes-basics.md~",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md",
     "inbox/2025-06-11_mastering-linux.md",
-    "inbox/2025-06-01_docker-course.md",
     "inbox/2025-06-11_mastering-linux.md~",
     "Test.md",
-    "inbox/2025-06-01_docker-course.md~",
     "my-notes",
     "inbox/2025-05-28_master-gcp-gke.md",
-    "inbox/2025-05-29_docker-cheat-sheet.md",
     "inbox/2025-05-29_docker-cheat-sheet.md~",
     "images/Screenshot 2025-06-08 014010.png",
     "4913",
@@ -229,8 +232,6 @@
     "inbox/2025-05-30_postgresql-cheat-sheet.md",
     "zettelkasten/2025-05-30_postgresql-cheat-sheet.md",
     "inbox/2025-05-30_tmux-cheat-sheet.md",
-    "notes/dev-env/2025-05-30_tmux-notes.md",
-    "inbox/2025-05-26_istio-notes.md",
-    "images/gke-standard-vs-autopilot-architecture.png"
+    "notes/dev-env/2025-05-30_tmux-notes.md"
   ]
 }

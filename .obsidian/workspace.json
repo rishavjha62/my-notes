@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/2025-06-11_mastering-linux.md",
+                "file": "inbox/2025-06-14_kubernetes-basics.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-11_mastering-linux"
+              "title": "2025-06-14_kubernetes-basics"
             }
           }
         ]
@@ -180,11 +180,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ec909fcce833e480",
+  "active": "596d7a61f0205fb2",
   "lastOpenFiles": [
+    "inbox/2025-06-14_kubernetes-cheat-sheet.md",
+    "inbox/2025-06-11_mastering-linux.md",
     "inbox/2025-06-01_docker-course.md",
     "inbox/2025-06-11_mastering-linux.md~",
-    "inbox/2025-06-11_mastering-linux.md",
     "inbox/4913",
     "Test.md",
     "inbox/2025-06-01_docker-course.md~",

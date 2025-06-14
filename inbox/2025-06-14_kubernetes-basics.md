@@ -44,5 +44,5 @@ How does a container runs pod?
    mechanism(via kubelet).
 5. The node will have a container runtime(docker) which will check if the pod is
    already running, if not it will create a new pod on the node.
-6. There is a scheduler as which will schedule orchestrate the pods on the
-   nodes.
+6. There is a scheduler which orchestrates the pods on the nodes. This scheduler
+   has a watch mechanism for both pods and the nodes.

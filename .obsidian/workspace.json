@@ -11,17 +11,28 @@
             "id": "596d7a61f0205fb2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "inbox/2025-06-14_kubernetes-basics.md",
-                "mode": "preview",
-                "source": false
+                "file": "Excalidraw/docker-layers.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "2025-06-14_kubernetes-basics"
+              "icon": "excalidraw-icon",
+              "title": "docker-layers.excalidraw"
+            }
+          },
+          {
+            "id": "413a8acf6f72172a",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/kubernetes-architecture.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "kubernetes-architecture.excalidraw"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -180,8 +191,11 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "596d7a61f0205fb2",
+  "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "Excalidraw/docker-layers.excalidraw.md",
+    "Excalidraw/kubernetes-architecture.excalidraw.md",
+    "inbox/2025-06-14_kubernetes-basics.md",
     "inbox/4913",
     "inbox/2025-06-14_kubernetes-basics.md~",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md",
@@ -191,7 +205,6 @@
     "Test.md",
     "inbox/2025-06-01_docker-course.md~",
     "my-notes",
-    "Excalidraw/docker-layers.excalidraw.md",
     "inbox/2025-05-28_master-gcp-gke.md",
     "inbox/2025-05-29_docker-cheat-sheet.md",
     "inbox/2025-05-29_docker-cheat-sheet.md~",
@@ -204,7 +217,6 @@
     "Pasted Image 20250601173844_295.png",
     "Excalidraw",
     "inbox/1748774622-KTQM.md",
-    "notes/course/2025-05-18-markdown_notes.md~",
     "notes/course/2025-05-18-markdown_notes.md",
     "zettelkasten/2025-05-18-markdown_notes.md",
     "devops-notes.md",
@@ -219,7 +231,6 @@
     "inbox/2025-05-30_tmux-cheat-sheet.md",
     "notes/dev-env/2025-05-30_tmux-notes.md",
     "inbox/2025-05-26_istio-notes.md",
-    "inbox/2025-05-30_tmux-notes.md",
     "images/gke-standard-vs-autopilot-architecture.png"
   ]
 }

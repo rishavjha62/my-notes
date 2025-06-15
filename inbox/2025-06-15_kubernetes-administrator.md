@@ -87,8 +87,8 @@ There are 3 taint-effect:
 - NoSchedule -> The pods will not be scheduled on the node.
 - PreferNoSchedule -> The system will try to avoid placing a node on the pod but
   it is not guaranteed.
-
-- NoExecute
+- NoExecute -> New pods will not be scheudled on the node and existing pods will
+  be evicted if they don't tolerate the taint.
 
 ```bash
 kubectl taint nodes <node-name> key=value:taint-effect

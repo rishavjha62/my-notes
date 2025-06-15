@@ -112,3 +112,26 @@ spec:
     - name: nginx-container
       image: nginx
 ```
+
+- Replication Controller with YAML:
+
+```yml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myapp-rc
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+      spec:
+        contianers:
+          - name: nginx-container
+            iamge: nginx
+```

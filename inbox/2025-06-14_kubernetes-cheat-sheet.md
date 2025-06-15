@@ -45,16 +45,6 @@ kubectl apply -f <pod-definition.yml>
 
 # to create a run a pod
 kubectl run --image=<image-name> <pod-name>
-# create a deployment
-kubectl create deployment --image=<iamge-name> <deployment-name>
-# to expose a port on deployment
-kubectl expose deployment <deployment-name> --port 80
-# edit deployment
-kubectl edit deployment <deployment-name>
-# scale deployment
-kubectl scale deployment <deployment-name> --replicas=5
-# updating the image
-kubectl set image deployment <deployment-name> <current-image>=<new-image:1.18>
 # using object configuration file
 kubectl create -f <filename.yml>
 kubectl replace -f <filename.yml>
@@ -71,8 +61,17 @@ kubectl run nginx --image=nginx --dry-run=client -o yaml
 ## Deployment
 
 ```bash
-#Create a deployment
-kubectl create deployment --image=nginx nginx
+
+# create a deployment
+kubectl create deployment --image=<iamge-name> <deployment-name>
+# to expose a port on deployment
+kubectl expose deployment <deployment-name> --port 80
+# edit deployment
+kubectl edit deployment <deployment-name>
+# scale deployment
+kubectl scale deployment <deployment-name> --replicas=5
+# updating the image
+kubectl set image deployment <deployment-name> <current-image>=<new-image:1.18>
 
 # Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
 kubectl create deployment --image=nginx nginx --dry-run=client -o yaml
@@ -85,9 +84,11 @@ kubectl scale deployment nginx --replicas=4
 
 # Another way to do this is to save the YAML definition to a file and modify
 kubectl create deployment nginx --image=nginx --dry-run=client -o yaml > nginx-deployment.yaml
+```
 
-# service
+## service
 
+```bash
 # Create a Service named redis-service of type ClusterIP to expose pod redis on port 6379
 kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml
 # or

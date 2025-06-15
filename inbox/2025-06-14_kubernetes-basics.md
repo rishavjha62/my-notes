@@ -78,3 +78,21 @@ How does a kubernetes runs pod?
      version is detected.
 
 ![Kubernetes Architecture: How it works?](../images/kubernetes-architecture.excalidraw.svg)
+
+## YAML in kubernetes
+
+```yml
+apiVersion:
+kind:
+
+metadata:
+
+spec:
+```
+
+| Kind       | Version |
+| ---------- | ------- |
+| Pod        | v1      |
+| Service    | v1      |
+| ReplicaSet | apps/v1 |
+| Deployment | apps/v1 |

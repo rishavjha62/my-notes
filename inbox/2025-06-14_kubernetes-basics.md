@@ -43,15 +43,17 @@ urls:
 
 When you install kubernetes on a system, the following components are installed:
 
-- API Server -> REST API to interact with the kubernetes cluster.
-- etcd keystore -> Distributed reliable key value store used to store all the
-  data required to manage the cluster and ensure there are no conflicts between
-  the masters.
-- scheduler -> Responsible for distributing work or containers across multiple
-  nodes.
-- controller
-- container runtime
-- kubelet
+- **API Server** -> REST API to interact with the kubernetes cluster.
+- **etcd keystore** -> Distributed reliable key value store used to store all
+  the data required to manage the cluster and ensure there are no conflicts
+  between the masters.
+- **scheduler** -> Responsible for distributing work or containers across
+  multiple nodes.
+- **controller** -> The brain behind orchestration and responsible for bringing
+  up new containers in case a node or contianers goes down.
+- **container runtime** -> Underlying software used to run containers (docker).
+- **kubelet** -> Responsible for making sure that containers are running on the
+  node expected.
 
 How does a container runs pod?
 

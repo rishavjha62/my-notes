@@ -19,3 +19,14 @@ urls:
 - Multiple Schedulers
 - Scheduler Events
 - Configure Kubernetes Scheduler
+
+1. Manual Scheduling: How scheduling works?
+
+Every pod has a field called `nodeName` that is not set by default. The
+scheduler goes through all the pods that don't have this property set. The
+scheudler then identifies the right node for the pod by running the scheduling
+algorithm & sets the `nodeName` property on those pods by creating a binding
+object.  
+In case there is no scheduler to monitor or schedule nodes, the pods continue to
+be in pending state. You can manually schedule the pods by setting the
+`nodeName` manually on these pods.

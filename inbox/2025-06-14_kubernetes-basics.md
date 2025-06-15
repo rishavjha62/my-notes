@@ -167,4 +167,11 @@ spec:
 ```
 
 - Deployment with YAML:
+
   > YAML is same as ReplicaSet except for the `kind: Deployment`
+
+- Services with YAML:
+
+1. NodePort
+
+![NodePort service](../images/node-port-service.excalidraw.svg)

@@ -4,35 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "e2af354926a8d6f6",
+        "id": "80aca9997dd7c2b9",
         "type": "tabs",
         "children": [
           {
-            "id": "4c38411dd93b3128",
+            "id": "24696dc40a14dc70",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/docker-layers.excalidraw.md"
+                "file": "inbox/2025-06-14_kubernetes-basics.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "docker-layers.excalidraw"
-            }
-          },
-          {
-            "id": "ab8bce747b69c1bb",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/node-port-service.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "node-port-service.excalidraw"
+              "icon": "lucide-file",
+              "title": "2025-06-14_kubernetes-basics"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -192,14 +181,15 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ab8bce747b69c1bb",
+  "active": "24696dc40a14dc70",
   "lastOpenFiles": [
     "Excalidraw/docker-layers.excalidraw.md",
     "Excalidraw/node-port-service.excalidraw.md",
+    "inbox/2025-06-14_kubernetes-basics.md~",
+    "images/node-port-service.excalidraw.svg",
     "inbox/2025-06-14_kubernetes-basics.md",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md~",
     "inbox/4913",
-    "inbox/2025-06-14_kubernetes-basics.md~",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md",
     "Excalidraw/kubernetes-architecture.excalidraw.md",
     "images/kubernetes-architecture.excalidraw (1).svg",
@@ -236,7 +226,6 @@
     "notes/cheat-sheet/2025-05-30_postgresql-cheat-sheet.md",
     "inbox/2025-05-30_postgresql-cheat-sheet.md",
     "zettelkasten/2025-05-30_postgresql-cheat-sheet.md",
-    "inbox/2025-05-30_tmux-cheat-sheet.md",
-    "notes/dev-env/2025-05-30_tmux-notes.md"
+    "inbox/2025-05-30_tmux-cheat-sheet.md"
   ]
 }

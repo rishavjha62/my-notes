@@ -66,9 +66,11 @@ kubectl run nginx --image=nginx
 
 # Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
 kubectl run nginx --image=nginx --dry-run=client -o yaml
+```
 
-# Deployment
+## Deployment
 
+```bash
 #Create a deployment
 kubectl create deployment --image=nginx nginx
 

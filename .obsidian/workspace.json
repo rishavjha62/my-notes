@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e078e4fcc0516f01",
+        "id": "e2af354926a8d6f6",
         "type": "tabs",
         "children": [
           {
-            "id": "c66033b3d19d35f5",
+            "id": "4c38411dd93b3128",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "c47e20f8425fd4dc",
@@ -180,13 +181,13 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ec909fcce833e480",
+  "active": "4c38411dd93b3128",
   "lastOpenFiles": [
-    "inbox/2025-06-14_kubernetes-basics.md~",
-    "inbox/4913",
-    "inbox/2025-06-14_kubernetes-cheat-sheet.md",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md~",
+    "inbox/4913",
     "inbox/2025-06-14_kubernetes-basics.md",
+    "inbox/2025-06-14_kubernetes-basics.md~",
+    "inbox/2025-06-14_kubernetes-cheat-sheet.md",
     "Excalidraw/kubernetes-architecture.excalidraw.md",
     "images/kubernetes-architecture.excalidraw (1).svg",
     "images/kubernetes-architecture.excalidraw.svg",

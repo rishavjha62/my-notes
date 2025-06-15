@@ -121,3 +121,17 @@ kubectl rollout undo deployment/myapp-dp
 ```bash
 kubectl get pods --selector app=App1
 ```
+
+### Taints and Tolerations
+
+```bash
+kubectl taint nodes <node-name> key=value:NoSchedule
+kubectl taint nodes <node-name> key=vlaue:PreferNoScheudle
+kuectl taint nodes <node-name> key=vlaue:NoExecute
+
+# to check the taint on the nodes
+kubectl describe nodes <node-name> | grep Taint
+
+# to remove taint from controlplane first run the above command and use the output
+kubectl taint nodes <ndoe-name> <output-from-previous-command>-
+```

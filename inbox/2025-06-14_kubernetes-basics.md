@@ -11,6 +11,13 @@ urls:
 
 # kubernetes basics
 
+- **image**: An image is a package or a template. it is used to create
+  contianers.
+
+- **containers**: A completly isolated environment that can have thier own
+  proccess, network, mounts, etc but they share the same OS kernel. They are
+  running instances of images.
+
 - **Pods**: A pod is single instance of an application. It is smallest object
   you can create in kubernetes. A container is encapsulated in to a kubernetes
   object known as pods.

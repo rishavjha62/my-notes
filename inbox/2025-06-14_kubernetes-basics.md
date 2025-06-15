@@ -49,9 +49,12 @@ How does a container runs pod?
    for pods that don't have any node name specified and look for the right node
    to put it on as efficiently as possible.
 7. Kubernetes bundles together controller process together as the _controller
-   manager_. i. The _replicaset controller_ will watch for replicasets and pods.
-   It will query for the number of pods that corresponds to the replicasets, and
-   it will issue the creation of these pods if not present already. ii. The
-   _deployment controller_ will watch for deployments and replicasets. It wil
-   query the replicasets and issue creation of replicasets if a new version is
-   detected.
+   manager_.
+   - The _replicaset controller_ will watch for replicasets and pods. It will
+     query for the number of pods that corresponds to the replicasets, and it
+     will issue the creation of these pods if not present already.
+   - The _deployment controller_ will watch for deployments and replicasets. It
+     wil query the replicasets and issue creation of replicasets if a new
+     version is detected.
+
+![Kubernetes Architecture: How it works?](../images/kubernetes-architecture.excalidraw.svg)

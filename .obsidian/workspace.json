@@ -22,18 +22,6 @@
             }
           },
           {
-            "id": "e8dd0cb0ff6127b4",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/kubernetes-architecture.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "kubernetes-architecture.excalidraw"
-            }
-          },
-          {
             "id": "e1088fcef6cedc0a",
             "type": "leaf",
             "state": {
@@ -45,8 +33,7 @@
               "title": "kubernetes-architecture.excalidraw"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -205,12 +192,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "e1088fcef6cedc0a",
+  "active": "413a8acf6f72172a",
   "lastOpenFiles": [
     "inbox/2025-06-14_kubernetes-basics.md~",
     "inbox/4913",
-    "images/kubernetes-architecture.excalidraw.svg",
     "Excalidraw/kubernetes-architecture.excalidraw.md",
+    "images/kubernetes-architecture.excalidraw.svg",
     "inbox/2025-06-14_kubernetes-basics.md",
     "inbox/2025-06-01_docker-course.md",
     "Excalidraw/docker-layers.excalidraw.md",

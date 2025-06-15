@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9847f7f8df2102e3",
+        "id": "4446d16cef1b448e",
         "type": "tabs",
         "children": [
           {
-            "id": "03ebb238199c4df0",
+            "id": "cd901ad0a0529d2d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -180,12 +180,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "81915fc470bb4782",
+  "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "inbox/2025-06-14_kubernetes-basics.md",
     "inbox/2025-06-14_kubernetes-basics.md~",
     "Excalidraw/kubernetes-architecture.excalidraw.md",
     "images/kubernetes-architecture.excalidraw (1).svg",
-    "inbox/2025-06-14_kubernetes-basics.md",
     "inbox/4913",
     "images/kubernetes-architecture.excalidraw.svg",
     "inbox/2025-06-01_docker-course.md",

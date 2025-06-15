@@ -25,15 +25,6 @@ goal, however in the declarative approach you define the final state.
 kubectl create -f <pod-definition.yml>
 # or
 kubectl apply -f <pod-definition.yml>
-
-# get the pod details
-kubectl get pods
-# more details
-kubectl get pods -o wide
-
-# get more detailed description
-kubectl describe pods <pod-name>
-
 ```
 
 - Imperative approach for pods
@@ -52,5 +43,23 @@ kubectl expose deployment <deployment-name> --port 80
 kubectl edit deployment <deployment-name>
 
 # scale deployment
-kubectl scale deployment <deployment-name> --r
+kubectl scale deployment <deployment-name> --replicas=5
+
+# updating the image
+kubectl set image deployment <deployment-name> <current-image>=<new-image:1.18>
+
+# using object configuration file
+kubectl create -f <filename.yml>
+kubectl replace -f <filename.yml>
+kubectl delete -f <filename.yml>
+```
+
+```bash
+# get the pod details
+kubectl get pods
+# more details
+kubectl get pods -o wide
+
+# get more detailed description
+kubectl describe pods <pod-name>
 ```

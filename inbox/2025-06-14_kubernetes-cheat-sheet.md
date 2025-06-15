@@ -35,3 +35,22 @@ kubectl get pods -o wide
 kubectl describe pods <pod-name>
 
 ```
+
+- Imperative approach for pods
+
+```bash
+# to create a run a pod
+kubectl run --image=<image-name> <pod-name>
+
+# create a deployment
+kubectl create deployment --image=<iamge-name> <deployment-name>
+
+# to expose a port on deployment
+kubectl expose deployment <deployment-name> --port 80
+
+# edit deployment
+kubectl edit deployment <deployment-name>
+
+# scale deployment
+kubectl scale deployment <deployment-name> --r
+```

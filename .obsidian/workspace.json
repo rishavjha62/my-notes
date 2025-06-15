@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4446d16cef1b448e",
+        "id": "e078e4fcc0516f01",
         "type": "tabs",
         "children": [
           {
-            "id": "cd901ad0a0529d2d",
+            "id": "c66033b3d19d35f5",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "inbox/2025-06-14_kubernetes-basics.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-06-14_kubernetes-basics"
             }
           }
         ]
@@ -176,7 +180,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "cd901ad0a0529d2d",
+  "active": "ec909fcce833e480",
   "lastOpenFiles": [
     "inbox/2025-06-14_kubernetes-cheat-sheet.md",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md~",

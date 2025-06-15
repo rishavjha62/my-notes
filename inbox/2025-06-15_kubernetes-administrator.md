@@ -79,4 +79,18 @@ particular use case so we would like only those pods to be put on node 1 that
 belong to the applications.  
 First, we prevent all nodes from being placed on node 1 by placing a blue taint
 on the node. None of the pods have any tolerations, therefore none of the pods
-will be placed on this node.
+will be placed on this node. Now, if the pod D belongs to our applications, we
+add a toleration to our D pod.
+
+There are 3 taint-effect:
+
+- NoSchedule -> The pods will not be scheduled on the node.
+- PreferNoSchedule -> The system will try to avoid placing a node on the pod but
+  it is not guaranteed.
+
+- NoExecute
+
+```bash
+kubectl taint nodes <node-name> key=value:taint-effect
+
+```

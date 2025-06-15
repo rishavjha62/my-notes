@@ -58,7 +58,7 @@ kubectl run nginx --image=nginx
 kubectl run nginx --image=nginx --dry-run=client -o yaml
 ```
 
-## Deployment
+- Deployment creation & management
 
 ```bash
 
@@ -86,7 +86,7 @@ kubectl scale deployment nginx --replicas=4
 kubectl create deployment nginx --image=nginx --dry-run=client -o yaml > nginx-deployment.yaml
 ```
 
-## service
+- Service creation & management
 
 ```bash
 # Create a Service named redis-service of type ClusterIP to expose pod redis on port 6379
@@ -98,4 +98,17 @@ kubectl create service clusterip redis --tcp=6379:6379 --dry-run=client -o yaml
 kubectl expose pod nginx --type=NodePort --port=80 --name=nginx-service --dry-run=client -o yaml
 # or
 kubectl create service nodeport nginx --tcp=80:80 --node-port=30080 --dry-run=client -o yaml
+```
+
+- Updates and Roll back of deployments
+
+```bash
+# check status of your rollouts
+kubectl rollout status deployment/myapp
+
+# check history of your rollouts
+kubectl rollout history deployment/myapp-dp
+
+# undo a change
+kubectl rollout undo deployment/myapp-dp
 ```

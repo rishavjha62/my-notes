@@ -14,6 +14,7 @@ urls:
 
 - Manual Scheduling
 - Labels & Selectors
+- Taints & Tolerations
 - Resource Limits
 - Daemon Sets
 - Multiple Schedulers
@@ -65,3 +66,11 @@ Services, Deployments, ReplicaSet use labels to create pods.
 
 Annotations: They're used to record other details like buildVersion, contact
 details, phone number, etc.
+
+3. Taints & Tolerations:
+
+Taints and Toleration are used to set restrictions on what pods can be scheudled
+on a node.
+
+For example: If we've 3 nodes and 4 pods, the scheduler tries to place these
+pods on available worker nodes.

@@ -34,9 +34,10 @@ be in pending state. You can manually schedule the pods by setting the
 
 > The `nodeName` can only be assigned at creation time.
 
-> [!NOTE] The way to assign a existing pod to another node.  
-> Create a binding object & send a POST request to the pod's binding API thus
-> mimicing what the actual scheduler does.  
+> [!NOTE]  
+> The way to assign a existing pod to another node is by creating a binding
+> object & send a POST request to the pod's binding API thus mimicing what the
+> actual scheduler does.  
 > You must convert the below yml file to json format as shown below.
 >
 > ```yml

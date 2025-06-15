@@ -27,7 +27,8 @@ Daemon.
 - Docker CLI: It is the command line interface that that we can use to perform
   actions such as running a new container, destroying it, etc.
 
-> [!Note] Docker CLI doesn't necessarliy needs to be on the same host.  
+> [!Note]  
+> Docker CLI doesn't necessarliy needs to be on the same host.  
 > We can have the cli remotely and manage the docker daemon on a remote machine.
 
 i.e. we can run all the commands remotely by specifying the `-H` flag as shown
@@ -163,7 +164,8 @@ sudo echo "0 <uid_of_the_unpriviledged_user> <gid_of_the_unpriviledged_user> <co
 
 ```
 
-> [!NOTE] How is all this information useful?  
+> [!NOTE]  
+> How is all this information useful?  
 > This gives insight on how a container uses namespace feature from linux. We
 > can start our own container(with debug tools) which joins the same namespace
 > as the target contianer for troubleshooting purpose.
@@ -238,7 +240,8 @@ sudo cgexec -g cpu:cpu_limiter1 -g cpuset:cpu_limiter_set python app1.py
 sudo cgexec -g cpu:cpu_limiter2 -g cpuset:cpu_limiter_set python app2.py
 ```
 
-> [!NOTE] Control group cfs_quota_us v cpu.shares  
+> [!NOTE]  
+> Control group cfs_quota_us v cpu.shares  
 > cpu.cfs_quota_us applies hard limit but cpu.shares don't.
 
     - This can be done by providing `--cpus=0.5` flag to ensure that container could only use 50% of the host cpu resource.
@@ -282,7 +285,8 @@ sudo unshare -fpiu --mount-proc bash
 pivot_root . old_root
 ```
 
-> [!NOTE] The upper and the lower layer could be a different filesystem.
+> [!NOTE]  
+> The upper and the lower layer could be a different filesystem.
 
 > [!NOTE] Docker stores all it's data by default inside `/var/lib/docker`.
 

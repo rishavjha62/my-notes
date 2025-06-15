@@ -11,17 +11,28 @@
             "id": "4c38411dd93b3128",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "inbox/2025-06-14_kubernetes-basics.md",
-                "mode": "preview",
-                "source": false
+                "file": "Excalidraw/docker-layers.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "2025-06-14_kubernetes-basics"
+              "icon": "excalidraw-icon",
+              "title": "docker-layers.excalidraw"
+            }
+          },
+          {
+            "id": "ab8bce747b69c1bb",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/node-port-service.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "node-port-service.excalidraw"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -181,18 +192,19 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "4c38411dd93b3128",
+  "active": "ab8bce747b69c1bb",
   "lastOpenFiles": [
+    "Excalidraw/docker-layers.excalidraw.md",
+    "Excalidraw/node-port-service.excalidraw.md",
+    "inbox/2025-06-14_kubernetes-basics.md",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md~",
     "inbox/4913",
-    "inbox/2025-06-14_kubernetes-basics.md",
     "inbox/2025-06-14_kubernetes-basics.md~",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md",
     "Excalidraw/kubernetes-architecture.excalidraw.md",
     "images/kubernetes-architecture.excalidraw (1).svg",
     "images/kubernetes-architecture.excalidraw.svg",
     "inbox/2025-06-01_docker-course.md",
-    "Excalidraw/docker-layers.excalidraw.md",
     "inbox/2025-06-01_docker-course.md~",
     "images/dark-docker-layers.excalidraw.svg",
     "images/docker-layers.excalidraw.svg",

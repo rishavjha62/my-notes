@@ -30,3 +30,9 @@ object.
 In case there is no scheduler to monitor or schedule nodes, the pods continue to
 be in pending state. You can manually schedule the pods by setting the
 `nodeName` manually on these pods.
+
+> The `nodeName` can only be assigned at creation time.
+
+> [!NOTE] The way to assign a existing pod to another node.  
+> Create a binding object & send a POST request to the pod's binding API thus
+> mimicing what the actual scheduler does.

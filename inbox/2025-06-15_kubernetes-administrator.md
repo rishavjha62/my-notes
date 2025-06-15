@@ -57,8 +57,11 @@ be in pending state. You can manually schedule the pods by setting the
 2. Labels & Selectors
 
 Labels : They are properties attached to items. They are defined under metadata
-under the labels section.
+under the labels section and can be added as key value format.
 
 Selectors: They help with filtering those items based on the labels.
 
 Services, Deployments, ReplicaSet use labels to create pods.
+
+Annotations: They're used to record other details like buildVersion, contact
+details, phone number, etc.

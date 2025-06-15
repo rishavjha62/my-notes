@@ -6,6 +6,7 @@ hubs:
   - "[[kubernetes]]"
 urls:
   - udemy.com/course/learn-kubernetes/
+  - udemy.com/course/certified-kubernetes-administrator-with-practice-tests
 ---
 
 # kubernetes cheat sheet
@@ -112,3 +113,7 @@ kubectl rollout history deployment/myapp-dp
 # undo a change
 kubectl rollout undo deployment/myapp-dp
 ```
+
+## kubernetes administrator
+
+### scheudling

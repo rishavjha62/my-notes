@@ -82,7 +82,7 @@ on the node. None of the pods have any tolerations, therefore none of the pods
 will be placed on this node. Now, if the pod D belongs to our applications, we
 add a toleration to our D pod.
 
-There are 3 taint-effect:
+Taints are applied on pods. There are 3 taint effect:
 
 - NoSchedule -> The pods will not be scheduled on the node.
 - PreferNoSchedule -> The system will try to avoid placing a node on the pod but
@@ -94,3 +94,27 @@ There are 3 taint-effect:
 kubectl taint nodes <node-name> key=value:taint-effect
 
 ```
+
+Tolerations are added to pods and can be added in the pod definition file under
+the spec section.
+
+```yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+  tolerations:
+    - key: "app"
+      operator: "Equal"
+      value: "blue"
+      effect: "NoSchedule"
+```
+
+> [!NOTE]  
+> Taints and Tolerations are only meant to restrict nodes from accepting certain
+> pods.

@@ -133,6 +133,36 @@ spec:
     spec:
       contianers:
         - name: nginx-container
-          iamge: nginx
+          image: nginx
   replicas: 3
+```
+
+- Replication with ReplicaSet YAML:
+
+> [!NOTE] The selector field in spec makes it different from
+> ReplicationController
+
+```yml
+apiVerison: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replicaset
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      type: front-end
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      contianers:
+        - name: nginx-container
+          image: nginx
 ```

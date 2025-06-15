@@ -18,18 +18,26 @@ commands, or declaratively, by writing manifests and using `kubectl apply`.
 In the imperative approach you give step by step instructions to reach your
 goal, however in the declarative approach you define the final state.
 
-- Declarative approach for pods
+- Pods creation & management
 
 ```bash
+# get the pod details
+kubectl get pods
+# more details
+kubectl get pods -o wide
+
+# get more detailed description
+kubectl describe pods <pod-name>
+
+# Declarative approach for pods
+
 # creating pods with yml file
 kubectl create -f <pod-definition.yml>
 # or
 kubectl apply -f <pod-definition.yml>
-```
 
-- Imperative approach for pods
+#Imperative approach for pod
 
-```bash
 # to create a run a pod
 kubectl run --image=<image-name> <pod-name>
 
@@ -51,15 +59,6 @@ kubectl set image deployment <deployment-name> <current-image>=<new-image:1.18>
 # using object configuration file
 kubectl create -f <filename.yml>
 kubectl replace -f <filename.yml>
-kubectl delete -f <filename.yml>
-```
+kubectl delete -f <filename.yml
 
-```bash
-# get the pod details
-kubectl get pods
-# more details
-kubectl get pods -o wide
-
-# get more detailed description
-kubectl describe pods <pod-name>
 ```

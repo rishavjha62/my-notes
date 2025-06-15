@@ -36,3 +36,19 @@ be in pending state. You can manually schedule the pods by setting the
 > [!NOTE] The way to assign a existing pod to another node.  
 > Create a binding object & send a POST request to the pod's binding API thus
 > mimicing what the actual scheduler does.
+>
+> ```yml
+>
+> ```
+>
+> ````
+>
+> ```bash
+> curl --header "Content-Type: application/json" --request POST --data '{"apiVersion":"v1", "kind": "Binding"...} \
+> http://$SERVER/api/v1/namespaces/default/pods/$PODNAME/binding/
+> ```
+> ````
+
+```
+
+```

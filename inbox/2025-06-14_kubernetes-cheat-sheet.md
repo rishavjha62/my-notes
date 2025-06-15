@@ -9,3 +9,14 @@ urls:
 ---
 
 # kubernetes cheat sheet
+
+## Declarative and Imperative commands for Pods
+
+- Declarative:
+
+```bash
+# creating pods with yml file
+kubectl create -f <pod-definition.yml>
+# or
+kubectl apply -f <pod-definition.yml>
+```

@@ -211,7 +211,7 @@ spec:
 
 3. LoadBalancer
 
-Same as NodePort but applicable on cloud only.
+> Same as NodePort but applicable on cloud only.
 
 ```yml
 spec:

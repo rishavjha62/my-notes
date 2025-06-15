@@ -11,7 +11,11 @@ urls:
 
 # kubernetes basics
 
-- **image**: An image is a package or a template. it is used to create
+- **kubernetes**: It is a container orchestration technology used to orchestrate
+  the deployment and management of 100s and 1000s of containers in a clustered
+  envrionment.
+
+- **image**: An image is a package or a template that is used to create
   contianers.
 
 - **containers**: A completly isolated environment that can have thier own
@@ -25,9 +29,13 @@ urls:
 > [!NOTE] A pod can have multiple containers.  
 > These containers are usually not of the same kind.
 
-- **Cluster**: A cluster is a set of nodes grouped together.
+- **cluster**: A cluster is a set of nodes grouped together.
 
-- **Master Node**: A master node is another node in the cluster with kubernetes
+- **nodes(minions)**: A node is a machine physical or virtual on which
+  kubernetes is installed. It is a worker machine where contianers will be
+  launched.
+
+- **master node**: A master node is another node in the cluster with kubernetes
   installed. It watches over the other nodes in the cluster and is responsible
   for orchestration of the contianers on worker nodes.
 
@@ -35,9 +43,12 @@ urls:
 
 When you install kubernetes on a system, the following components are installed:
 
-- API Server -> REST API
-- etcd keystore -> database
-- scheduler
+- API Server -> REST API to interact with the kubernetes cluster.
+- etcd keystore -> Distributed reliable key value store used to store all the
+  data required to manage the cluster and ensure there are no conflicts between
+  the masters.
+- scheduler -> Responsible for distributing work or containers across multiple
+  nodes.
 - controller
 - container runtime
 - kubelet

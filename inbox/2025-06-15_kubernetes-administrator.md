@@ -72,5 +72,11 @@ details, phone number, etc.
 Taints and Toleration are used to set restrictions on what pods can be scheudled
 on a node.
 
-For example: If we've 3 nodes and 4 pods, the scheduler tries to place these
-pods on available worker nodes.
+For example: If we've 3 nodes (node 1, 2, 3 & 4) and 4 pods (A, B, C, D), the
+scheduler tries to place these pods on available worker nodes. As of now there
+are no restrictions. Let's assume we've dedicated resources on node 1 for a
+particular use case so we would like only those pods to be put on node 1 that
+belong to the applications.  
+First, we prevent all nodes from being placed on node 1 by placing a blue taint
+on the node. None of the pods have any tolerations, therefore none of the pods
+will be placed on this node.

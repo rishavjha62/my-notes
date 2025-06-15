@@ -139,8 +139,7 @@ spec:
 
 - Replication with ReplicaSet YAML:
 
-> [!NOTE] The selector field in spec makes it different from
-> ReplicationController
+> The selector field in spec makes it different from ReplicationController
 
 ```yml
 apiVerison: apps/v1
@@ -166,3 +165,6 @@ spec:
         - name: nginx-container
           image: nginx
 ```
+
+- Deployment with YAML:
+  > YAML is same as ReplicaSet except for the `kind: Deployment`

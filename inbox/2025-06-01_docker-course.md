@@ -286,9 +286,8 @@ pivot_root . old_root
 ```
 
 > [!NOTE]  
-> The upper and the lower layer could be a different filesystem.
-
-> [!NOTE] Docker stores all it's data by default inside `/var/lib/docker`.
+> The upper and the lower layer could be a different filesystem.  
+> Docker stores all it's data by default inside `/var/lib/docker`.
 
 ## Layered Architecture:
 
@@ -315,9 +314,9 @@ it when running the docker container using the flag
 `-v /path/on/host:/path/on/container` command. This is called _Bind Mounting_.
 Similary we can use the _Volume mount_ to mount the volume we created above.
 
-> [!NOTE] Using the -v flag is the old way and is replaced with --mount Docker
-> suggests to use _Volume mount_ as it is efficient due to read write
-> operations.
+> [!NOTE]  
+> Using the -v flag is the old way and is replaced with --mount Docker suggests
+> to use _Volume mount_ as it is efficient due to read write operations.
 
 example:
 
@@ -339,5 +338,6 @@ Some of the common storage drivers are:
 5. Overlay
 6. Overlay2
 
-> [!NOTE] The storage drivers are choosen based on the underlying OS.  
+> [!NOTE]  
+> The storage drivers are choosen based on the underlying OS.  
 > i.e. Overlay2 is used for Ubuntu.

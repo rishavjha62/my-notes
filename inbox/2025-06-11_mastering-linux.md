@@ -77,5 +77,6 @@ Concepts:
       - 1: standard output or stdout
       - 2: standard error or stderr
 
-> [!NOTE] We can combine stream operators  
+> [!NOTE]  
+> We can combine stream operators  
 > Like error to a seperate file and output in a seperate one.

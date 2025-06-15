@@ -26,7 +26,8 @@ urls:
   you can create in kubernetes. A container is encapsulated in to a kubernetes
   object known as pods.
 
-> [!NOTE] A pod can have multiple containers.  
+> [!NOTE]  
+> A pod can have multiple containers.  
 > These containers are usually not of the same kind.
 
 - **cluster**: A cluster is a set of nodes grouped together.

@@ -116,4 +116,8 @@ kubectl rollout undo deployment/myapp-dp
 
 ## kubernetes administrator
 
-### scheudling
+### Labels & Selectors
+
+```bash
+kubectl get pods --selector app=App1
+```

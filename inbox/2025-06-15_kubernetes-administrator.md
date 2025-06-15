@@ -53,3 +53,12 @@ be in pending state. You can manually schedule the pods by setting the
 > curl --header "Content-Type: application/json" --request POST --data '{"apiVersion":"v1", "kind": "Binding"...} \
 > http://$SERVER/api/v1/namespaces/default/pods/$PODNAME/binding/
 > ```
+
+2. Labels & Selectors
+
+Labels : They are properties attached to items. They are defined under metadata
+under the labels section.
+
+Selectors: They help with filtering those items based on the labels.
+
+Services, Deployments, ReplicaSet use labels to create pods.

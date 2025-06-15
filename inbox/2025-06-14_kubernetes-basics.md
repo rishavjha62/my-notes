@@ -96,3 +96,19 @@ spec:
 | Service    | v1      |
 | ReplicaSet | apps/v1 |
 | Deployment | apps/v1 |
+
+- Pods with YAML:
+
+```yml
+apiVerison: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  cotainers:
+    - name: nginx-container
+      image: nginx
+```

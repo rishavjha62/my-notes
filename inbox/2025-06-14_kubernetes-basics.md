@@ -55,7 +55,7 @@ When you install kubernetes on a system, the following components are installed:
 - **kubelet** -> Responsible for making sure that containers are running on the
   node expected.
 
-How does a container runs pod?
+How does a kubernetes runs pod?
 
 1. We've some client (using _kubectl_) that run `kubectl apply -f pod.yml`
 2. kubectl is sending a POST request to a endpoint in the API server.

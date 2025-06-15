@@ -130,8 +130,9 @@ spec:
       labels:
         app: myapp
         type: front-end
-      spec:
-        contianers:
-          - name: nginx-container
-            iamge: nginx
+    spec:
+      contianers:
+        - name: nginx-container
+          iamge: nginx
+  replicas: 3
 ```

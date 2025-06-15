@@ -118,4 +118,4 @@ spec:
 
 > [!NOTE]  
 > Taints and Tolerations are only meant to restrict nodes from accepting certain
-> pods.
+> pods. It doesn't guarantee that a pod will always be placed on a certain node.

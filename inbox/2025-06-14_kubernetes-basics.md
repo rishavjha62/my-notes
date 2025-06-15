@@ -175,3 +175,45 @@ spec:
 1. NodePort
 
 ![NodePort service](../images/node-port-service.excalidraw.svg)
+
+```yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+spec:
+  type: NodePort
+  ports:
+    - targetPort: 80
+      port: 80
+      nodePort: 30008
+  selector:
+    app: myapp
+    type: front-end
+```
+
+2. ClusterIP
+
+```yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: back-end
+spec:
+  type: ClusterIP
+  ports:
+    - targetPort: 80
+      port: 80
+  selector:
+    app: myapp
+    type: backend
+```
+
+3. LoadBalancer
+
+Same as NodePort but applicable on cloud only.
+
+```yml
+spec:
+  type: LoadBalancer
+```

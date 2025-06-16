@@ -127,3 +127,16 @@ spec:
 To set limitations on the pods so that they can only run on certain nodes. We
 can do this by specifying the `NodeSelector` field in the pod definition file
 under the spec section.
+
+```yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+  NodeSelector:
+  size: Large
+```

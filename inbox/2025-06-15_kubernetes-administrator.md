@@ -198,14 +198,15 @@ node affinity types:
 | Type2 | Preferred        | Ignored         |
 | Type3 | Required         | Required        |
 
-6. Resource Requirements & Limitations The kube scheduler decides which node the
-   pod goes on to. The scheduler considers the amount of resource required by
-   the pod and those available on the nodes and identies the best nodes to place
-   the pod on.  
-   If sufficient resources are not avialable on any of the nodes, the scheduler
-   then holds back scheduling the pod and the pod will be in pending state.  
-   To define the resources used by the pod, we create a section named
-   `resources` under the `spec>containers`.
+6. Resource Requirements & Limitations
+
+The kube scheduler decides which node the pod goes on to. The scheduler
+considers the amount of resource required by the pod and those available on the
+nodes and identies the best nodes to place the pod on.  
+If sufficient resources are not avialable on any of the nodes, the scheduler
+then holds back scheduling the pod and the pod will be in pending state.  
+To define the resources used by the pod, we create a section named `resources`
+under the `spec>containers`.
 
 ```yml
 apiVersion: v1
@@ -239,4 +240,8 @@ section in `spec>containers` as shown above.
 > The pod will be terminated in case it constantly tries to use more memory than
 > what is defined and will give OOM(Out of Memory) error in the logs.
 
-> [!NOTE] By default kubernetes doesn't have a cpu or memory request limit set.
+> [!NOTE]  
+> By default kubernetes doesn't have a cpu or memory request limit set.
+
+Limit Ranges  
+We can ensure all pods have some default resource set by using **limit ranges**.

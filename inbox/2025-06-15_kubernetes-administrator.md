@@ -126,7 +126,7 @@ spec:
 
 To set limitations on the pods so that they can only run on certain nodes. We
 can do this by specifying the `NodeSelector` field in the pod definition file
-under the spec section.
+under the spec section & labeling the node as done in the pod definition file.
 
 ```yml
 apiVersion: v1
@@ -138,5 +138,13 @@ spec:
     - name: nginx
       image: nginx
   NodeSelector:
-  size: Large
+    size: Large
 ```
+
+```bash
+kubectl label ndoes node01 size=Large
+```
+
+5. Node Affinity:  
+   The primary feature of Node Affinity is to ensure that pods are hosted on
+   particular nodes.

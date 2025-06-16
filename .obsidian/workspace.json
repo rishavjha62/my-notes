@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "inbox/2025-06-14_kubernetes-basics.md",
+                "file": "inbox/2025-06-15_kubernetes-administrator.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-06-14_kubernetes-basics"
+              "title": "Outline of 2025-06-15_kubernetes-administrator"
             }
           },
           {
@@ -162,12 +162,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,7 +180,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "24696dc40a14dc70",
+  "active": "81915fc470bb4782",
   "lastOpenFiles": [
     "inbox/2025-06-15_kubernetes-administrator.md~",
     "inbox/4913",

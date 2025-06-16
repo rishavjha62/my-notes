@@ -169,4 +169,17 @@ spec:
               operator: In
               value:
                 - Large
+                - Medium
+```
+
+```yml
+affinity:
+  nodeAAffinity:
+    requiredDuringSchedulingIgnoreDuringExecution:
+    nodeSelectorTerms:
+      - matchExpressions:
+          - key: size
+            operator: NotIn
+            value:
+              - Small
 ```

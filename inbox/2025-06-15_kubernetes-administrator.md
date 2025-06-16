@@ -205,8 +205,29 @@ node affinity types:
    If sufficient resources are not avialable on any of the nodes, the scheduler
    then holds back scheduling the pod and the pod will be in pending state.  
    To define the resources used by the pod, we create a section named
-   `resources` under the spec.
+   `resources` under the `spec>containers`.
 
 ```yml
-apiVersion:
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simple-webapp-color
+  labels:
+    name: simple-webapp-color
+spec:
+  containers:
+    - name: simple-webapp-color
+      image: simple-webapp-color
+      ports:
+        - contianerPort: 8080
+      resources:
+        requests:
+          memory: "4Gi"
+          cpu: 2
+        limits:
+          memory: "2Gi"
+          cpu: 2
 ```
+
+We can also set a limit on the resouces the pod can access under the `resources`
+section in `spec>containers` as shown above.

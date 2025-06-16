@@ -231,3 +231,10 @@ spec:
 
 We can also set a limit on the resouces the pod can access under the `resources`
 section in `spec>containers` as shown above.
+
+> [!NOTE]  
+> A pod can only use the cpu defined in the limits however it can use more
+> Memory than what is specified. The system thorttles the cpu so that it can go
+> beyond the defined limit.  
+> The pod will be terminated in case it constantly tries to use more memory than
+> what is defined and will give OOM(Out of Memory) error in the logs.

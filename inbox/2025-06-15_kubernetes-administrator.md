@@ -19,6 +19,7 @@ urls:
 - Node Affinity
 - Resource Limits
 - Daemon Sets
+- Static Pods
 - Multiple Schedulers
 - Scheduler Events
 - Configure Kubernetes Scheduler
@@ -281,3 +282,20 @@ spec:
     limit.cpu: 10
     limit.memory: 10Gi
 ```
+
+7. Daemon Sets:
+
+Daemon Sets are like ReplicaSet as it helps to deploy multiple instances of
+pods. It runs one copy of pod on each node in the cluster. Whenever a new node
+is added, a replica of the pod is deployed on the node.  
+Use cases of daemon sets:
+
+- Monitorning agent
+- logs viewer
+- kube-proxy can be deployed as a daemon set
+- networking solutions like weavenet reuquires an agent on each node.
+
+It can deployed with a yaml definition file and looks similar to the ReplicaSet.
+The kind is of the type DaemonSet `kind: DaemonSet`.
+
+> It uses default scheduler & node affinity to deploy a pod on each node.

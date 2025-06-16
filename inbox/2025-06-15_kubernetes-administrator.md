@@ -48,7 +48,7 @@ be in pending state. You can manually schedule the pods by setting the
 > metadata:
 >   name: nginx
 > target:
->   apiVerison: v1
+>   apiVersion: v1
 >   kind: Node
 >   name: node02
 > ```
@@ -197,3 +197,16 @@ node affinity types:
 | Type1 | Required         | Ignored         |
 | Type2 | Preferred        | Ignored         |
 | Type3 | Required         | Required        |
+
+6. Resource Requirements & Limitations The kube scheduler decides which node the
+   pod goes on to. The scheduler considers the amount of resource required by
+   the pod and those available on the nodes and identies the best nodes to place
+   the pod on.  
+   If sufficient resources are not avialable on any of the nodes, the scheduler
+   then holds back scheduling the pod and the pod will be in pending state.  
+   To define the resources used by the pod, we create a section named
+   `resources` under the spec.
+
+```yml
+apiVersion:
+```

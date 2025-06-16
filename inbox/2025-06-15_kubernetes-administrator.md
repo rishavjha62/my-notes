@@ -15,6 +15,8 @@ urls:
 - Manual Scheduling
 - Labels & Selectors
 - Taints & Tolerations
+- Node selector
+- Node Affinity
 - Resource Limits
 - Daemon Sets
 - Multiple Schedulers
@@ -119,3 +121,9 @@ spec:
 > [!NOTE]  
 > Taints and Tolerations are only meant to restrict nodes from accepting certain
 > pods. It doesn't guarantee that a pod will always be placed on a certain node.
+
+4. Node Selector:
+
+To set limitations on the pods so that they can only run on certain nodes. We
+can do this by specifying the `NodeSelector` field in the pod definition file
+under the spec section.

@@ -243,5 +243,23 @@ section in `spec>containers` as shown above.
 > [!NOTE]  
 > By default kubernetes doesn't have a cpu or memory request limit set.
 
-Limit Ranges  
+Limit Ranges:  
 We can ensure all pods have some default resource set by using **limit ranges**.
+
+```yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-resource-constraint
+spec:
+  limits:
+    - default:
+        cpu: 500m
+      defaultRequest:
+        cpu: 500m
+      max:
+        cpu: "1"
+      min:
+        cpu: 100m
+      type: Container
+```

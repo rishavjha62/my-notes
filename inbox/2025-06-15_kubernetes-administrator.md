@@ -147,4 +147,26 @@ kubectl label ndoes node01 size=Large
 
 5. Node Affinity:  
    The primary feature of Node Affinity is to ensure that pods are hosted on
-   particular nodes.
+   particular nodes. It provides advanced expressions to limit pod placement on
+   specific nodes. It can be done by updating the pod definition file under spec
+   section by adding `affinity` as shown below.
+
+```yml
+apiVersion: v1
+kind: pod
+metadata:
+  name: myapp-pod
+spec:
+  contianers:
+    - name: nginx
+      image: nginx
+  affinity:
+    nodeAAffinity:
+      requiredDuringSchedulingIgnoreDuringExecution:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: size
+              operator: In
+              value:
+                - Large
+```

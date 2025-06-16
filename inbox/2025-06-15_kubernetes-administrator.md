@@ -263,3 +263,21 @@ spec:
         cpu: 100m
       type: Container
 ```
+
+Resource Quotas:  
+To restrict the total amount of resouces that can be consumed by applications
+deployed in the cluster, we use quotas at a namespace level using the definition
+file.
+
+```yml
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: my-resource-quota
+spec:
+  hard:
+    requests.cpu: 4
+    requests.memory: 4Gi
+    limit.cpu: 10
+    limit.memory: 10Gi
+```

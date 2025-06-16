@@ -238,3 +238,5 @@ section in `spec>containers` as shown above.
 > beyond the defined limit.  
 > The pod will be terminated in case it constantly tries to use more memory than
 > what is defined and will give OOM(Out of Memory) error in the logs.
+
+> [!NOTE] By default kubernetes doesn't have a cpu or memory request limit set.

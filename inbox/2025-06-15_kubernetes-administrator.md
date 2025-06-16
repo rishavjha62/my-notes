@@ -191,3 +191,9 @@ node affinity types:
 - requiredDuringSchedulingIgnoreDuringExecution
 - preferredDuringSchedulingIgnoreDuringExecution
   > In Planning: requiredDuringSchedulingRequiredDuringExecution
+
+|       | DuringScheduling | DuringExecution |
+| ----- | ---------------- | --------------- |
+| Type1 | Required         | Ignored         |
+| Type2 | Preferred        | Ignored         |
+| Type3 | Required         | Required        |

@@ -183,3 +183,11 @@ affinity:
             value:
               - Small
 ```
+
+The Node Affinity types defines the behaivour of the scheduler with respect to
+node affinity and the stages in the lifecycle of the pod. There are 2 types of
+node affinity types:
+
+- requiredDuringSchedulingIgnoreDuringExecution
+- preferredDuringSchedulingIgnoreDuringExecution
+  > In Planning: requiredDuringSchedulingRequiredDuringExecution

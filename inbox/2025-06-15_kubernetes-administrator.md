@@ -12,7 +12,7 @@ urls:
 
 ## Scheduling
 
-- [Manual Scheduling](#Manual Scheduling: How scheduling works?)
+- [Manual Scheduling](#manual scheduling: how scheduling works?)
 - Labels & Selectors
 - Taints & Tolerations
 - Node selector

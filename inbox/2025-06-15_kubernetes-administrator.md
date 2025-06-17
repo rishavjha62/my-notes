@@ -398,6 +398,8 @@ placed on nodes.
 
 ### Multiple Scheduers
 
+- Multiple Schedulers
+
 We can create our custom scheduler and multiple of those can be used by certain
 application. These schedulers can be created using pod defintion file.
 
@@ -454,3 +456,5 @@ spec:
 > # view logs of the scheduler
 > kubectl logs my-custom-scheduler --name-space=kube-system
 > ```
+
+- Scheduler Profiles

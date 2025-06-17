@@ -20,10 +20,10 @@ urls:
 - [Resource Limits](#resource-requirements--limitations)
 - [Daemon Sets](#daemon-sets)
 - [Static Pods](#static-pods)
-- Priority Classes
-- Multiple Schedulers
-- Scheduler Events
-- Configure Kubernetes Scheduler
+- Priority Classes(#priority-classes)
+- Multiple Schedulers(#multiple-schedulers)
+- Scheduler Events(#scheduler-events)
+- Configure Kubernetes Scheduler(#configure-kubernetes-scheduler)
 
 ### Manual Scheduling: How scheduling works?
 
@@ -335,6 +335,11 @@ mirror of the pod.
 
 Use Case:  
 These static pods can be used to deploy the control plane comomponents as pods
-on the nodes. i. Start by installing kubelet on all the master nodes. ii. Create
-pod definition file that uses docker images of the various control comomponents.
-iii. Place the pod definition files in the designated manifests folder.
+on the nodes.
+
+1. Start by installing kubelet on all the master nodes.
+2. Create pod definition file that uses docker images of the various control
+   comomponents.
+3. Place the pod definition files in the designated manifests folder.
+
+### Priority Classes

@@ -308,3 +308,13 @@ configure the kubelet to read the pod definition files from a directory
 `/etc/kubernetes/manifests` on the host designated to store information about
 the pods. It can also ensure that pod stays alive. The pods created this way are
 called **Static pods**.
+
+!> [!NOTE]
+
+> This directory could be any directory on the host. The location for this
+> directory could be set by passing the directory to the kubelet as on option
+> while running the service.
+>
+> ```kubelet.service
+> --pod-manifest-path=/etc/Kubernetes/manifests \\
+> ```

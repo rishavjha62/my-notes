@@ -480,3 +480,29 @@ All of these operations are acheieved with different plugins as shown below:
 Having multiple scheduler can cause issues as these are seperates process, hence
 they might not be aware of each other and may run into race conditions while
 scheduling a pod and could try to scheule multiple node on same nodes.
+
+We can create multiple profiles in a single scheduler in the scheduler config
+yaml file by adding more entries to the list of profiles as shown below.
+
+```yml
+apiVersion: kubescheduler.config.k8s.io/v1
+kind: KubeSchedulerConfiguration
+profiles:
+  - schedulerName: my-scheduler
+  - schedulerName: my-scheduler2
+    plugins:
+      score:
+        disabled:
+          - name: TaintToleration
+        enabled:
+          - name: MyCustomPluginA
+          - name: MyCustomPluginB
+  - schedulerName: my-scheduler3
+    plugins:
+      prescore:
+        disabled:
+          - name: "*"
+      score:
+        disabled:
+          - name: "*"
+```

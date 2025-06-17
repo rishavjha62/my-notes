@@ -316,5 +316,11 @@ called **Static pods**.
 > while running the service.
 >
 > ```kubelet.service
-> --pod-manifest-path=/etc/Kubernetes/manifests \\
+> ExecStart=/usr/local/bin/kubelet \\
+>   --pod-manifest-path=/etc/Kubernetes/manifests \\
 > ```
+>
+> The other way to do this is by defining `config=kubeconfig.yaml`. Clusters
+> setup by kubeadmin tool use this method.  
+> kubeconfig.yaml  
+> staticPodPath: /etc/kubernetes/manifests

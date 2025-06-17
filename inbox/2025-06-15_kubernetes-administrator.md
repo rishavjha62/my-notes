@@ -324,3 +324,9 @@ called **Static pods**.
 > `kubelet.serive`. Clusters setup by kubeadmin tool use this method.  
 > kubeconfig.yaml  
 > staticPodPath: /etc/kubernetes/manifests
+
+The kubelet can create both kind of pods, the static pods and the ones from the
+API server at the same time. The API server is still aware of the static pods
+created by the kubelet. When the kubelet creates a static pod that is part of a
+cluster, it also creates a mirror object in the kubeapi server as a read only
+mirror of the pod.

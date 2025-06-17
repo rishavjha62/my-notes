@@ -205,7 +205,7 @@ node affinity types:
 
 The kube scheduler decides which node the pod goes on to. The scheduler
 considers the amount of resource required by the pod and those available on the
-nodes and identies the best nodes to place the pod on.  
+nodes and identifies the best nodes to place the pod on.  
 If sufficient resources are not avialable on any of the nodes, the scheduler
 then holds back scheduling the pod and the pod will be in pending state.  
 To define the resources used by the pod, we create a section named `resources`
@@ -233,12 +233,12 @@ spec:
           cpu: 2
 ```
 
-We can also set a limit on the resouces the pod can access under the `resources`
-section in `spec>containers` as shown above.
+We can also set a limit on the resources the pod can access under the
+`resources` section in `spec>containers` as shown above.
 
 > [!NOTE]  
 > A pod can only use the cpu defined in the limits however it can use more
-> Memory than what is specified. The system thorttles the cpu so that it can go
+> Memory than what is specified. The system throttles the cpu so that it can go
 > beyond the defined limit.  
 > The pod will be terminated in case it constantly tries to use more memory than
 > what is defined and will give OOM(Out of Memory) error in the logs.
@@ -357,7 +357,7 @@ kubectl get priorityclass
 ```
 
 Use pod defintion files to create a new priority class. And once a priority
-class is created it can be used within a pod defintion file creating a pod as
+class is created it can be used within a pod definition file creating a pod as
 shown below:
 
 ```yml

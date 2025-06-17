@@ -544,3 +544,8 @@ Admission Controllers not enabled by default:
 > replaced with `NamespaceLifecycle` admission controller.
 
 - Validating & Mutating Admission Controller
+
+1. Validating Admission Controllers could validate the request such as
+   NamespaceExists AC.
+2. Mutating Admission Controllers could modify the request such as
+   DefaultStorageClass AC.

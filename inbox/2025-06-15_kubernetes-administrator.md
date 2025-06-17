@@ -393,15 +393,15 @@ priority class.
 The `preemptionPolicy` decides the behaivour wether to evict a lower priority
 pod. By default it is set to `preemptionPolicy: PreemptLowerPriority` which
 kills the lower priority pods. If it is set to `preemptionPolicy: never` it will
-wait for the reources to be available before a new pod with lower priority is
+wait for the resources to be available before a new pod with lower priority is
 placed on nodes.
 
-### Multiple Scheduers
+### Multiple Schedulers
 
 - Multiple Schedulers
 
 We can create our custom scheduler and multiple of those can be used by certain
-application. These schedulers can be created using pod defintion file.
+application. These schedulers can be created using pod definition file.
 
 We use these custom scheduler in case we want to perform additional checks.
 
@@ -461,9 +461,15 @@ spec:
 
 When a pod is created:
 
-1. The pod first wait in the scheduling queue. The pods are first sorted based
-   on priority defined.
-2.
+1. **Scheduling Queue**: The pod first wait in the scheduling queue. The pods
+   are first sorted based on priority defined. The pods with the higher priority
+   are pushed to the beginning of the queue.
+2. **Filtering**: The nodes that can't run the pod due to resource constraint
+   gets filtered out.
+3. **Scoring**: The nodes are now scored with different weights. The scheudler
+   scores each nodes based on the free resource after the pod is assigned to
+   them. The node with more resouce remaining gets a higher score.
+4. **Binding**: This is where the pod is bound to the node with higher score.
 
 ![scheduling plugins](../images/scheduling-plugins-kubernetes.png)
 

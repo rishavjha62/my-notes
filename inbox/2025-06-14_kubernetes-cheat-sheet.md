@@ -159,3 +159,13 @@ kubectl get events -o wid
 # view logs of the scheduler
 kubectl logs my-custom-scheduler --name-space=kube-system
 ```
+
+## Admission Controller
+
+````bash
+kube-apiserver -h | grep enable-admission-plugins
+
+# if running via kubeadm setup
+kubectl exec kube-apiserver-controlplane -n kube-system -h | grep enable-admission-plugins
+> ```
+````

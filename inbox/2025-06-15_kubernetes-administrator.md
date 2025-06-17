@@ -533,4 +533,13 @@ Admission Controllers not enabled by default:
 >
 > ```bash
 > kube-apiserver -h | grep enable-admission-plugins
+>
+> # if running via kubeadm setup
+> kubectl exec kube-apiserver-controlplane -n kube-system -h | grep
+> enable-admission-plugins
+>
+> ```
+>
+> ```
+>
 > ```

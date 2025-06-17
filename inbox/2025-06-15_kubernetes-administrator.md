@@ -542,3 +542,5 @@ Admission Controllers not enabled by default:
 > [!NOTE]  
 > The `NamespaceAutoProvision` & `NamespaceExists` are now decommissioned and
 > replaced with `NamespaceLifecycle` admission controller.
+
+- Validating & Mutating Admission Controller

@@ -356,7 +356,9 @@ The kubernetes control plane objects gets the highest priority up to
 kubectl get priorityclass
 ```
 
-Use pod defintion files to create a new priority class.
+Use pod defintion files to create a new priority class. And once a priority
+class is created it can be used within a pod defintion file creating a pod as
+shown below:
 
 ```yml
 apiVersion: scheduling.k8s.io/v1
@@ -365,4 +367,20 @@ metadata:
   name: high-priority
 value: 1000000000
 description: "Priority class for mission critical pods"
+```
+
+```yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    name: nginx
+spec:
+  contianers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 8080
+  priorityClassName: high-priority
 ```

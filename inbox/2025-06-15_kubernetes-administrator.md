@@ -21,9 +21,10 @@ urls:
 - [Daemon Sets](#daemon-sets)
 - [Static Pods](#static-pods)
 - [Priority Classes](#priority-classes)
-- [Multiple Schedulers](#multiple-schedulers)
-- [Scheduler Events](#scheduler-events)
-- [Configure Kubernetes Scheduler](#configure-kubernetes-scheduler)
+- [Schedulers](#schedulers)
+  - Multiple Schedulers
+  - Scheduler Profiles
+- [Admission Controllers](#admission-controllers)
 
 ### Manual Scheduling: How scheduling works?
 
@@ -396,7 +397,7 @@ kills the lower priority pods. If it is set to `preemptionPolicy: never` it will
 wait for the resources to be available before a new pod with lower priority is
 placed on nodes.
 
-### Multiple Schedulers
+### Schedulers
 
 - Multiple Schedulers
 
@@ -506,3 +507,5 @@ profiles:
         disabled:
           - name: "*"
 ```
+
+### Admission Controllers

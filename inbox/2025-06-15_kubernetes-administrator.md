@@ -471,6 +471,12 @@ When a pod is created:
    them. The node with more resouce remaining gets a higher score.
 4. **Binding**: This is where the pod is bound to the node with higher score.
 
+All of these operations are acheieved with different plugins as shown below:
+
 ![scheduling plugins](../images/scheduling-plugins-kubernetes.png)
 
 ![Extension Points](../images/extension-points-scheduler-profiles-kubernetes.png)
+
+Having multiple scheduler can cause issues as these are seperates process, hence
+they might not be aware of each other and may run into race conditions while
+scheduling a pod and could try to scheule multiple node on same nodes.

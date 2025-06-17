@@ -20,7 +20,6 @@ urls:
 - [Resource Limits](#resource-requirements--limitations)
 - [Daemon Sets](#daemon-sets)
 - [Static Pods](#static-pods)
-- Static Pods
 - Priority Classes
 - Multiple Schedulers
 - Scheduler Events
@@ -61,7 +60,7 @@ be in pending state. You can manually schedule the pods by setting the
 > http://$SERVER/api/v1/namespaces/default/pods/$PODNAME/binding/
 > ```
 
-2. Labels & Selectors
+### Labels & Selectors
 
 Labels : They are properties attached to items. They are defined under metadata
 under the labels section and can be added as key value format.
@@ -73,7 +72,7 @@ Services, Deployments, ReplicaSet use labels to create pods.
 Annotations: They're used to record other details like buildVersion, contact
 details, phone number, etc.
 
-3. Taints & Tolerations:
+### Taints & Tolerations:
 
 Taints and Toleration are used to set restrictions on what pods can be scheudled
 on a node.
@@ -125,7 +124,7 @@ spec:
 > Taints and Tolerations are only meant to restrict nodes from accepting certain
 > pods. It doesn't guarantee that a pod will always be placed on a certain node.
 
-4. Node Selector:
+### Node Selector:
 
 To set limitations on the pods so that they can only run on certain nodes. We
 can do this by specifying the `NodeSelector` field in the pod definition file
@@ -148,11 +147,12 @@ spec:
 kubectl label ndoes node01 size=Large
 ```
 
-5. Node Affinity:  
-   The primary feature of Node Affinity is to ensure that pods are hosted on
-   particular nodes. It provides advanced expressions to limit pod placement on
-   specific nodes. It can be done by updating the pod definition file under spec
-   section by adding `affinity` as shown below.
+### Node Affinity:
+
+The primary feature of Node Affinity is to ensure that pods are hosted on
+particular nodes. It provides advanced expressions to limit pod placement on
+specific nodes. It can be done by updating the pod definition file under spec
+section by adding `affinity` as shown below.
 
 ```yml
 apiVersion: v1
@@ -201,7 +201,7 @@ node affinity types:
 | Type2 | Preferred        | Ignored         |
 | Type3 | Required         | Required        |
 
-6. Resource Requirements & Limitations
+### Resource Requirements & Limitations
 
 The kube scheduler decides which node the pod goes on to. The scheduler
 considers the amount of resource required by the pod and those available on the
@@ -285,7 +285,7 @@ spec:
     limit.memory: 10Gi
 ```
 
-7. Daemon Sets:
+### Daemon Sets:
 
 Daemon Sets are like ReplicaSet as it helps to deploy multiple instances of
 pods. It runs one copy of pod on each node in the cluster. Whenever a new node
@@ -302,7 +302,7 @@ The kind is of the type DaemonSet `kind: DaemonSet`.
 
 > It uses default scheduler & node affinity to deploy a pod on each node.
 
-8. Static Pods:
+### Static Pods:
 
 The kubelet can manage the node independently in absence of kubeapi server,
 scheduler, controllers, & etcd. We've kubelet & Docker installed on host. We can

@@ -443,3 +443,12 @@ spec:
       image: k8s.gcr.io/kube-scheduler-amd64:v1.11.3
       name: kuber-scheduler
 ```
+
+> The `leaderElect` option is used when we've multiple copies of the scheduler
+> running on multiple master nodes as a high availability setup.
+
+> How to know which scheduler picked up a particular pod?
+>
+> ```bash
+> kubectl get events -o wide
+> ```

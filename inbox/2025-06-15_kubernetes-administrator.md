@@ -20,10 +20,10 @@ urls:
 - [Resource Limits](#resource-requirements--limitations)
 - [Daemon Sets](#daemon-sets)
 - [Static Pods](#static-pods)
-- Priority Classes(#priority-classes)
-- Multiple Schedulers(#multiple-schedulers)
-- Scheduler Events(#scheduler-events)
-- Configure Kubernetes Scheduler(#configure-kubernetes-scheduler)
+- [Priority Classes](#priority-classes)
+- [Multiple Schedulers](#multiple-schedulers)
+- [Scheduler Events](#scheduler-events)
+- [Configure Kubernetes Scheduler](#configure-kubernetes-scheduler)
 
 ### Manual Scheduling: How scheduling works?
 

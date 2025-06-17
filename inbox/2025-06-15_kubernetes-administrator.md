@@ -13,12 +13,13 @@ urls:
 ## Scheduling
 
 - [Manual Scheduling](#manual-scheduling-how-scheduling-works)
-- Labels & Selectors
-- Taints & Tolerations
-- Node selector
-- Node Affinity
-- Resource Limits
-- Daemon Sets
+- [Labels & Selectors](#labels--selectors)
+- [Taints & Tolerations](#taints--tolerations)
+- [Node selector](#node-selector)
+- [Node Affinity](#node-affinity)
+- [Resource Limits](#resource-requirements--limitations)
+- [Daemon Sets](#daemon-sets)
+- [Static Pods](#static-pods)
 - Static Pods
 - Priority Classes
 - Multiple Schedulers

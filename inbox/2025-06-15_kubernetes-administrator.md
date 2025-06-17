@@ -384,3 +384,8 @@ spec:
         - containerPort: 8080
   priorityClassName: high-priority
 ```
+
+If no priority class is defined in the definition file, it is assumed to have a
+priority of 0. The default value can however be changed to a different default
+value by adding `globalDefault: True` in the definition file created for
+priority class.

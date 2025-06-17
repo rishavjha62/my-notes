@@ -266,7 +266,7 @@ spec:
 ```
 
 Resource Quotas:  
-To restrict the total amount of resouces that can be consumed by applications
+To restrict the total amount of resources that can be consumed by applications
 deployed in the cluster, we use quotas at a namespace level using the definition
 file.
 
@@ -290,7 +290,7 @@ pods. It runs one copy of pod on each node in the cluster. Whenever a new node
 is added, a replica of the pod is deployed on the node.  
 Use cases of daemon sets:
 
-- Monitorning agent
+- Monitoring agent
 - logs viewer
 - kube-proxy can be deployed as a daemon set
 - networking solutions like weavenet reuquires an agent on each node.
@@ -302,5 +302,5 @@ The kind is of the type DaemonSet `kind: DaemonSet`.
 
 8. Static Pods:
 
-The kubelet can manage the node independtly in absence of kubeapi server,
+The kubelet can manage the node independently in absence of kubeapi server,
 scheduler, controllers

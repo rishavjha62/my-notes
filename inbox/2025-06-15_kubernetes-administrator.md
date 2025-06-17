@@ -395,3 +395,27 @@ pod. By default it is set to `preemptionPolicy: PreemptLowerPriority` which
 kills the lower priority pods. If it is set to `preemptionPolicy: never` it will
 wait for the reources to be available before a new pod with lower priority is
 placed on nodes.
+
+### Multiple Scheduers
+
+We can create our custom scheduler and multiple of those can be used by certain
+application. These schedulers can be created using pod defintion file.
+
+We use these custom scheduler in case we want to perform additional checks.
+
+When creating a pod or deployment we can instruct kubernetes to have the pod
+scheduled by a specific scheduler.
+
+```yml
+apiVersion: kubescheduler.config.k8s.io/v1
+kind: KubeSchedulerConfiguration
+profiles:
+  - schedulerName: my-scheduler
+```
+
+We can point the new scheduler service to this new scheduler:
+
+```my-scheduler.service
+ExecStart=/usr/local/bin/kube-scheduler \\
+    --config=/etc/kubernetes/config/my-scheduler-config.yml
+```

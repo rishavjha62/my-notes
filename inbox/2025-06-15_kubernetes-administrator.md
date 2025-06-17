@@ -537,9 +537,8 @@ Admission Controllers not enabled by default:
 > # if running via kubeadm setup
 > kubectl exec kube-apiserver-controlplane -n kube-system -h | grep
 > enable-admission-plugins
->
 > ```
->
-> ```
->
-> ```
+
+> [!NOTE]  
+> The `NamespaceAutoProvision` & `NamespaceExists` are now decommissioned and
+> replaced with `NamespaceLifecycle` admission controller.

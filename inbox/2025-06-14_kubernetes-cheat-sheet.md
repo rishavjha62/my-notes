@@ -142,3 +142,10 @@ kubectl taint nodes <ndoe-name> <output-from-previous-command>-
 #to create a label on the node
 kubectl label ndoes <node-name> <label-key>=<label_value>
 ```
+
+### Priority Class
+
+```bash
+# To list the priority classes run
+kubectl get priorityclass
+```

@@ -349,5 +349,20 @@ objects. They are available for any pod on any namespace. They can be defined
 with a range of numbers (2,000,000,000 - 1,000,000,000 - 2,147,483,648).
 
 The kubernetes control plane objects gets the highest priority up to
-2,000,000,000.  
-To list the priority classes run `kubectl get priorityclass`
+2,000,000,000.
+
+```bash
+# To list the priority classes run
+kubectl get priorityclass
+```
+
+Use pod defintion files to create a new priority class.
+
+```yml
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: high-priority
+value: 1000000000
+description: "Priority class for mission critical pods"
+```

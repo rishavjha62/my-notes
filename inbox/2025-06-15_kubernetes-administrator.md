@@ -458,3 +458,7 @@ spec:
 > ```
 
 - Scheduler Profiles
+
+![scheduling plugins](../images/scheduling-plugins-kubernetes.png)
+
+![Extension Points](../images/extension-points-scheduler-profiles-kubernetes.png)

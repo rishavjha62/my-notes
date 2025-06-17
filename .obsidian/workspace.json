@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "c47e20f8425fd4dc",
@@ -166,7 +167,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,7 +182,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "81915fc470bb4782",
+  "active": "24696dc40a14dc70",
   "lastOpenFiles": [
     "inbox/2025-06-14_kubernetes-cheat-sheet.md~",
     "inbox/2025-06-15_kubernetes-administrator.md~",

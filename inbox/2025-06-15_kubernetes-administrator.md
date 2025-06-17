@@ -411,6 +411,10 @@ apiVersion: kubescheduler.config.k8s.io/v1
 kind: KubeSchedulerConfiguration
 profiles:
   - schedulerName: my-scheduler
+leaderElection:
+  leaderElect: true
+  resourceNamespace: kube-system
+  resourceName: lock-object-my-scheduler
 ```
 
 We can point the new scheduler service to this new scheduler:
@@ -418,4 +422,24 @@ We can point the new scheduler service to this new scheduler:
 ```my-scheduler.service
 ExecStart=/usr/local/bin/kube-scheduler \\
     --config=/etc/kubernetes/config/my-scheduler-config.yml
+```
+
+Deploying Additional Scheduler as a Pod (preferred way)
+
+```yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-custom-scheduler
+  namespace: kube-system
+spec:
+  containers:
+    - command:
+        - kube-scheduler
+        - --address=127.0.0.1
+        - --kubeconfig=/etc/kubernetes/scheduler.conf
+        - --config=/etc/kubernetes/my-scheduler-conf.yml
+
+      image: k8s.gcr.io/kube-scheduler-amd64:v1.11.3
+      name: kuber-scheduler
 ```

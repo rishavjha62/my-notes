@@ -149,3 +149,13 @@ kubectl label ndoes <node-name> <label-key>=<label_value>
 # To list the priority classes run
 kubectl get priorityclass
 ```
+
+### To look for scheduled events
+
+```bash
+# to know which scheduler was picked by a pod
+kubectl get events -o wid
+
+# view logs of the scheduler
+kubectl logs my-custom-scheduler --name-space=kube-system
+```

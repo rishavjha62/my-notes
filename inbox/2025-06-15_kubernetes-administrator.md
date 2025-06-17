@@ -451,4 +451,6 @@ spec:
 >
 > ```bash
 > kubectl get events -o wide
+> # view logs of the scheduler
+> kubectl logs my-custom-scheduler --name-space=kube-system
 > ```

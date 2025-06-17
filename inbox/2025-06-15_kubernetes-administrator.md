@@ -389,3 +389,9 @@ If no priority class is defined in the definition file, it is assumed to have a
 priority of 0. The default value can however be changed to a different default
 value by adding `globalDefault: True` in the definition file created for
 priority class.
+
+The `preemptionPolicy` decides the behaivour wether to evict a lower priority
+pod. By default it is set to `preemptionPolicy: PreemptLowerPriority` which
+kills the lower priority pods. If it is set to `preemptionPolicy: never` it will
+wait for the reources to be available before a new pod with lower priority is
+placed on nodes.

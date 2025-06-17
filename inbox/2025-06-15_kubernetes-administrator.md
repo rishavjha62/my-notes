@@ -309,7 +309,7 @@ configure the kubelet to read the pod definition files from a directory
 the pods. It can also ensure that pod stays alive. The pods created this way are
 called **Static pods**.
 
-!> [!NOTE]
+> [!NOTE]
 
 > This directory could be any directory on the host. The location for this
 > directory could be set by passing the directory to the kubelet as on option
@@ -320,7 +320,7 @@ called **Static pods**.
 >   --pod-manifest-path=/etc/Kubernetes/manifests \\
 > ```
 >
-> The other way to do this is by defining `config=kubeconfig.yaml`. Clusters
-> setup by kubeadmin tool use this method.  
+> The other way to do this is by defining `--config=kubeconfig.yaml` in the
+> `kubelet.serive`. Clusters setup by kubeadmin tool use this method.  
 > kubeconfig.yaml  
 > staticPodPath: /etc/kubernetes/manifests

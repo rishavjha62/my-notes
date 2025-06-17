@@ -303,4 +303,8 @@ The kind is of the type DaemonSet `kind: DaemonSet`.
 8. Static Pods:
 
 The kubelet can manage the node independently in absence of kubeapi server,
-scheduler, controllers
+scheduler, controllers, & etcd. We've kubelet & Docker installed on host. We can
+configure the kubelet to read the pod definition files from a directory
+`/etc/kubernetes/manifests` on the host designated to store information about
+the pods. It can also ensure that pod stays alive. The pods created this way are
+called **Static pods**.

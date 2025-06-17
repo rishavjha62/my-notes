@@ -12,7 +12,7 @@ urls:
 
 ## Scheduling
 
-- Manual Scheduling
+- [Manual Scheduling] (# Manual Scheduling: How scheduling works?)
 - Labels & Selectors
 - Taints & Tolerations
 - Node selector
@@ -20,11 +20,12 @@ urls:
 - Resource Limits
 - Daemon Sets
 - Static Pods
+- Priority Classes
 - Multiple Schedulers
 - Scheduler Events
 - Configure Kubernetes Scheduler
 
-1. Manual Scheduling: How scheduling works?
+### Manual Scheduling: How scheduling works?
 
 Every pod has a field called `nodeName` that is not set by default. The
 scheduler goes through all the pods that don't have this property set. The
@@ -329,9 +330,10 @@ The kubelet can create both kind of pods, the static pods and the ones from the
 API server at the same time. The API server is still aware of the static pods
 created by the kubelet. When the kubelet creates a static pod that is part of a
 cluster, it also creates a mirror object in the kubeapi server as a read only
-mirror of the pod.  
+mirror of the pod.
 
 Use Case:  
-These static pods can be used to deploy the control plane comomponents as pods on the nodes.
-
-
+These static pods can be used to deploy the control plane comomponents as pods
+on the nodes. i. Start by installing kubelet on all the master nodes. ii. Create
+pod definition file that uses docker images of the various control comomponents.
+iii. Place the pod definition files in the designated manifests folder.

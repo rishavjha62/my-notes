@@ -509,3 +509,28 @@ profiles:
 ```
 
 ### Admission Controllers
+
+They help us implement better security measures to enforce how a cluster is
+used. Apart from simply validating configuration, they can do a lot such as
+change the request itself, or perform additional operations before a pod is
+created.  
+There are a number of admission controllers that come prebuilt with kubernetes.
+
+- AlwaysPullImages: They ensure every time a pod is created, the iamges are
+  always pulled.
+- DefaultStorageClass: Observes the creation of PVCs & automatically adds a
+  default storage class to them.
+- EventRateLimit: It can help set a limit on the request that API server can
+  handle at a time.
+- NamespaceExists: Rejects request to namespaces that don't exist.
+- etc
+
+Admission Controllers not enabled by default:
+
+- NamespaceAutoProvision: Auto create namespaces that don't exist.
+
+> View Enabled Admission Controllers
+>
+> ```bash
+> kube-apiserver -h | grep enable-admission-plugins
+> ```

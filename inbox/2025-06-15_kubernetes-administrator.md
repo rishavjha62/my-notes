@@ -459,6 +459,12 @@ spec:
 
 - Scheduler Profiles
 
+When a pod is created:
+
+1. The pod first wait in the scheduling queue. The pods are first sorted based
+   on priority defined.
+2.
+
 ![scheduling plugins](../images/scheduling-plugins-kubernetes.png)
 
 ![Extension Points](../images/extension-points-scheduler-profiles-kubernetes.png)

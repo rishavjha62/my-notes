@@ -135,3 +135,10 @@ kubectl describe nodes <node-name> | grep Taint
 # to remove taint from controlplane first run the above command and use the output
 kubectl taint nodes <ndoe-name> <output-from-previous-command>-
 ```
+
+### Node Selector
+
+```bash
+#to create a label on the node
+kubectl label ndoes <node-name> <label-key>=<label_value>
+```

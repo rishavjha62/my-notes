@@ -299,3 +299,8 @@ It can deployed with a yaml definition file and looks similar to the ReplicaSet.
 The kind is of the type DaemonSet `kind: DaemonSet`.
 
 > It uses default scheduler & node affinity to deploy a pod on each node.
+
+8. Static Pods:
+
+The kubelet can manage the node independtly in absence of kubeapi server,
+scheduler, controllers

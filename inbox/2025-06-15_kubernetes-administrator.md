@@ -607,3 +607,6 @@ webhooks:
 1. Monitor Cluster Components: Kubernetes doesn't provide any monitoring feature
    however there are a number of open-source solution such as Metric Server,
    Prometheus, Elastic Stack, DataDog, dynatrace.
+
+Heapster enabled monitoring and analysis feature for kubernetes. However it is
+depricated and a slim down version was formed knows as Metric Server.

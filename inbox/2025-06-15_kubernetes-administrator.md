@@ -616,3 +616,18 @@ The metric server retrieves metrics from each of the kubernetes nodes and pods
 and aggregates them and stores them in memory. It is an in memory solution as a
 results you can't see historical performance data. For that we use advance
 monitoring solution.
+
+Kubernetes runs an agent on each node known as kubelet which is responsible for
+recieving instructions from kubernetes master api server and running pods on the
+nodes. The kubelet also contains `cAdvisor`. It is responsible for retrieving
+performance metrics from pods and exposing them through kubelet api to make the
+metrics available for the metric server.
+
+```bash
+# for minikube
+minikube addons enable metrics-server
+
+# for others
+git clone https://github.com/kubernetes-incubator/metrics-server
+kubectl create -f deploy/1.8+/
+```

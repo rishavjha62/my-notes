@@ -557,4 +557,5 @@ first. To support external AC there are 2 special AC available.
 - ValidatingAdmissionWebhook
 
 We can configure these webhooks to point to a server that are hosted within the
-kubernetes cluster or outside it
+kubernetes cluster or outside it. Our server will have our own Admission webhook
+service running with our code and logic.

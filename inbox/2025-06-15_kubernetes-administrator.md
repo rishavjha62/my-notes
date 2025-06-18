@@ -558,4 +558,9 @@ first. To support external AC there are 2 special AC available.
 
 We can configure these webhooks to point to a server that are hosted within the
 kubernetes cluster or outside it. Our server will have our own Admission webhook
-service running with our code and logic.
+service running with our code and logic.  
+After a request goes through all the builtin AC, it hits the webhook that is
+configured. The request then makes a call to the Admission Webhook server by
+passing in an Admission review object in a json format. This object has all the
+details about the request as well as the user that made the request and the type
+of operation that is being performed.

@@ -563,4 +563,8 @@ After a request goes through all the builtin AC, it hits the webhook that is
 configured. The request then makes a call to the Admission Webhook server by
 passing in an Admission review object in a json format. This object has all the
 details about the request as well as the user that made the request and the type
-of operation that is being performed.
+of operation that is being performed and on what object and the object itself.  
+The admission webhook controller on recieving the request responds with an
+Admission review object and wether the operation is allowed or not.
+
+![Admission Webhook Controller Request & Response](../images/admission-webhook-controller-kubernetes.png)

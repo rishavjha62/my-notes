@@ -598,3 +598,12 @@ webhooks:
                 resources: ["pods"]
                 scope: "Namespaced"
 ```
+
+## Logging And Monitoring
+
+- Monitor Cluster Components
+- Application Logs
+
+1. Monitor Cluster Components: Kubernetes doesn't provide any monitoring feature
+   however there are a number of open-source solution such as Metric Server,
+   Prometheus, Elastic Stack, DataDog, dynatrace.

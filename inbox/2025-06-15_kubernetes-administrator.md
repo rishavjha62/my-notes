@@ -609,4 +609,10 @@ webhooks:
    Prometheus, Elastic Stack, DataDog, dynatrace.
 
 Heapster enabled monitoring and analysis feature for kubernetes. However it is
-depricated and a slim down version was formed knows as Metric Server.
+depricated and a slim down version was formed knows as Metric Server. You can
+have one metrics server per cluster.
+
+The metric server retrieves metrics from each of the kubernetes nodes and pods
+and aggregates them and stores them in memory. It is an in memory solution as a
+results you can't see historical performance data. For that we use advance
+monitoring solution.

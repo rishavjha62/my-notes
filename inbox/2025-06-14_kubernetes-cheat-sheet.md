@@ -169,3 +169,24 @@ kube-apiserver -h | grep enable-admission-plugins
 kubectl exec kube-apiserver-controlplane -n kube-system -h | grep enable-admission-plugins
 > ```
 ````
+
+### Monitoring Cluster Components
+
+```bash
+# for minikube
+minikube addons enable metrics-server
+
+# for others
+git clone https://github.com/kubernetes-incubator/metrics-server
+kubectl create -f deploy/1.8+/
+
+# to view metrics
+kubectl top node
+```
+
+Application log
+
+```bash
+# To view the application log
+kubeclt logs -f <pod-name>
+```

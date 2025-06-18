@@ -634,3 +634,10 @@ kubectl create -f deploy/1.8+/
 # to view metrics
 kubectl top node
 ```
+
+2. Application log
+
+```bash
+# To view the application log
+kubeclt logs -f <pod-name>
+```

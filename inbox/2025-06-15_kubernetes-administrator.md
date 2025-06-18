@@ -549,3 +549,12 @@ Admission Controllers not enabled by default:
    NamespaceExists AC.
 2. Mutating Admission Controllers could modify the request such as
    DefaultStorageClass AC.
+
+There are other AC that could do both and gnerally Mutating AC are invoked
+first. To support external AC there are 2 special AC available.
+
+- MutatingAdmissionWebhook
+- ValidatingAdmissionWebhook
+
+We can configure these webhooks to point to a server that are hosted within the
+kubernetes cluster or outside it

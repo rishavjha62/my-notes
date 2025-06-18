@@ -572,3 +572,6 @@ Admission review object and wether the operation is allowed or not.
 1. Deploying Webhook Server: This webhook server contains the logic for whether
    to accept or reject the requests and it should be able to receive and respond
    with appropriate response that the webhook expects.
+   - We can either run it as a server.
+   - or containerize it within kubernetes cluster as a deployment. It will then
+     need a service for it to be accessed.

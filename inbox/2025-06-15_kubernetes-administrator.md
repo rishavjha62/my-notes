@@ -630,4 +630,7 @@ minikube addons enable metrics-server
 # for others
 git clone https://github.com/kubernetes-incubator/metrics-server
 kubectl create -f deploy/1.8+/
+
+# to view metrics
+kubectl top node
 ```

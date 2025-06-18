@@ -575,3 +575,26 @@ Admission review object and wether the operation is allowed or not.
    - We can either run it as a server.
    - or containerize it within kubernetes cluster as a deployment. It will then
      need a service for it to be accessed.
+2. Configuring Admission Webhook : Configure our cluster to the service and
+   validate or mutate the request. For this we create a validating/mutating
+   configuraiton object as shown below.
+
+```yml
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+    name: "pod-policy.example.com"
+webhooks:
+    -   name: "pod-policy.example.com"
+        clientConfig:
+            service:
+                namespace: "webhook-namespace"
+                name: "webhook-service"
+            caBundle: "Ci0tLS0Qk......tLS0k"
+        rules:
+            -   apiGroups: [""}
+                apiVersions: ["v1"]
+                operations: {"CREATE"]
+                resources: ["pods"]
+                scope: "Namespaced"
+```

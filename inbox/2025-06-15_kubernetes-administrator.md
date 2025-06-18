@@ -568,3 +568,7 @@ The admission webhook controller on recieving the request responds with an
 Admission review object and wether the operation is allowed or not.
 
 ![Admission Webhook Controller Request & Response](../images/admission-webhook-controller-kubernetes.png)
+
+1. Deploying Webhook Server: This webhook server contains the logic for whether
+   to accept or reject the requests and it should be able to receive and respond
+   with appropriate response that the webhook expects.

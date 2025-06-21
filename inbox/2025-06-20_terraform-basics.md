@@ -15,8 +15,8 @@ urls:
 HCL basics:
 
 ```tf
-resource <block> <parameters> {
-    key1 = value1
-    key2 = value2
+resource "<block>" "<parameters>" {
+    key1 = "value1"
+    key2 = "value2"
 }
 ```

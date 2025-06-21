@@ -641,3 +641,21 @@ kubectl top node
 # To view the application log
 kubeclt logs -f <pod-name>
 ```
+
+## Storage in Kubernetes
+
+- [Contianer Storage Interface](#container-storage-interface)
+- Persistent Volumes
+- Persistent Volume Claims
+- Using PVCs in pods
+- Application Configurations
+- Storage Class
+- Stateful sets
+
+### Container Storage Interface
+
+Container Storage Interface was developed to support multiple storage solutions.
+With CSI you can write your own driver for your own stroage to work with
+kubernetes. CSI is not kubernetes specific standard. It is meant to be a
+universal standrd and if implemented, allows any container orchestration tool to
+work with any storage vendor with a supported plugin.

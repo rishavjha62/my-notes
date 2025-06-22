@@ -66,3 +66,16 @@ resource "google_compute_instance" "my-first-gce" {
     }
 }
 ```
+
+## Terraform Workflow:
+
+A simple terraform workflow consists of 4 steps:
+
+1. Write the config file.
+2. Run the `terraform init` command. This will check the config file and
+   initialize the working directory containing the .tf files. It will look for
+   all the providers used based on the resource type declared and will download
+   the plugin to be able to work on these resources.
+
+3. Review the execution plan with `terraform plan` command.
+4. Apply the changes with `terraform apply` command.

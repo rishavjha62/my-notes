@@ -309,9 +309,9 @@ terraform apply
 ```
 
 4. We can also use **Variable Definition File** as shown below. These variable
-   definition files should always end with `something.tfvars` or
-   `something.auto.tfvars` `something.tfvars.json` or
-   `something.auto.tfvars.json`.
+   definition files should always end with `terraform.tfvars` or `*.auto.tfvars`
+   `terraform.tfvars.json` or `*.auto.tfvars.json` and will be automatically
+   loaded.
 
 ```tfvars.json
 filename="/root/pets.txt"
@@ -320,3 +320,16 @@ prefix="Mrs"
 separator="."
 length="2"
 ```
+
+If in case they are named anything else other than the mentioned example above
+like `variables.tfvars` then they should be passed with the command line flag
+`-var-file` as shown below.
+
+```bash
+terraform apply -var-file variables.tfvars
+```
+
+> [!NOTE]  
+> Terraform uses `Variable Definition Precedence` order to determine which
+> variables should be used in case variables are passed with all 4 examples
+> above together.

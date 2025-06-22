@@ -286,11 +286,32 @@ variable kitty {
 
 - Using Variables in Terraform
 
-In case no default value is provided inside the variable block, then we'll
-prompted at the time of applying the configuration file in interactive mode.  
-Alternatively, we can use the command line flags while applying as shown below.
+1. In case no default value is provided inside the variable block, then we'll
+   prompted at the time of applying the configuration file in interactive mode.
+2. Alternatively, we can use the command line flags while applying as shown
+   below.
 
 ```bash
 terraform apply -var "filename=/root/pets.txt" -var "content=we love pets!" \
 -var "prefix=Mrs" -var "separator=." -var "length=2"
+```
+
+3. We can also use environment varialbles as shown below with
+   TF*VAR*<declared_variable>
+
+```bash
+export TF_VAR_filename="/root/pets.txt"
+export TF_VAR_content="We love pets!"
+export TF_VAR_prefix="Mrs"
+export TF_VAR_separator="."
+export TF_VAR_length="2"
+terraform apply
+```
+
+4. We can also use **Variable Definition File** as shown below. These variable
+   definition files should always end with `something.tfvars` or
+   `something.tfvars.json`
+
+```tfvars.json
+
 ```

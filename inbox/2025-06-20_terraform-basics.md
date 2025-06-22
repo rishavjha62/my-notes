@@ -253,7 +253,7 @@ variable "pet_count" {
     type = map(number)
 }
 
-# Set (Similar to list but can't have duplicates)
+# Sets :Similar to list but can't have duplicates
 variable "prefix" {
     default = ["Mr", "Mrs", "Sir"] # Incorrect ["Mr", "Mrs", "Sir", "Sir"]
     type = set(string)
@@ -277,4 +277,9 @@ variable "bella" {
     }
 }
 
+# Tuples : Similar to list but we can use element of variable types
+variable kitty {
+    type = tuple([string, number, bool])
+    default = ["cat", 8, true]
+}
 ```

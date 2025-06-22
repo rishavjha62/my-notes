@@ -124,3 +124,13 @@ infrastructure.
 
 > The plugin is installed in a hidden directory called `.terraform` folder
 > within the working diretory.
+>
+> The plugin name is shown in the format `hashicorp.local` which is also known
+> the source address. This is an identifier used by terraform to locate and
+> downlaod the plugin from the registry.
+>
+> 1. The first part of the name is the **organizational namespace**.
+> 2. This is followed by the type of the provider (such as local, google, azure,
+>    aws)
+> 3. The plugin could also have the hostname in front which is where the plugin
+>    is located. If omitted, it defaults to `registry.terraform.io`.

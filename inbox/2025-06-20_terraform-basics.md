@@ -204,3 +204,13 @@ resource "random_pet" "my-pet" {
     length = var.length
 }
 ```
+
+- Understanding the variables block
+
+> The variable block can use three parameters:
+>
+> 1. default: To specify the default value of a parameter
+> 2. type: They are optional as well but when used it enforces the type of
+>    varable being used.
+> 3. description: They are optional but are a good practice to describe what the
+>    varilable is used for.

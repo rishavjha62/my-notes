@@ -226,3 +226,31 @@ resource "random_pet" "my-pet" {
 |        | pet2 = dog             |
 | object | Complex Data Structure |
 | tuple  | Comples Data Structure |
+
+- Examples of list, map, object & tuple
+
+```terraform
+# List
+variable "prefix" {
+    default = ["Mr", "Mrs", "Sir", "Madam"]
+    type = list(string)
+}
+
+# Map
+variable file-content {
+    type = map(string)
+    default = {
+        "statement1" = "We love pets!"
+        "statement2" = "We love animals"
+    }
+}
+variable "pet_count" {
+    default = {
+        "dogs" = 3
+        "cats" = 1
+        "cow" = 2
+    }
+    type = map(number)
+}
+
+```

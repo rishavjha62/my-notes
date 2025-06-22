@@ -104,4 +104,13 @@ will show the execution plan as well which can be seen with `-` symbol.
 ### Providers
 
 On running `terraform init`, terraform downloads & installs plugins for the
-providers used within the configuration.
+providers used within the configuration. These plugins can be for the cloud
+provders such GCP, AWS, Azure or local provider. It uses plugins based
+architecture to work with hundreds of such infrastructure platforms.  
+These plugins are available at registry.terraform.io
+
+There are 3 kinds of providers:
+
+1. Official providers:
+2. Partner
+3.

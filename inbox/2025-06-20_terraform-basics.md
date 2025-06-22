@@ -149,3 +149,18 @@ directory such as:
 | variables.tf | Contains variable declaration                         |
 | outputs.tf   | Contains output from resources                        |
 | provider.tf  | Contains Provider definition                          |
+
+- Using Multiple Providers:
+
+```terraform
+resource "local_file" "pet" {
+    filename = "~/pets.txt"
+    content = "we love pets"
+}
+
+resource "random_pet" "my-pet" {
+    prefix = "Mrs"
+    seperator = "."
+    length = "1"
+}
+```

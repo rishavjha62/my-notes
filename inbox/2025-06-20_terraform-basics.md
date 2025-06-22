@@ -310,8 +310,13 @@ terraform apply
 
 4. We can also use **Variable Definition File** as shown below. These variable
    definition files should always end with `something.tfvars` or
-   `something.tfvars.json`
+   `something.auto.tfvars` `something.tfvars.json` or
+   `something.auto.tfvars.json`.
 
 ```tfvars.json
-
+filename="/root/pets.txt"
+content="We love pets!"
+prefix="Mrs"
+separator="."
+length="2"
 ```

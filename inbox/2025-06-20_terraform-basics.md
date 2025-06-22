@@ -42,3 +42,27 @@ resource "local_file" "pet" {
 - **Arguments**: Within the curly braces, we can provide the arguments in a key
   value formats. These arguments are specific to the type of resources we are
   creating.
+
+Example resource :
+https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance
+
+```tf
+resource "google_compute_instance" "my-first-gce" {
+    name = "my-first-gce-with-terraform"
+    zone = "us-central1-a"
+    tags = ["foo", "bar"]
+    mahcine_type = "n1-standard-2"
+    network_interface {
+        network = "default"
+    }
+    boot_disk {
+        intitialize_params {
+            image = "debian-10-buster-v20210196"
+            size = 20
+        }
+    }
+    labels = {
+        "env" = "test"
+    }
+}
+```

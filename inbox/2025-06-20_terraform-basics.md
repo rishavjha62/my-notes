@@ -283,3 +283,14 @@ variable kitty {
     default = ["cat", 8, true]
 }
 ```
+
+- Using Variables in Terraform
+
+In case no default value is provided inside the variable block, then we'll
+prompted at the time of applying the configuration file in interactive mode.  
+Alternatively, we can use the command line flags while applying as shown below.
+
+```bash
+terraform apply -var "filename=/root/pets.txt" -var "content=we love pets!" \
+-var "prefix=Mrs" -var "separator=." -var "length=2"
+```

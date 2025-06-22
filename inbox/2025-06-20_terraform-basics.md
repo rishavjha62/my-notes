@@ -21,9 +21,12 @@ resource "<block>" "<parameters>" {
 }
 ```
 
-```terraform
-resouce "local_file" "pet" {
+```tf
+resource "local_file" "pet" {
     filename = "~/pets.txt"
     content = "we love pets"
 }
 ```
+
+- **Block Name**: In above example the `resource` is the first element which is
+  of the type `block name`. following it is Resource Type

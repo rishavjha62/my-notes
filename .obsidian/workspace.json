@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/2025-06-15_kubernetes-administrator.md",
+                "file": "inbox/2025-06-20_terraform-basics.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-15_kubernetes-administrator"
+              "title": "2025-06-20_terraform-basics"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "c47e20f8425fd4dc",
@@ -185,6 +184,7 @@
   "lastOpenFiles": [
     "inbox/2025-06-20_terraform-basics.md~",
     "inbox/4913",
+    "inbox/2025-06-15_kubernetes-administrator.md",
     "inbox/2025-06-15_kubernetes-administrator.md~",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md~",
     "images/admission-webhook-controller-kubernetes.png",
@@ -193,7 +193,6 @@
     "inbox/2025-06-01_docker-course.md",
     "inbox/2025-06-14_kubernetes-basics.md",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md",
-    "inbox/2025-06-15_kubernetes-administrator.md",
     "inbox/2025-06-14_kubernetes-basics.md~",
     "inbox/2025-06-11_mastering-linux.md~",
     "inbox/2025-06-01_docker-course.md~",
@@ -216,7 +215,6 @@
     "4913",
     "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
     "notes/course/2025-05-30_tmux-notes.md",
-    "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md~",
     "inbox/1748774622-KTQM.md",
     "notes/course/2025-05-18-markdown_notes.md",
     "zettelkasten/2025-05-18-markdown_notes.md",

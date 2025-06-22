@@ -215,12 +215,14 @@ resource "random_pet" "my-pet" {
 > 3. description: They are optional but are a good practice to describe what the
 >    varilable is used for.
 
-| Type   | Example          |
-| ------ | ---------------- |
-| string | "/root/pets.txt" |
-| number | 1                |
-| bool   | true/false       |
-| any    | Default Value    |
-| list   | ["foo", "bar"]   |
-| map    | pet1 = cat       |
-|        | pet2 = dog       |
+| Type   | Example                |
+| ------ | ---------------------- |
+| string | "/root/pets.txt"       |
+| number | 1                      |
+| bool   | true/false             |
+| any    | Default Value          |
+| list   | ["foo", "bar"]         |
+| map    | pet1 = cat             |
+|        | pet2 = dog             |
+| object | Complex Data Structure |
+| tuple  | Comples Data Structure |

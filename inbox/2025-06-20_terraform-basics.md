@@ -253,4 +253,28 @@ variable "pet_count" {
     type = map(number)
 }
 
+# Set (Similar to list but can't have duplicates)
+variable "prefix" {
+    default = ["Mr", "Mrs", "Sir"] # Incorrect ["Mr", "Mrs", "Sir", "Sir"]
+    type = set(string)
+}
+
+# Objects can be used to create complex data structure combining all above
+variable "bella" {
+    type = object ({
+        name = string
+        color = string
+        age = number
+        food = list(string)
+        favorite_pet = bool
+    })
+    default = {
+        name = "bella"
+        color = "brown"
+        age = 8
+        food = ["Dosa", "Pav Bhaji", "Pani Puri"]
+        favorite_pet = true
+    }
+}
+
 ```

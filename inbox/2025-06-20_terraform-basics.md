@@ -105,16 +105,16 @@ will show the execution plan as well which can be seen with `-` symbol.
 
 On running `terraform init`, terraform downloads & installs plugins for the
 providers used within the configuration. These plugins can be for the cloud
-provders such GCP, AWS, Azure or local provider. It uses plugins based
+providers such GCP, AWS, Azure or local provider. It uses plugins based
 architecture to work with hundreds of such infrastructure platforms.  
 These plugins are available at registry.terraform.io
 
 There are 3 kinds of providers:
 
 1. **Official providers**: These are owned and maintained by Hashicorp.
-2. **Partner providers**: These are owned and maintained by 3rd Party
-   techonology comapany that has gone through a partner provided process from
-   Hashicorp. Some examples are heroku, digital ocean, etc.
+2. **Partner providers**: These are owned and maintained by 3rd Party technology
+   comapany that has gone through a partner provided process from Hashicorp.
+   Some examples are heroku, digital ocean, etc.
 3. **Community providers**: These are published and maintained by individual
    contributors.
 
@@ -123,11 +123,11 @@ safe command to run as many times as required without affecting the
 infrastructure.
 
 > The plugin is installed in a hidden directory called `.terraform` folder
-> within the working diretory.
+> within the working directory.
 >
 > The plugin name is shown in the format `hashicorp.local` which is also known
 > the source address. This is an identifier used by terraform to locate and
-> downlaod the plugin from the registry.
+> download the plugin from the registry.
 >
 > 1. The first part of the name is the **organizational namespace**.
 > 2. This is followed by the type of the provider (such as local, google, azure,
@@ -135,9 +135,17 @@ infrastructure.
 > 3. The plugin could also have the hostname in front which is where the plugin
 >    is located. If omitted, it defaults to `registry.terraform.io`.
 
-### Configuraiton Directory
+### Configuration Directory
 
-We can have multiple .tf files in a directory. Also, there could be multiple
+We can have multiple `.tf` files in a directory. Also, there could be multiple
 configuration blocks created within a single configuration file with multiple
 providers. A common naming conventions for such a configuration file is to call
-it `main.tf`.
+it `main.tf`. There are other configuration files that can be created within the
+directory such as:
+
+| File Name    | Purpose                                               |
+| ------------ | ----------------------------------------------------- |
+| main.tf      | Main configuration file containing resource defintion |
+| variables.tf | Contains variable declaration                         |
+| outputs.tf   | Contains output from resources                        |
+| provider.tf  | Contains Provider definition                          |

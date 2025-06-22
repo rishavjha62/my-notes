@@ -111,8 +111,16 @@ These plugins are available at registry.terraform.io
 
 There are 3 kinds of providers:
 
-1. Official providers: These are owned and maintained by Hashicorp.
-2. Partner providers: These are owned and maintained by 3rd Party techonology
-   comapany that has gone through a partner provided process from Hashicorp.
+1. **Official providers**: These are owned and maintained by Hashicorp.
+2. **Partner providers**: These are owned and maintained by 3rd Party
+   techonology comapany that has gone through a partner provided process from
+   Hashicorp. Some examples are heroku, digital ocean, etc.
+3. **Community providers**: These are published and maintained by individual
+   contributors.
 
-3.
+These plugin version are shown when you run `terraform init` command. It is a
+safe command to run as many times as required without affecting the
+infrastructure.
+
+> The plugin is installed in a hidden directory called `.terraform` folder
+> within the working diretory.

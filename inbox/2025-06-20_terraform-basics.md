@@ -167,3 +167,40 @@ resource "random_pet" "my-pet" {
 
 We need to re-run `terraform init` if a new provider is added before we can make
 use of it.
+
+### Using Input Variables
+
+- Defining Variables inside the `variables.tf` file.
+
+```terraform
+variable "filename" {
+    default = "/root/pets.txt"
+}
+variable "content" {
+    default = "We love pets!"
+}
+variable "prefix" {
+    default = "Mrs"
+}
+variable "separator" {
+    default = "."
+}
+variable "length" {
+    default = "1"
+}
+```
+
+- Using variables inside the `main.tf` file
+
+```terraform
+resource "local_file" "pet" {
+    filename = var.filename
+    content = var.content
+}
+
+resource "random_pet" "my-pet" {
+    prefix = var.prefix
+    seperator = var.seperator
+    length = var.length
+}
+```

@@ -164,3 +164,6 @@ resource "random_pet" "my-pet" {
     length = "1"
 }
 ```
+
+We need to re-run `terraform init` if a new provider is added before we can make
+use of it.

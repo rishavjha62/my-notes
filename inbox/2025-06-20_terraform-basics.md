@@ -20,3 +20,10 @@ resource "<block>" "<parameters>" {
     key2 = "value2"
 }
 ```
+
+```terraform
+resouce "local_file" "pet" {
+    filename = "~/pets.txt"
+    content = "we love pets"
+}
+```

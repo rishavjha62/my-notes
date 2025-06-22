@@ -333,3 +333,9 @@ terraform apply -var-file variables.tfvars
 > Terraform uses `Variable Definition Precedence` order to determine which
 > variables should be used in case variables are passed with all 4 examples
 > above together.
+>
+> 1. It loads the environemnt variables first.
+> 2. Next from `terraform.tfvars`.
+> 3. Third from `*.auto.tfvars` in alphabetical orders.
+> 4. Finally it considers the command line flag of `-var` or `-var-file` with
+>    the **_highest priority_**.

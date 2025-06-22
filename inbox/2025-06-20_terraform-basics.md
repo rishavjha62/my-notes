@@ -134,3 +134,10 @@ infrastructure.
 >    aws)
 > 3. The plugin could also have the hostname in front which is where the plugin
 >    is located. If omitted, it defaults to `registry.terraform.io`.
+
+### Configuraiton Directory
+
+We can have multiple .tf files in a directory. Also, there could be multiple
+configuration blocks created within a single configuration file with multiple
+providers. A common naming conventions for such a configuration file is to call
+it `main.tf`.

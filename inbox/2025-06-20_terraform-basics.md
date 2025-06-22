@@ -12,7 +12,9 @@ urls:
 
 # terraform basics
 
-HCL basics:
+## HCL basics:
+
+### Basics of creating a resource
 
 ```tf
 resource "<block>" "<parameters>" {
@@ -67,7 +69,7 @@ resource "google_compute_instance" "my-first-gce" {
 }
 ```
 
-## Terraform Workflow:
+### Terraform Workflow:
 
 A simple terraform workflow consists of 4 steps:
 
@@ -85,3 +87,13 @@ A simple terraform workflow consists of 4 steps:
 
 > `terraform show` can be used to check all the resouces that has been created.
 > This information is inspected from the state file.
+
+### Update & Destroy Infrastructure
+
+In case we've made some changes to our .tf file. We can run the `terraform plan`
+command before publishing the resource. This will show all the changes in a
+`diff` format.
+
+Terraform will first delete the resouce and create a new resouce. This can be
+seen in the terminal with `-+` symbol. This type of Infrastructure is called
+**Immutable Infrastructure**.

@@ -97,3 +97,11 @@ command before publishing the resource. This will show all the changes in a
 Terraform will first delete the resouce and create a new resouce. This can be
 seen in the terminal with `-+` symbol. This type of Infrastructure is called
 **Immutable Infrastructure**.
+
+To completely remove the infrastructure run `terraform destroy` command. This
+will show the execution plan as well which can be seen with `-` symbol.
+
+### Providers
+
+On running `terraform init`, terraform downloads & installs plugins for the
+providers used within the configuration.

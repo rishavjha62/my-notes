@@ -111,6 +111,8 @@ These plugins are available at registry.terraform.io
 
 There are 3 kinds of providers:
 
-1. Official providers:
-2. Partner
+1. Official providers: These are owned and maintained by Hashicorp.
+2. Partner providers: These are owned and maintained by 3rd Party techonology
+   comapany that has gone through a partner provided process from Hashicorp.
+
 3.

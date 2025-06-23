@@ -447,4 +447,13 @@ compares it against the configuration files.
 1. State files are blueprints of all the resources that terraform manages. It
    records the identity of the resouce it creates in this state file. Each
    resouce will have a unique id.
-2. It also tracks the metadata details such as resource dependencies.
+2. It also tracks the metadata details such as resource dependencies. When
+   deleting a resouce with dependicies, terraform will rely on the state file.
+3. **_Performance_**: When dealing with 100s and 1000s of resources, distributed
+   across multiple providers, it is not feasible for terraform to reconcile
+   state for every terraform operation as it would take a lot of time to fetch
+   details from all the providers. In such cases terraform state could be used
+   as a record of truth without having to reconcile. We can bypass having to
+   refresh state every time by `terraform plan --refresh=false`.
+4. **_Collaboration_**: It is recommended to store the terraform state file in a
+   remote data store for collaboration and security purposes.

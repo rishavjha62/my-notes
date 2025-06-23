@@ -431,6 +431,8 @@ terraform output <variable_name>
 
 ## Terraform State
 
+### Local State
+
 When `terraform plan` is ran, it checks the state file present inside the
 working directory. The file named `terraform.tfstate` is present which is a JSON
 data structure that maps the real world infrastructure resources to the resource
@@ -444,11 +446,12 @@ compares it against the configuration files.
 
 - Purpose of state
 
-1. State files are blueprints of all the resources that terraform manages. It
-   records the identity of the resouce it creates in this state file. Each
-   resouce will have a unique id.
-2. It also tracks the metadata details such as resource dependencies. When
-   deleting a resouce with dependicies, terraform will rely on the state file.
+1. **_Mapping Configuration to Real World_**: State files are blueprints of all
+   the resources that terraform manages. It records the identity of the resouce
+   it creates in this state file. Each resouce will have a unique id.
+2. **_Tracking Metadata_**: It also tracks the metadata details such as resource
+   dependencies. When deleting a resouce with dependicies, terraform will rely
+   on the state file.
 3. **_Performance_**: When dealing with 100s and 1000s of resources, distributed
    across multiple providers, it is not feasible for terraform to reconcile
    state for every terraform operation as it would take a lot of time to fetch
@@ -457,3 +460,12 @@ compares it against the configuration files.
    refresh state every time by `terraform plan --refresh=false`.
 4. **_Collaboration_**: It is recommended to store the terraform state file in a
    remote data store for collaboration and security purposes.
+
+- Considerations for state file:
+
+1. State file contains sensitive information, thus need to be stored in remote
+   data storage rather than than on version control system.
+2. The state file shouldn't be updated manually. Changes however can be made
+   using the `state` commands.
+
+### Remote State:

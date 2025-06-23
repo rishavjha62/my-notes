@@ -357,3 +357,27 @@ resource "random_pet" "my-pet" {
     length = var.length
 }
 ```
+
+### Resource Dependencies
+
+In the above example, terraform first creates `random_pet` resource and then
+`local_file` resouce. When these resouce are deleted, they are deleted in
+reverse order `local_file` first and then `random_pet`. This type of dependency
+is called **_Implicit Dependency_**.  
+There is another way to specify the dependencies within the configuration file
+using the `depends-on` arguent as shown below.
+
+```terraform
+resource "local_file" "pet" {
+    filename = var.filename
+    content = "My favorite pet is Mr.Cat"
+    depends_on = [
+        random_pet.my-pet
+    ]
+}
+resource "random_pet" "my-pet" {
+    prefix = var.prefix
+    separator = var.separator
+    length = var.length
+}
+```

@@ -415,9 +415,16 @@ Once the block has been created and we've run the configuration file by
 
 ```bash
 
-# to print all output variables
+# to print all output variables defined in all the files in the current configuration directory
 terraform output
 
 # to print a particular variable
 terraform output <variable_name>
 ```
+
+- Use of output variables:
+
+1. When to quickly display details about the provisioned resources on the
+   screen.
+2. Feed the output variables to other IAC tools such as Ansible or a ad-hoc
+   script.

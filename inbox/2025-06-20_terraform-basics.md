@@ -365,7 +365,8 @@ In the above example, terraform first creates `random_pet` resource and then
 reverse order `local_file` first and then `random_pet`. This type of dependency
 is called **_Implicit Dependency_**.  
 There is another way to specify the dependencies within the configuration file
-using the `depends-on` arguent as shown below.
+using the `depends-on` arguent as shown below. It ensures that `local_file` is
+only created after `random_pet`. This is known as **_Explicit Dependency_**.
 
 ```terraform
 resource "local_file" "pet" {

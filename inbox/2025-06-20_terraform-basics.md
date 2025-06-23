@@ -428,3 +428,23 @@ terraform output <variable_name>
    screen.
 2. Feed the output variables to other IAC tools such as Ansible or a ad-hoc
    script.
+
+## Terraform State
+
+When `terraform plan` is ran, it checks the state file present inside the
+working directory. The file named `terraform.tfstate` is present which is a JSON
+data structure that maps the real world infrastructure resources to the resource
+definition in the configuration files.  
+It is the single source of truth when running commands such as `terraform plan`
+& `terraform apply`.
+
+If a change is made to the configuration file and `terraform plan` or
+`terraform apply` command is run, terraform by default refreshes the state again
+compares it against the configuration files.
+
+- Purpose of state
+
+1. State files are blueprints of all the resources that terraform manages. It
+   records the identity of the resouce it creates in this state file. Each
+   resouce will have a unique id.
+2. It also tracks the metadata details such as resource dependencies.

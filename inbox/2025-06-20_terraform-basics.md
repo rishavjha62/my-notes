@@ -160,7 +160,7 @@ resource "local_file" "pet" {
 
 resource "random_pet" "my-pet" {
     prefix = "Mrs"
-    seperator = "."
+    separator = "."
     length = "1"
 }
 ```
@@ -200,7 +200,7 @@ resource "local_file" "pet" {
 
 resource "random_pet" "my-pet" {
     prefix = var.prefix
-    seperator = var.seperator
+    separator = var.separator
     length = var.length
 }
 ```
@@ -339,3 +339,20 @@ terraform apply -var-file variables.tfvars
 > 3. Third from `*.auto.tfvars` in alphabetical orders.
 > 4. Finally it considers the command line flag of `-var` or `-var-file` with
 >    the **_highest priority_**.
+
+### Resource Attributes
+
+They are used to link two resources together and to bound the ouput of one
+resouce with the other.
+
+```terraform
+resource "local_file" "pet" {
+    filename = var.filename
+    content = "My favorite pet is ${random_pet.my-pet.id}"
+}
+
+resource "random_pet" "my-pet" {
+    prefix = var.prefix
+    separator = var.separator
+    length = var.length
+```

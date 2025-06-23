@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/2025-06-01_docker-course.md",
+                "file": "inbox/2025-06-20_terraform-basics.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-01_docker-course"
+              "title": "2025-06-20_terraform-basics"
             }
           }
         ]
@@ -180,8 +180,9 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "24696dc40a14dc70",
+  "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "inbox/2025-06-01_docker-course.md",
     "inbox/2025-06-20_terraform-basics.md~",
     "inbox/4913",
     "inbox/2025-06-20_terraform-basics.md",
@@ -191,7 +192,6 @@
     "images/admission-webhook-controller-kubernetes.png",
     "images/extension-points-scheduler-profiles-kubernetes.png",
     "images/scheduling-plugins-kubernetes.png",
-    "inbox/2025-06-01_docker-course.md",
     "inbox/2025-06-14_kubernetes-basics.md",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md",
     "inbox/2025-06-14_kubernetes-basics.md~",

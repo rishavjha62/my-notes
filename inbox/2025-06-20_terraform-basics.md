@@ -514,3 +514,23 @@ use_lockfile = true
 > [!Note]  
 > State locking has to be enabled in s3 by setting the arguemnt
 > `use_lockfile = true`.
+
+### Terraform state commands
+
+Note that the terraform state file should not be updated manually. In case a
+change is required, it can be done using `terraform state` command.
+
+Syntax for terraform state commands:
+
+```bash
+terraform state <sub-command> [options] [args]
+```
+
+The sub commands could be  
+| table |  
+| --------- |  
+| list |  
+| mv |  
+| pull |  
+| rm |  
+| show |

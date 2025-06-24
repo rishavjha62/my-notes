@@ -313,7 +313,7 @@ terraform apply
    `terraform.tfvars.json` or `*.auto.tfvars.json` and will be automatically
    loaded.
 
-```tfvars.json
+```json
 filename="/root/pets.txt"
 content="We love pets!"
 prefix="Mrs"

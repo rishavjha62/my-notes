@@ -469,3 +469,15 @@ compares it against the configuration files.
    using the `state` commands.
 
 ### Remote State:
+
+- Remote State  
+  Storing the terraform state file in a remote stroage bucket like google cloud
+  stroage bucket, or amazon s3.
+
+- State Locking  
+  If two people update the same resource at the same time, it could lead to
+  unintended consequence such as corruption of the state file. Terraform can
+  protect itself when concurrent operation are run against same configuration by
+  locking the state file. This feature is called **_State Locking_**.
+
+- Configuring remote backend with s3

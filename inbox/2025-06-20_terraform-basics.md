@@ -488,6 +488,8 @@ We need 2 things to configure remote backend for terraform state file.
 - A Database (either Cloud SQL, Firestore or Amazons DynamoDB) for state locking
   & consistency checks.
 
+Example with GCS & Firestore:
+
 ```terraform
 terraform {
   backend "gcs" {
@@ -497,6 +499,8 @@ terraform {
 }
 ```
 
+Example with AWS s3 & DynamoDB.
+
 ```terraform
 terraform {
 backend "s3" {
@@ -504,7 +508,8 @@ bucket= "kodekloud-terraform-state-bucket01"
 key = "finance/terraform.tfstate"
 region = "us-west-1"
 dynamodb_table = "state-locking"
-
-
 }
 ```
+
+> [!Note]  
+> AWS DynamoDB is supported for state locking by Hashicorp.

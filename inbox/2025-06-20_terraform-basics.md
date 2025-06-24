@@ -526,7 +526,7 @@ Syntax for terraform state commands:
 terraform state <sub-command> [options] [args]
 ```
 
-The sub commands could be  
+The sub commands could be:  
 | table |  
 | --------- |  
 | list |  
@@ -534,3 +534,10 @@ The sub commands could be
 | pull |  
 | rm |  
 | show |
+
+- `list` : The list command could be used to display all the resouces recorded
+  within the terraform state file. Can be used with arguments which can be
+  resource name.
+
+- `show`: The show command will provide detailed information about the resouce
+  and can also be passed with arugment as the resouce name

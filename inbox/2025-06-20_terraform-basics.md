@@ -53,7 +53,7 @@ resource "google_compute_instance" "my-first-gce" {
     name = "my-first-gce-with-terraform"
     zone = "us-central1-a"
     tags = ["foo", "bar"]
-    mahcine_type = "n1-standard-2"
+    machine_type = "n1-standard-2"
     network_interface {
         network = "default"
     }
@@ -512,5 +512,5 @@ use_lockfile = true
 ```
 
 > [!Note]  
-> State locking has to enabled in s3 by setting the `use_lockfile` argumen to
-> true
+> State locking has to be enabled in s3 by setting the arguemnt
+> `use_lockfile = true`.

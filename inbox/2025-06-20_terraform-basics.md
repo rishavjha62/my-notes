@@ -33,12 +33,12 @@ resource "local_file" "pet" {
 - **Block Name**: In above example the `resource` is the first element which is
   of the type `block name`.
 
-- **Resource Type**: Following resource we've the declaration of the Resource
+- **resource Type**: Following resource we've the declaration of the resource
   Type that we want to create. This is a fixed value and depends on the provider
   where we want to create the resource. In this example we've the local resource
   with the type being file `[local = provider, file = resource]`.
 
-- **Resource Name**: This is logical name that can be used to identify the
+- **resource Name**: This is logical name that can be used to identify the
   resource. It can be named anything. Here we've called it `pet`.
 
 - **Arguments**: Within the curly braces, we can provide the arguments in a key
@@ -94,7 +94,7 @@ In case we've made some changes to our .tf file. We can run the `terraform plan`
 command before publishing the resource. This will show all the changes in a
 `diff` format.
 
-Terraform will first delete the resouce and create a new resouce. This can be
+Terraform will first delete the resource and create a new resource. This can be
 seen in the terminal with `-+` symbol. This type of Infrastructure is called
 **Immutable Infrastructure**.
 
@@ -340,10 +340,10 @@ terraform apply -var-file variables.tfvars
 > 4. Finally it considers the command line flag of `-var` or `-var-file` with
 >    the **_highest priority_**.
 
-### Resource Attributes
+### resource Attributes
 
 They are used to link two resources together and to bound the ouput of one
-resouce with the other.
+resource with the other.
 
 ```terraform
 resource "local_file" "pet" {
@@ -358,10 +358,10 @@ resource "random_pet" "my-pet" {
 }
 ```
 
-### Resource Dependencies
+### resource Dependencies
 
 In the above example, terraform first creates `random_pet` resource and then
-`local_file` resouce. When these resouce are deleted, they are deleted in
+`local_file` resource. When these resource are deleted, they are deleted in
 reverse order `local_file` first and then `random_pet`. This type of dependency
 is called **_Implicit Dependency_**.  
 There is another way to specify the dependencies within the configuration file
@@ -386,10 +386,10 @@ resource "random_pet" "my-pet" {
 ### Output Variables
 
 The output variables could be used to store the value of an expression in
-terraform. For example, the `random_pet` resouce will generate a random_pet name
-using the attribute called `id` when we apply the configuration. To save this
-output in a variable called `pet-name`, we could create an output block as shown
-below:
+terraform. For example, the `random_pet` resource will generate a random_pet
+name using the attribute called `id` when we apply the configuration. To save
+this output in a variable called `pet-name`, we could create an output block as
+shown below:
 
 ```terraform
 resource "local_file" "pet" {
@@ -447,10 +447,10 @@ compares it against the configuration files.
 - Purpose of state
 
 1. **_Mapping Configuration to Real World_**: State files are blueprints of all
-   the resources that terraform manages. It records the identity of the resouce
-   it creates in this state file. Each resouce will have a unique id.
+   the resources that terraform manages. It records the identity of the resource
+   it creates in this state file. Each resource will have a unique id.
 2. **_Tracking Metadata_**: It also tracks the metadata details such as resource
-   dependencies. When deleting a resouce with dependicies, terraform will rely
+   dependencies. When deleting a resource with dependicies, terraform will rely
    on the state file.
 3. **_Performance_**: When dealing with 100s and 1000s of resources, distributed
    across multiple providers, it is not feasible for terraform to reconcile
@@ -535,9 +535,15 @@ The sub commands could be:
 | rm |  
 | show |
 
-- `list` : The list command could be used to display all the resouces recorded
+- `list` : The list command could be used to display all the resources recorded
   within the terraform state file. Can be used with arguments which can be
   resource name.
 
-- `show`: The show command will provide detailed information about the resouce
-  and can also be passed with arugment as the resouce name
+- `show`: The show command will provide detailed information about the resource
+  and can also be passed with arugment as the resource name.
+
+- `mv`: Used to move items in a terraform state file.
+
+```bash
+terraform state mv [options] SOURCE DESTINATION
+```

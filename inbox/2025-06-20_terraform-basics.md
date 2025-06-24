@@ -549,3 +549,10 @@ The sub commands could be:
 ```bash
 terraform state mv [options] SOURCE DESTINATION
 ```
+
+- `pull`: To downlaod and view the resources in a remote state file. This output
+  can passed to tools like like `jq` to filter the data.
+
+- `rm`: To delete items from terraform state file and can be used with argument
+  as the resource name. Also, ensure to remove the resource from configuration
+  file.

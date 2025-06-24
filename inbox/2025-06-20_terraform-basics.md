@@ -507,6 +507,7 @@ backend "s3" {
 bucket= "my_bucket_name"
 key = "path/to/my/key"
 region = "us-west-1"
+use_lockfile = true
 }
 ```
 

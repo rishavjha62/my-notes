@@ -488,7 +488,7 @@ We need 2 things to configure remote backend for terraform state file.
 - A Database (either Cloud SQL, Firestore or Amazons DynamoDB) for state locking
   & consistency checks.
 
-Example with GCS & Firestore:
+Example with GCS: developer.hashicorp.com/terraform/language/backend/gcs
 
 ```terraform
 terraform {
@@ -499,14 +499,17 @@ terraform {
 }
 ```
 
-Example with AWS s3 & DynamoDB.
+Example with AWS s3: developer.hashicorp.com/terraform/language/backend/s3
 
 ```terraform
 terraform {
 backend "s3" {
-bucket= "kodekloud-terraform-state-bucket01"
-key = "finance/terraform.tfstate"
+bucket= "my_bucket_name"
+key = "path/to/my/key"
 region = "us-west-1"
-dynamodb_table = "state-locking"
 }
 ```
+
+> [!Note]  
+> State locking has to enabled in s3 by setting the `use_lockfile` argumen to
+> true

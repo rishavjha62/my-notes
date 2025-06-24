@@ -542,7 +542,9 @@ The sub commands could be:
 - `show`: The show command will provide detailed information about the resource
   and can also be passed with arugment as the resource name.
 
-- `mv`: Used to move items in a terraform state file.
+- `mv`: Used to move items in a terraform state file. Resource can be moved
+  within the source file which means renaming the resource or from once state
+  file to another state file.
 
 ```bash
 terraform state mv [options] SOURCE DESTINATION

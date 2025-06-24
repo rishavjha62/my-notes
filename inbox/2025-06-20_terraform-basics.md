@@ -510,6 +510,3 @@ region = "us-west-1"
 dynamodb_table = "state-locking"
 }
 ```
-
-> [!Note]  
-> AWS DynamoDB is supported for state locking by Hashicorp.

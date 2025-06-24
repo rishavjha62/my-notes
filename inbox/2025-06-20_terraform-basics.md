@@ -481,3 +481,18 @@ compares it against the configuration files.
   locking the state file. This feature is called **_State Locking_**.
 
 - Configuring remote backend with s3
+
+We need 2 things to configure remote backend for terraform state file.
+
+- storage bucket (either GCS bucket or aws s3 bucket, etc) to store state file.
+- A Database (either Cloud SQL, Firestore or Amazons DynamoDB) for state locking
+  & consistency checks.
+
+```terraform
+terraform {
+  backend "gcs" {
+    bucket  = "terraform-state-bucket-unique"
+    prefix  = "terraform/state"  # Folder structure within bucket
+  }
+}
+```

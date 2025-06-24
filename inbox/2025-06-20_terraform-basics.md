@@ -58,7 +58,7 @@ resource "google_compute_instance" "my-first-gce" {
         network = "default"
     }
     boot_disk {
-        intitialize_params {
+        initialize_params {
             image = "debian-10-buster-v20210196"
             size = 20
         }

@@ -659,3 +659,18 @@ data "local_file" "dog" {
     filename = "/root/dog.txt"
 }
 ```
+
+## Meta Arguments
+
+Meta Arguments can be used with every resource type to modify the behaviour of
+resource. These can help manage dependencies, create multiple instances, and
+control resouce lifecycle actions.
+
+- depends_on -> For defining explicit dependencies
+- lifecycle -> Defines how the resources should be created, updated & destroyed
+- count
+- for_each
+- provider
+
+1. count: To create multiple instances for a resource. Value should be greater
+   than 1.

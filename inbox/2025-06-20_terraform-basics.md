@@ -618,7 +618,7 @@ resource "local_file" "pet" {
 - `prevent_destroy = true` rejects any changes that will result in resource
   getting destroyed and will throw an error.
 
-> ![Note]  
+> [!Note]  
 > `terraform destroy` will still delete these resources.
 
 - `ignore_changes = all` will prevent a resource from being updated based on a
@@ -695,3 +695,7 @@ resource "local_file" "pet" {
     count =  length(var.filename)  #3
 }
 ```
+
+> [!Note]  
+> Drawback: Terraform replaces the other objects as they are shifted by the
+> number of resources delted.

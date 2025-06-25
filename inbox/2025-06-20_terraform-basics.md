@@ -729,3 +729,25 @@ resource "local_file" "pet" {
     for_each = toset(var.filename)
 }
 ```
+
+## Version Constraints
+
+The functionality of a provider plugin may vary drastically from one version to
+another. Version constraints are used to make sure that a specific version of a
+provider is used when we run the terraform init command.
+
+```terraform
+terraform {
+    required_provider {
+    local = {
+    sourch = "hashicorp/local"
+    version = "1.4.0"  # or version != 2.0.0" # we can use others comparision operator
+        }
+    }
+}
+
+resource "local_file" "pet" {
+    filename = "/root/pet.txt"
+    content = "We love pets!"
+}
+```

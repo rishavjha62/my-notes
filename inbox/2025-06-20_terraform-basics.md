@@ -720,3 +720,12 @@ resource "local_file" "pet" {
     for_each = var.filename
 }
 ```
+
+Another way to do this is to convert the list to set with `toset` function.
+
+```terraform
+resource "local_file" "pet" {
+    filename = each.value
+    for_each = toset(var.filename)
+}
+```

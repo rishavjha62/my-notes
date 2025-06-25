@@ -680,8 +680,8 @@ variables.tf
 ```terraform
 variable "filename" {
     default = [
-    "roots/pets.txt"
-    "roots/dogs.txt"
+    "roots/pets.txt",
+    "roots/dogs.txt",
     "roots/cat.txt"
     ]
 }
@@ -707,8 +707,8 @@ resource "local_file" "pet" {
 variable "filename" {
     type = set(string)
     default = [
-    "roots/pets.txt"
-    "roots/dogs.txt"
+    "roots/pets.txt",
+    "roots/dogs.txt",
     "roots/cat.txt"
     ]
 }

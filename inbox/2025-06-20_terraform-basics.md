@@ -674,3 +674,24 @@ control resouce lifecycle actions.
 
 1. count: To create multiple instances for a resource. Value should be greater
    than 1.
+
+variables.tf
+
+````terraform
+variable "filename" {
+    default = [
+    "roots/pets.txt"
+    "roots/dogs.txt"
+    "roots/cat.txt"
+    ]
+}
+```
+
+File name main.tf
+
+```terraform
+resource "local_file" "pet" {
+    fileaname = var.filename[count.index]
+    count = 3
+}
+````

@@ -677,7 +677,7 @@ control resouce lifecycle actions.
 
 variables.tf
 
-````terraform
+```terraform
 variable "filename" {
     default = [
     "roots/pets.txt"
@@ -687,11 +687,11 @@ variable "filename" {
 }
 ```
 
-File name main.tf
+main.tf
 
 ```terraform
 resource "local_file" "pet" {
     fileaname = var.filename[count.index]
-    count = 3
+    count =  length(var.filename)  #3
 }
-````
+```

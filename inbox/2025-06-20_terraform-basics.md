@@ -621,5 +621,22 @@ resource "local_file" "pet" {
 > ![Note]  
 > `terraform destroy` will still delete these resources.
 
-- `ignore_changes` will prevent a resource from being updated based on a list of
-  attributes that we defined within the lifecycle block.
+- `ignore_changes = all` will prevent a resource from being updated based on a
+  list of attributes that we defined within the lifecycle block. The
+  `ignore_changes` block will accept a list of attributes which needs to be
+  ignored for any changes as shown below.
+
+```terraform
+resource "aws_instance" "webserver" {
+    ami = "ami-030493849775"
+    instance_type = "t2.micro"
+    tags = {
+        Name = "ProjectA-Webserver"
+    }
+    lifecycle {
+        ignore_changes = [
+        tags, ami
+        ]
+    }
+}
+```

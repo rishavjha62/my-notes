@@ -612,3 +612,14 @@ resource "local_file" "pet" {
     }
 }
 ```
+
+- `create_before_destroy = true` ensures that a new resource is created before
+  deleting old one.
+- `prevent_destroy = true` rejects any changes that will result in resource
+  getting destroyed and will throw an error.
+
+> ![Note]  
+> `terraform destroy` will still delete these resources.
+
+- `ignore_changes` will prevent a resource from being updated based on a list of
+  attributes that we defined within the lifecycle block.

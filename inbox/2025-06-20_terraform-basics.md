@@ -640,3 +640,22 @@ resource "aws_instance" "webserver" {
     }
 }
 ```
+
+## Datasources
+
+Since infrastructure can be provisioned using other tools such as Chef, Puppet,
+Cloud Formation, Salt Stack, Ansible, Ad-hoc script, manually, etc.  
+Datasources allow terraform to read attibutes from resources which are
+provisioned outside its control. We can define a data block within the
+configuration file to read data as shown below.
+
+```terraform
+resource "local_file" "pet" {
+    filename = "/root/pets.txt"
+    content = data.local_file.dog.content
+}
+
+data "local_file" "dog" {
+    filename = "/root/dog.txt"
+}
+```

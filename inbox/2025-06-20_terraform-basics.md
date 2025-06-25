@@ -554,5 +554,47 @@ terraform state mv [options] SOURCE DESTINATION
   can passed to tools like like `jq` to filter the data.
 
 - `rm`: To delete items from terraform state file and can be used with argument
-  as the resource name. Also, ensure to remove the resource from configuration
-  file.
+
+## Terraform Commands
+
+```bash
+# To check if the syntax is correct
+terraform validate
+
+# To format the terraform configuration files
+terraform fmt
+
+# Prints the current state of the infrastructure as seen by terraform
+terraform show
+# to view the json format output
+terraform show -json
+
+# To see list all providers used in configuration files
+terraform providers
+# To copy provider plugins to another directory
+terraform providers mirror </your/new/path>
+
+# To view all output variables in the configuration directory
+terraform output
+# for a specific variable
+terraform output <variable_name>
+
+# To sync with the real world infrastructure
+terraform apply -refresh-only
+
+# To create a visual representation of the dependicies in the configuration
+terraform graph
+# this output can be created in graph using graphviz (external tool)
+terraform graph | dot -Tsvg > graph.svg
+```
+
+### Mutable vs Immutable Infrastructure
+
+Mutable infrastructure allows for updates to be made to existing servers, while
+immutable infrastructure requires creating a new instance for any update,
+ensuring consistency & reducing risks associated with configuration drift.
+
+### Lifecycle Rules
+
+You may want to first create a new resource and then delete the old resource or
+not want the resource to be deleted at all.

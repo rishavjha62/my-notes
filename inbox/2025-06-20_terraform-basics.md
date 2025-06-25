@@ -597,4 +597,18 @@ ensuring consistency & reducing risks associated with configuration drift.
 ### Lifecycle Rules
 
 You may want to first create a new resource and then delete the old resource or
-not want the resource to be deleted at all.
+not want the resource to be deleted at all even if there is a change made in its
+local configuration. This can be achieved in terraform by using **Lifecycle
+Rules**.
+
+```terraform
+resource "local_file" "pet" {
+    filename = "/root/pets.txt"
+    content = "We love pets!"
+    file_permission = "0700"
+
+    lifecycle {
+        create_before_destroy = true
+    }
+}
+```

@@ -664,7 +664,7 @@ data "local_file" "dog" {
 
 Meta Arguments can be used with every resource type to modify the behaviour of
 resource. These can help manage dependencies, create multiple instances, and
-control resouce lifecycle actions.
+control resource lifecycle actions.
 
 - depends_on -> For defining explicit dependencies
 - lifecycle -> Defines how the resources should be created, updated & destroyed
@@ -698,4 +698,25 @@ resource "local_file" "pet" {
 
 > [!Note]  
 > Drawback: Terraform replaces the other objects as they are shifted by the
-> number of resources delted.
+> number of resources deleted. To avoid this we can use `for_each`.
+
+2. for_each: The for_each argument can be used to loop through the resources.
+   However it works only with Set or Map variable.
+
+```terraform
+variable "filename" {
+    type = set(string)
+    default = [
+    "roots/pets.txt"
+    "roots/dogs.txt"
+    "roots/cat.txt"
+    ]
+}
+```
+
+```terraform
+resource "local_file" "pet" {
+    filename = each.value
+    for_each = var.filename
+}
+```

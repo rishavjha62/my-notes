@@ -751,3 +751,9 @@ resource "local_file" "pet" {
     content = "We love pets!"
 }
 ```
+
+## Useful Functions in Terraform
+
+1. `file()`: Used to capture the value of a file to a argument.
+2. `length()`: Used to count length.
+3. `toset()`: Used to convert list to set variable.

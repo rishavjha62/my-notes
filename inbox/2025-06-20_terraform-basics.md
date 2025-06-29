@@ -757,3 +757,32 @@ resource "local_file" "pet" {
 1. `file()`: Used to capture the value of a file to a argument.
 2. `length()`: Used to count length.
 3. `toset()`: Used to convert list to set variable.
+
+> Terraform also provides console which can be used to testing functions &
+> interpolations. To use the console run the command `terraform console`. It
+> loads the state associated with the configuration directory by default
+> allowing us to any values that is currently stored in it and also loads any
+> variables that are stored within the configuration file.
+
+### Categories of Functions
+
+- Numeric Functions : Used to transform and manipulate numbers
+
+  - max (-1, 2, 10, 200)
+
+  ```terraform
+  variable "num" {
+      type = set(number)
+      default = [250, 10, 11, 5]
+      description = "A set of numbers"
+  }
+  ```
+
+  ```bash
+  terraform console
+  > max(var.num...)
+  ```
+
+- String Functions
+- Collection Functions
+- Type Conversion Functions

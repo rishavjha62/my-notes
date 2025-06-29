@@ -829,8 +829,47 @@ Workspaces allow us to configuration files to create repeatable infrastructure
 for multiple use cases.
 
 ```bash
+# to create a new workspace
 terraform workspace new ProjectA
+
+# to list all workspace
+terraform workspace list
+
+# to switch workspace
+terraform workspace select projectB
 ```
 
 > [!Note]  
 > Once a workspace is created, terraform will switch to this workspace.
+
+### How to use create resources based on workspace?
+
+-> variables.tf
+
+```terraform
+variable region {
+    default = "ca-central-1"
+}
+variable instance_type {
+    default = "t2.micro"
+}
+variable ami {
+    type = map
+    default = {
+        "projectA" = "ami-092384092384"
+        "projectB" = "ami-0923840982038"
+    }
+}
+```
+
+->main.tf
+
+```terraform
+resource "aws_instance" "projectA" {
+    ami = lookup(var.ami, terraform.workspace)
+    instance-type = var.instance_type
+    tags = {
+        Name = terraform.workspace
+    }
+}
+```

@@ -795,5 +795,29 @@ resource "local_file" "pet" {
     - join(",", ["ami-xyz", "AMI-ABC","ami-efg"])
 ```
 
-- Collection Functions
+- Collection Functions: Used for collection data type such as Set, List & Map,
+
+  ```bash
+  - length(var.ami)
+  - index(var.ami, "AMI-ABC")
+  - element(var.ami, 2)
+  - contains(var.ami, "AMI-ABC")
+  - keys(var.ami) # to convert keys of a map to list
+  - values(var.ami) # to convert values of a map to list
+  - lookup (var.ami, "ca-central-1")
+
+  ```
+
+```terraform
+variable "ami" {
+    type = map
+    default = {
+        "us-east-1" = "ami-xyz",
+        "ca-central-1" = "ami-efg"
+        "ap-south-1" = "ami-ABC"
+    }
+    description = "A map of AMI ID's for specific regions"
+}
+```
+
 - Type Conversion Functions

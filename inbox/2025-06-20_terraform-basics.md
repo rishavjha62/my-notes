@@ -873,3 +873,8 @@ resource "aws_instance" "projectA" {
     }
 }
 ```
+
+> [!Note]  
+> When using workspaces, terraform stores state file in a directory called
+> `terraform.tfstate.d` Inside the directory, we can see directory for each
+> workspace for each at least one terraform apply was run.

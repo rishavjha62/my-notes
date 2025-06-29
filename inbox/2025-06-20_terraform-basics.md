@@ -832,5 +832,5 @@ for multiple use cases.
 terraform workspace new ProjectA
 ```
 
-> ![Note]  
+> [!Note]  
 > Once a workspace is created, terraform will switch to this workspace.

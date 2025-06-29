@@ -804,7 +804,7 @@ resource "local_file" "pet" {
   - contains(var.ami, "AMI-ABC")
   - keys(var.ami) # to convert keys of a map to list
   - values(var.ami) # to convert values of a map to list
-  - lookup (var.ami, "ca-central-1")
+  - lookup (var.ami, "ca-central-1", "default-if-none-found-optional")
 
   ```
 
@@ -820,4 +820,17 @@ variable "ami" {
 }
 ```
 
-- Type Conversion Functions
+- Type Conversion Functions : To change varilable from one type to another
+  - toset(var.ami)
+
+## Terraform Workspace
+
+Workspaces allow us to configuration files to create repeatable infrastructure
+for multiple use cases.
+
+```bash
+terraform workspace new ProjectA
+```
+
+> ![Note]  
+> Once a workspace is created, terraform will switch to this workspace.

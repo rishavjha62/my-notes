@@ -768,7 +768,7 @@ resource "local_file" "pet" {
 
 - Numeric Functions : Used to transform and manipulate numbers
 
-  - max (-1, 2, 10, 200)
+  - max (-1, 2, 10, 200): Provides the max of the numbers.
 
   ```terraform
   variable "num" {
@@ -778,11 +778,22 @@ resource "local_file" "pet" {
   }
   ```
 
-  ```bash
+```bash
   terraform console
   > max(var.num...)
-  ```
+    - ceil (10.1)
+    - floor (10.1)
+```
 
-- String Functions
+- String Functions : Used to tranform and manipulate strings.
+
+```bash
+    - split(",", "ami-xyz,AMI-ABC,ami-efg")    - lower(var.ami)
+    - upper(var.ami)
+    - tittle(var.ami)
+    - substr(var.ami, 0, 7)
+    - join(",", ["ami-xyz", "AMI-ABC","ami-efg"])
+```
+
 - Collection Functions
 - Type Conversion Functions

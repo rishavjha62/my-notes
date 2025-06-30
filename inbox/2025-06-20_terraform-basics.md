@@ -916,3 +916,11 @@ resource "aws_instance" "webserver" {
 > machine and the remote machine.
 
 2. The `local-exec` provisioner is used to run tasks on the local machine.
+
+
+
+
+
+
+
+

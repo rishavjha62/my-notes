@@ -883,8 +883,10 @@ resource "aws_instance" "projectA" {
 
 They provide a way for us to carry out tasks such as running command or scripts
 on remote resources or locally where terraform is installed.  
-For example :  
-We can use `remote exec` provisioner to run a bash script after a VM is created.
+For example :
+
+1. We can use `remote exec` provisioner to run a bash script after a VM is
+   created.
 
 ```terraform
 resource "aws_instance" "webserver" {
@@ -897,6 +899,12 @@ resource "aws_instance" "webserver" {
                   "sudo systemctl start nginx",
                  ]
             }
+    connection {
+        type = "ssh"
+        host = self.public_ip
+        user = "ubuntu"
+        private_key = file("root/.ssh/web")
+    }
     key_name = aws.key_pair.id
     vpc_security_group_ids = [aws_security_group.ssh-access.id]
 }
@@ -906,3 +914,5 @@ resource "aws_instance" "webserver" {
 > Just proividing the provisioner block with script might not work. For the
 > provisioner to work, there should be network connectivity between the local
 > machine and the remote machine.
+
+2. The `local-exec` provisioner is used to run tasks on the local machine.

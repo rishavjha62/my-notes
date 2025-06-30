@@ -917,10 +917,22 @@ resource "aws_instance" "webserver" {
 
 2. The `local-exec` provisioner is used to run tasks on the local machine.
 
+```terraform
+resource "aws_instance" "webserver" {
+    ami = "ami-2938479237492374"
+    instance_type = "t2.micro"
+    provisioner "local-exec" {
+        on_failure = continue # fail by default
+        # by default provisioners are created a resource is created known as create time provisioner
+        command = "echo ${aws_instance.webserver.public_ip} >> /tmp/ips.txt"
+    }
+    provisioner "local-exec" {
+        when = destroy
+        command = "echo Instance ${aws_instance.webserver.public_ip} Destroyed! >> /tmp/instance_state.txt"
+    }
+}
+```
 
-
-
-
-
-
-
+> [!Note]  
+> In case command within the provisioner block fails, the `terraform apply` also
+> errors out.

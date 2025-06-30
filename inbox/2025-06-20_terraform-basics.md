@@ -878,3 +878,31 @@ resource "aws_instance" "projectA" {
 > When using workspaces, terraform stores state file in a directory called
 > `terraform.tfstate.d` Inside the directory, we can see directory for each
 > workspace for each at least one terraform apply was run.
+
+## Terraform Provisioners
+
+They provide a way for us to carry out tasks such as running command or scripts
+on remote resources or locally where terraform is installed.  
+For example :  
+We can use `remote exec` provisioner to run a bash script after a VM is created.
+
+```terraform
+resource "aws_instance" "webserver" {
+    ami = "ami-293497459234924835"
+    instance_type = "t2.micro"
+    provisioner "remote-exec" {
+        inline = ["sudo apt update",
+                  "sudo apt install nginx -y"
+                  "sudo systemctl enable nginx",
+                  "sudo systemctl start nginx",
+                 ]
+            }
+    key_name = aws.key_pair.id
+    vpc_security_group_ids = [aws_security_group.ssh-access.id]
+}
+```
+
+> [!Note]  
+> Just proividing the provisioner block with script might not work. For the
+> provisioner to work, there should be network connectivity between the local
+> machine and the remote machine.

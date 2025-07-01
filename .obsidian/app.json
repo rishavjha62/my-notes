@@ -1,4 +1,5 @@
 {
   "vimMode": true,
-  "defaultViewMode": "preview"
+  "defaultViewMode": "preview",
+  "readableLineLength": false
 }

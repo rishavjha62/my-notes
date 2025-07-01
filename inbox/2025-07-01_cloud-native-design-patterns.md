@@ -316,3 +316,104 @@ centralized orchestrator that manages the execution flow.
   microservices.
 - Enables independent service scaling and easy change management.
 - Centralized state management allows resilience and observability.
+
+## Choreography Pattern
+
+### Objective
+
+Enable microservices to collaborate on a business process without centralized
+control, using asynchronous event-based communication.
+
+### Problem Context
+
+- System consists of **independent microservices**, each owning specific
+  domains.
+- Need to complete a multi-step **business transaction** across several
+  microservices.
+- Alternative to **Execution Orchestrator Pattern**, which introduces tight
+  coupling.
+
+### Key Characteristics
+
+- **No central orchestrator**: Flow is driven by services emitting and
+  responding to events.
+- **Event-driven communication** via a **message broker** or **distributed
+  message queue**.
+- Services **subscribe** to relevant events and **publish** their outcomes as
+  new events.
+- Promotes **loose coupling**, **autonomous teams**, and **independent
+  deployments**.
+
+### Real-World Analogy
+
+- Like a **choreographed dance**: each dancer (microservice) performs their
+  steps based on music (events) and not direct instructions.
+
+---
+
+### Example: Job Search Platform – User Signup Flow
+
+**Flow Steps:**
+
+1. **Candidate fills form and uploads resume** → data sent to **Candidate
+   Service**.
+2. **Candidate Service** stores info → emits **"CandidateRegistered"** event.
+3. **Email Function** subscribes to this event → sends confirmation email.
+4. **Skills Parser Service** also consumes this event → extracts skills → emits
+   **"SkillsParsed"** event.
+5. **Job Search Service** consumes **"SkillsParsed"** event → finds job matches
+   → emits **"JobsFound"** event.
+6. **Candidate Service** updates user record with jobs.  
+   **Email Service** optionally sends job list email (immediate or scheduled
+   digest).
+
+**Key Points:**
+
+- No service knows the full flow—only their responsibilities.
+- Events trigger a cascade of actions asynchronously.
+- Services can come and go without impacting others.
+
+---
+
+### Advantages
+
+- **Loose coupling**: Add or remove services without affecting existing ones.
+- **High scalability**: Independent services scale per need.
+- **Cost-effective**: Serverless-friendly—pay only on execution.
+- **Flexibility**: New functionality added via subscribing to events.
+- **Fault-tolerant**: Temporary service downtimes don’t lose messages (message
+  broker ensures delivery when service is back).
+
+---
+
+### Drawbacks
+
+- **Debugging is difficult**: No central view of the execution flow.
+- **Hard to trace failures**: Asynchronous events complicate root cause
+  analysis.
+- **Complex integration tests** required to ensure event chains behave as
+  expected.
+- **Not ideal for highly interdependent, transactional flows.**
+
+---
+
+### Implementation Considerations
+
+- Use **message broker** (e.g., Pub/Sub, Kafka, RabbitMQ) for reliable event
+  delivery.
+- Consider **dead letter queues** and **event versioning** for production
+  resilience.
+- Include **event correlation IDs** for better tracing.
+- Start with **simpler flows** before scaling to complex chains.
+
+---
+
+### Summary
+
+- **Choreography Pattern** solves the drawbacks of orchestration by removing
+  central control.
+- Services **collaborate through events**, enabling autonomy and agility.
+- Ideal for **simple to moderate** workflows with **high scalability
+  requirements**.
+- Comes with **observability and testing challenges** that must be managed
+  carefully.

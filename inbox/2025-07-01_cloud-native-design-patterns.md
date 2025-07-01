@@ -12,15 +12,17 @@ urls:
 
 # cloud native design patterns
 
-## Load Balancing
+## Scalability Patterns
 
-### Objective
+### Load Balancing
+
+#### Objective
 
 Enable systems to handle massive scale (billions of requests/day, petabytes of
 data) in a cost-effective, cloud-native way by distributing work across many
 instances.
 
-### Problem Statement
+#### Problem Statement
 
 - A single server cannot sustain high traffic: CPU, memory, or network become
   bottlenecks.
@@ -28,7 +30,7 @@ instances.
 - Need horizontal distribution of requests to avoid crashes and performance
   degradation.
 
-### Pattern Overview
+#### Pattern Overview
 
 - **Dispatcher** sits between clients and backend workers.
 - Each incoming request is routed to one of the available worker instances.
@@ -36,7 +38,7 @@ instances.
 - Supports fault tolerance: if an instance fails, dispatcher reroutes to healthy
   ones.
 
-### Common Use Cases
+#### Common Use Cases
 
 1. **HTTP Frontend → Backend**
    - Client (browser/mobile) → Load balancer → Identical backend instances
@@ -44,23 +46,23 @@ instances.
    - Each service group behind its own load balancer → independent scaling per
      service
 
-### Implementation Techniques
+#### Implementation Techniques
 
-#### 1. Cloud Load Balancing Service
+1. Cloud Load Balancing Service
 
 - Fully managed by cloud provider (e.g., AWS ELB, GCP Cloud Load Balancing)
 - Automatically scales across zones
 - Supports health checks and auto-restart of balancer instances
 - Can route external (client) and internal (service-to-service) traffic
 
-#### 2. Message Broker / Distributed Queue
+2. Message Broker / Distributed Queue
 
 - Publishers enqueue messages; consumers dequeue and process
 - Best for **asynchronous**, one-way communication
 - Use internally between services, not for client-facing request routing
 - Scales by adjusting the number of consumer workers
 
-### Routing Algorithms
+#### Routing Algorithms
 
 | Algorithm             | Description                                                           | When to Use                                   |
 | --------------------- | --------------------------------------------------------------------- | --------------------------------------------- |
@@ -68,14 +70,14 @@ instances.
 | **Session Affinity**  | Routes a client’s requests to the same instance (via cookie or IP)    | Applications that maintain server-side state  |
 | **Least Connections** | Sends new requests to the instance with the fewest active connections | Long-lived connections (e.g., database, LDAP) |
 
-### Auto Scaling Integration
+#### Auto Scaling Integration
 
 - **Agents** on each instance collect CPU, memory, network metrics.
 - **Auto scaling policies** adjust instance count based on thresholds.
 - Load balancer stays in sync with dynamic pool of instances.
 - Ensures elastic scale-out (on demand) and scale-in (to save cost).
 
-### Summary
+#### Summary
 
 - Load balancing is the foundational scalability pattern for cloud systems.
 - Two primary implementations: managed load-balancer service and message broker.
@@ -84,14 +86,14 @@ instances.
 - Combining load balancing with auto scaling yields highly resilient,
   cost-efficient architectures.
 
-## Pipes and Filters
+### Pipes and Filters
 
-### Objective
+#### Objective
 
 Decompose data processing into independent stages (filters) connected by streams
 (pipes) to enable flexibility, parallelism, and optimal resource utilization.
 
-### Pattern Overview
+#### Pattern Overview
 
 - **Filters**: Stateless components that perform a single transformation on
   data.
@@ -101,7 +103,7 @@ Decompose data processing into independent stages (filters) connected by streams
 - **Data Sink**: Final destination after all transformations (e.g., database,
   external API).
 
-### Problems Addressed
+#### Problems Addressed
 
 - **Tight Coupling**: Monolithic pipelines force all stages into one codebase
   and language.
@@ -110,20 +112,20 @@ Decompose data processing into independent stages (filters) connected by streams
 - **Independent Scaling**: Each stage can scale separately based on its
   throughput needs.
 
-### Benefits
+#### Benefits
 
 - Flexibility to choose best language/library per stage
 - Optimal hardware provisioning per filter
 - Independent scaling of each filter
 - Parallel execution of stages for high throughput
 
-### Typical Use Cases
+#### Typical Use Cases
 
 - **Stream Processing** (e.g., user activity, clickstream)
 - **IoT Data Ingestion**
 - **Media Pipelines** (image/video/audio processing)
 
-### Example: Video Processing Pipeline
+#### Example: Video Processing Pipeline
 
 1. **Chunking**
    - Split large video into smaller segments for streaming.
@@ -139,7 +141,7 @@ Decompose data processing into independent stages (filters) connected by streams
    - Run content-moderation algorithms → Flag or reject
      inappropriate/copyrighted content.
 
-### Implementation Considerations
+#### Implementation Considerations
 
 - **Granularity vs. Overhead**
   - Too many fine-grained filters increase operational complexity.
@@ -149,7 +151,7 @@ Decompose data processing into independent stages (filters) connected by streams
   - Not suitable for workflows requiring a single atomic transaction across
     stages.
 
-### Summary
+#### Summary
 
 - Pipes and Filters split complex processing into modular, independent
   components.
@@ -157,14 +159,14 @@ Decompose data processing into independent stages (filters) connected by streams
 - Careful design needed to balance modularity with system complexity and
   transactional requirements.
 
-## Scatter-Gather Pattern
+### Scatter-Gather Pattern
 
-### Objective
+#### Objective
 
 Process a single client request by dispatching it to multiple workers in
 parallel, then aggregating the results into a unified response.
 
-### Pattern Structure
+#### Pattern Structure
 
 - **Sender (Client)**: Initiates the request.
 - **Dispatcher**: Sends the request to multiple workers.
@@ -172,7 +174,7 @@ parallel, then aggregating the results into a unified response.
 - **Aggregator**: Collects and combines responses from all workers into a single
   response.
 
-### Key Characteristics
+#### Key Characteristics
 
 - Unlike Load Balancing, each worker receives the same request.
 - Workers are typically **not identical** – they may vary in logic, data, or
@@ -180,7 +182,7 @@ parallel, then aggregating the results into a unified response.
 - Each request is **independent and parallel**, enabling constant-time
   aggregation regardless of the number of workers.
 
-### Common Use Cases
+#### Common Use Cases
 
 1. **Distributed Search Services**
 
@@ -197,14 +199,14 @@ parallel, then aggregating the results into a unified response.
    - Workers process subsets of data in parallel for long-running analysis.
    - Aggregator collects results when processing is complete.
 
-### Benefits
+#### Benefits
 
 - High parallelism and scalability
 - Works well with internal and external systems
 - User remains unaware of number or type of workers
 - Constant response time despite system size
 
-### Implementation Considerations
+#### Implementation Considerations
 
 1. **Timeouts and Fault Tolerance**
 
@@ -225,7 +227,7 @@ parallel, then aggregating the results into a unified response.
    - Aggregator stores result using the ID; user can poll with ID to check
      status or retrieve results.
 
-### Summary
+#### Summary
 
 - Scatter-Gather enables concurrent processing of a single request across
   multiple components.
@@ -233,14 +235,14 @@ parallel, then aggregating the results into a unified response.
 - Enhances scalability, supports partial failure, and enables both real-time and
   batch-style workflows.
 
-## Execution Orchestration Pattern
+### Execution Orchestration Pattern
 
-### Objective
+#### Objective
 
 Coordinate complex workflows involving multiple services by introducing a
 centralized orchestrator that manages the execution flow.
 
-### Pattern Structure
+#### Pattern Structure
 
 - **Execution Orchestrator**:
   - Directs the flow of operations across multiple services.
@@ -251,7 +253,7 @@ centralized orchestrator that manages the execution flow.
   - Remain stateless and unaware of overall orchestration flow.
   - Can be implemented as Functions (e.g., FaaS) for cost efficiency.
 
-### Key Characteristics
+#### Key Characteristics
 
 - Centralized controller (Orchestrator) that doesn’t perform business logic, but
   invokes it.
@@ -259,7 +261,7 @@ centralized orchestrator that manages the execution flow.
 - Scalable and resilient via distributed deployments and state persistence.
 - Especially useful in **microservices** and **serverless** environments.
 
-### Common Use Case: User Registration in a Video Streaming Platform
+#### Common Use Case: User Registration in a Video Streaming Platform
 
 1. **User Form Submission** → Orchestrator receives request.
 2. **User Service** → Validates username/password.
@@ -271,14 +273,14 @@ centralized orchestrator that manages the execution flow.
 - All steps are coordinated by the **Execution Orchestrator**.
 - Only the Orchestrator is aware of the full process.
 
-### Benefits
+#### Benefits
 
 - Centralized flow control in distributed architecture.
 - Supports scalable, decoupled microservices.
 - Easier debugging and traceability via orchestrator logs.
 - Simplifies updates (add/remove services without impacting others).
 
-### Failure & Recovery Strategies
+#### Failure & Recovery Strategies
 
 - **Service-Level Failures**:
   - Orchestrator retries on failure.
@@ -292,7 +294,7 @@ centralized orchestrator that manages the execution flow.
   - Orchestrator handles idempotency (e.g., checking if a step has already been
     completed).
 
-### Implementation Considerations
+#### Implementation Considerations
 
 1. **Avoid Business Logic in Orchestrator**
 
@@ -310,21 +312,21 @@ centralized orchestrator that manages the execution flow.
 4. **Parallelism**
    - Some steps can be executed in parallel for efficiency.
 
-### Summary
+#### Summary
 
 - Execution Orchestration Pattern is vital for coordinating flows in
   microservices.
 - Enables independent service scaling and easy change management.
 - Centralized state management allows resilience and observability.
 
-## Choreography Pattern
+### Choreography Pattern
 
-### Objective
+#### Objective
 
 Enable microservices to collaborate on a business process without centralized
 control, using asynchronous event-based communication.
 
-### Problem Context
+#### Problem Context
 
 - System consists of **independent microservices**, each owning specific
   domains.
@@ -333,7 +335,7 @@ control, using asynchronous event-based communication.
 - Alternative to **Execution Orchestrator Pattern**, which introduces tight
   coupling.
 
-### Key Characteristics
+#### Key Characteristics
 
 - **No central orchestrator**: Flow is driven by services emitting and
   responding to events.
@@ -344,12 +346,12 @@ control, using asynchronous event-based communication.
 - Promotes **loose coupling**, **autonomous teams**, and **independent
   deployments**.
 
-### Real-World Analogy
+#### Real-World Analogy
 
 - Like a **choreographed dance**: each dancer (microservice) performs their
   steps based on music (events) and not direct instructions.
 
-### Example: Job Search Platform – User Signup Flow
+#### Example: Job Search Platform – User Signup Flow
 
 **Flow Steps:**
 
@@ -371,7 +373,7 @@ control, using asynchronous event-based communication.
 - Events trigger a cascade of actions asynchronously.
 - Services can come and go without impacting others.
 
-### Advantages
+#### Advantages
 
 - **Loose coupling**: Add or remove services without affecting existing ones.
 - **High scalability**: Independent services scale per need.
@@ -380,7 +382,7 @@ control, using asynchronous event-based communication.
 - **Fault-tolerant**: Temporary service downtimes don’t lose messages (message
   broker ensures delivery when service is back).
 
-### Drawbacks
+#### Drawbacks
 
 - **Debugging is difficult**: No central view of the execution flow.
 - **Hard to trace failures**: Asynchronous events complicate root cause
@@ -389,7 +391,7 @@ control, using asynchronous event-based communication.
   expected.
 - **Not ideal for highly interdependent, transactional flows.**
 
-### Implementation Considerations
+#### Implementation Considerations
 
 - Use **message broker** (e.g., Pub/Sub, Kafka, RabbitMQ) for reliable event
   delivery.
@@ -398,7 +400,7 @@ control, using asynchronous event-based communication.
 - Include **event correlation IDs** for better tracing.
 - Start with **simpler flows** before scaling to complex chains.
 
-### Summary
+#### Summary
 
 - **Choreography Pattern** solves the drawbacks of orchestration by removing
   central control.

@@ -7,7 +7,7 @@ hubs:
   - "[[system-design]]"
   - "[[devops-concept]]"
 urls:
-  -
+  - udemy.com/course/the-complete-cloud-computing-software-architecture-patterns
 ---
 
 # cloud native design patterns

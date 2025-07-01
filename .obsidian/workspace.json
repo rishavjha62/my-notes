@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "80aca9997dd7c2b9",
+        "id": "2fa6bffea065c042",
         "type": "tabs",
         "children": [
           {
-            "id": "24696dc40a14dc70",
+            "id": "5f7a7d80686c2d44",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -180,8 +180,9 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "24696dc40a14dc70",
+  "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "inbox/2025-07-01_cloud-native-design-patterns.md",
     "inbox/2025-07-01_cloud-native-design-patterns.md~",
     "inbox/4913",
     "inbox/2025-06-15_kubernetes-administrator.md",
@@ -214,7 +215,6 @@
     "my-notes",
     "inbox/2025-05-28_master-gcp-gke.md",
     "inbox/2025-05-29_docker-cheat-sheet.md~",
-    "4913",
     "notes/cheat-sheet/2025-05-30_tmux-cheat-sheet.md",
     "notes/course/2025-05-30_tmux-notes.md",
     "inbox/1748774622-KTQM.md",

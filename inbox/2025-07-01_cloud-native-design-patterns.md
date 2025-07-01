@@ -156,3 +156,79 @@ Decompose data processing into independent stages (filters) connected by streams
 - Ideal for heterogeneous workloads and high-throughput data streams.
 - Careful design needed to balance modularity with system complexity and
   transactional requirements.
+
+## Scatter-Gather Pattern
+
+### Objective
+
+Process a single client request by dispatching it to multiple workers in
+parallel, then aggregating the results into a unified response.
+
+### Pattern Structure
+
+- **Sender (Client)**: Initiates the request.
+- **Dispatcher**: Sends the request to multiple workers.
+- **Workers**: Handle independent processing tasks (internal or external).
+- **Aggregator**: Collects and combines responses from all workers into a single
+  response.
+
+### Key Characteristics
+
+- Unlike Load Balancing, each worker receives the same request.
+- Workers are typically **not identical** – they may vary in logic, data, or
+  ownership.
+- Each request is **independent and parallel**, enabling constant-time
+  aggregation regardless of the number of workers.
+
+### Common Use Cases
+
+1. **Distributed Search Services**
+
+   - Query is sent to multiple search workers, each responsible for a subset of
+     data.
+   - Aggregated and ranked results are returned to the user.
+
+2. **External Service Integration (e.g., Hotel Booking)**
+
+   - A single search query is sent to multiple external vendors.
+   - Quotes are collected, sorted, and shown to the user.
+
+3. **Big Data Analysis or Reporting**
+   - Workers process subsets of data in parallel for long-running analysis.
+   - Aggregator collects results when processing is complete.
+
+### Benefits
+
+- High parallelism and scalability
+- Works well with internal and external systems
+- User remains unaware of number or type of workers
+- Constant response time despite system size
+
+### Implementation Considerations
+
+1. **Timeouts and Fault Tolerance**
+
+   - Dispatcher should set a timeout for responses.
+   - If some workers fail or delay, partial results can still be used.
+
+2. **Decoupling via Message Broker**
+
+   - Use pub/sub model to reduce tight coupling.
+   - Dispatcher publishes requests; workers subscribe to topics.
+   - Workers publish results to another topic; aggregator subscribes and
+     compiles responses.
+
+3. **Support for Long-Running Jobs**
+   - Separate dispatcher and aggregator.
+   - Assign a unique identifier to each request.
+   - Workers tag results with the ID.
+   - Aggregator stores result using the ID; user can poll with ID to check
+     status or retrieve results.
+
+### Summary
+
+- Scatter-Gather enables concurrent processing of a single request across
+  multiple components.
+- Effective for search, aggregation, and integration tasks.
+- Enhances scalability, supports partial failure, and enables both real-time and
+  batch-style workflows.

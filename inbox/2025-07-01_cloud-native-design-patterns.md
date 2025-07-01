@@ -83,3 +83,94 @@ instances.
   patterns.
 - Combining load balancing with auto scaling yields highly resilient,
   cost-efficient architectures.
+
+# Scalable Software Architecture Patterns
+
+## Pipes and Filters
+
+### Objective
+
+Decompose data processing into independent stages (filters) connected by streams
+(pipes) to enable flexibility, parallelism, and optimal resource utilization.
+
+---
+
+### Pattern Overview
+
+- **Filters**: Stateless components that perform a single transformation on
+  data.
+- **Pipes**: Channels (e.g., message queues, distributed logs, notifications to
+  storage) that carry data from one filter to the next.
+- **Data Source**: Origin of input (e.g., HTTP service, IoT sensor).
+- **Data Sink**: Final destination after all transformations (e.g., database,
+  external API).
+
+---
+
+### Problems Addressed
+
+- **Tight Coupling**: Monolithic pipelines force all stages into one codebase
+  and language.
+- **Heterogeneous Requirements**: Different stages may need specialized hardware
+  or runtime (GPU for ML, high-CPU, high-memory).
+- **Independent Scaling**: Each stage can scale separately based on its
+  throughput needs.
+
+---
+
+### Benefits
+
+- Flexibility to choose best language/library per stage
+- Optimal hardware provisioning per filter
+- Independent scaling of each filter
+- Parallel execution of stages for high throughput
+
+---
+
+### Typical Use Cases
+
+- **Stream Processing** (e.g., user activity, clickstream)
+- **IoT Data Ingestion**
+- **Media Pipelines** (image/video/audio processing)
+
+---
+
+### Example: Video Processing Pipeline
+
+1. **Chunking**
+   - Split large video into smaller segments for streaming.
+2. **Thumbnail Extraction**
+   - Select a representative frame per segment.
+3. **Transcoding**
+   - Resize segments to multiple resolutions/bitrates for adaptive streaming.
+4. **Format Encoding**
+   - Encode segments into various container formats for device compatibility.
+5. **Audio Processing (parallel branch)**
+   - Transcribe speech → Translate captions → Generate subtitle files.
+6. **Compliance Check (parallel branch)**
+   - Run content-moderation algorithms → Flag or reject
+     inappropriate/copyrighted content.
+
+---
+
+### Implementation Considerations
+
+- **Granularity vs. Overhead**
+  - Too many fine-grained filters increase operational complexity.
+- **Statelessness**
+  - Filters should be stateless and receive all required context in input.
+- **Transactional Boundaries**
+  - Not suitable for workflows requiring a single atomic transaction across
+    stages.
+
+---
+
+### Summary
+
+- Pipes and Filters split complex processing into modular, independent
+  components.
+- Ideal for heterogeneous workloads and high-throughput data streams.
+- Careful design needed to balance modularity with system complexity and
+  transactional requirements.
+
+---

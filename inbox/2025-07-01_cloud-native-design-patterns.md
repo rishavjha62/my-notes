@@ -84,16 +84,12 @@ instances.
 - Combining load balancing with auto scaling yields highly resilient,
   cost-efficient architectures.
 
-# Scalable Software Architecture Patterns
-
 ## Pipes and Filters
 
 ### Objective
 
 Decompose data processing into independent stages (filters) connected by streams
 (pipes) to enable flexibility, parallelism, and optimal resource utilization.
-
----
 
 ### Pattern Overview
 
@@ -105,8 +101,6 @@ Decompose data processing into independent stages (filters) connected by streams
 - **Data Sink**: Final destination after all transformations (e.g., database,
   external API).
 
----
-
 ### Problems Addressed
 
 - **Tight Coupling**: Monolithic pipelines force all stages into one codebase
@@ -116,8 +110,6 @@ Decompose data processing into independent stages (filters) connected by streams
 - **Independent Scaling**: Each stage can scale separately based on its
   throughput needs.
 
----
-
 ### Benefits
 
 - Flexibility to choose best language/library per stage
@@ -125,15 +117,11 @@ Decompose data processing into independent stages (filters) connected by streams
 - Independent scaling of each filter
 - Parallel execution of stages for high throughput
 
----
-
 ### Typical Use Cases
 
 - **Stream Processing** (e.g., user activity, clickstream)
 - **IoT Data Ingestion**
 - **Media Pipelines** (image/video/audio processing)
-
----
 
 ### Example: Video Processing Pipeline
 
@@ -151,8 +139,6 @@ Decompose data processing into independent stages (filters) connected by streams
    - Run content-moderation algorithms → Flag or reject
      inappropriate/copyrighted content.
 
----
-
 ### Implementation Considerations
 
 - **Granularity vs. Overhead**
@@ -163,8 +149,6 @@ Decompose data processing into independent stages (filters) connected by streams
   - Not suitable for workflows requiring a single atomic transaction across
     stages.
 
----
-
 ### Summary
 
 - Pipes and Filters split complex processing into modular, independent
@@ -172,5 +156,3 @@ Decompose data processing into independent stages (filters) connected by streams
 - Ideal for heterogeneous workloads and high-throughput data streams.
 - Careful design needed to balance modularity with system complexity and
   transactional requirements.
-
----

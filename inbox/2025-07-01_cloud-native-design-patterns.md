@@ -349,8 +349,6 @@ control, using asynchronous event-based communication.
 - Like a **choreographed dance**: each dancer (microservice) performs their
   steps based on music (events) and not direct instructions.
 
----
-
 ### Example: Job Search Platform – User Signup Flow
 
 **Flow Steps:**
@@ -373,8 +371,6 @@ control, using asynchronous event-based communication.
 - Events trigger a cascade of actions asynchronously.
 - Services can come and go without impacting others.
 
----
-
 ### Advantages
 
 - **Loose coupling**: Add or remove services without affecting existing ones.
@@ -383,8 +379,6 @@ control, using asynchronous event-based communication.
 - **Flexibility**: New functionality added via subscribing to events.
 - **Fault-tolerant**: Temporary service downtimes don’t lose messages (message
   broker ensures delivery when service is back).
-
----
 
 ### Drawbacks
 
@@ -395,8 +389,6 @@ control, using asynchronous event-based communication.
   expected.
 - **Not ideal for highly interdependent, transactional flows.**
 
----
-
 ### Implementation Considerations
 
 - Use **message broker** (e.g., Pub/Sub, Kafka, RabbitMQ) for reliable event
@@ -405,8 +397,6 @@ control, using asynchronous event-based communication.
   resilience.
 - Include **event correlation IDs** for better tracing.
 - Start with **simpler flows** before scaling to complex chains.
-
----
 
 ### Summary
 

@@ -962,3 +962,20 @@ Similarly, we can untaint the resource if we don't want them to be recreated.
 ```bash
 terraform untaint aws_instance.webserver
 ```
+
+## Enable and Use Debugging
+
+Environment variable `export TF_LOG=TRACE` could be used to look deeper into the
+issues which could have caused issues.  
+Terraform offers 5 level logging:
+
+1. INFO
+2. WARNING
+3. ERROR
+4. DEBUG
+5. TRACE -> Most verbose logging level
+
+> To store the logs, use the `TF_LOG_PATH=/tmp/terraform.log` environemnt
+> variable.
+
+> To disable logging completely, unset the env variable `unset TF_LOG_PATH`.

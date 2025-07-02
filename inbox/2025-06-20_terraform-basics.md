@@ -979,3 +979,15 @@ Terraform offers 5 level logging:
 > variable.
 
 > To disable logging completely, unset the env variable `unset TF_LOG_PATH`.
+
+## Teraform Import
+
+To import resources in terraform which created outside its scope.
+
+```bash
+terraform import <resource_type>.<resource_name> <attribute>
+```
+
+> [!Note]  
+> Importing will fail if you don't manually make a entry of the resource block
+> inside your configuration file.

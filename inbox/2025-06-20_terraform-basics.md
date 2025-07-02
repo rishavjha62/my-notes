@@ -990,4 +990,6 @@ terraform import <resource_type>.<resource_name> <attribute>
 
 > [!Note]  
 > Importing will fail if you don't manually make a entry of the resource block
-> inside your configuration file.
+> inside your configuration file. This wil ensure that the state file is
+> populated with the details about the resource. Next, you can copy the details
+> from state file to the configuration file.

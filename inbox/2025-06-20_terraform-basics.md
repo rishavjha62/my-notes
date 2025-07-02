@@ -933,6 +933,12 @@ resource "aws_instance" "webserver" {
 }
 ```
 
-> [!Note]  
-> In case command within the provisioner block fails, the `terraform apply` also
-> errors out.
+> [!Note]
+>
+> - In case command within the provisioner block fails, the `terraform apply`
+>   also errors out.
+> - Any resource that is created while the provisioner fails, is marked as
+>   `tainted`.
+> - As a best practice, terraform recommends using `provisioners` as last
+>   resort. Wherever possible, use resource arguments natively available i.e.
+>   userdata for AWS, metadata for GCP, etc for running startup scripts.

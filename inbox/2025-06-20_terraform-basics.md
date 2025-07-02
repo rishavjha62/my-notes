@@ -949,3 +949,16 @@ Terraform marks the resource as tainted if a resource creation fails and will
 try to create teh resource on next subsequent `terraform apply`.  
 There will be cases when resource creation fails due to some issues such as
 provisioner block issue.
+
+In scenarios where we want to force the resource to be recreated again, we can
+taint the resource.
+
+```bash
+terraform taint aws_instance.webserver
+```
+
+Similarly, we can untaint the resource if we don't want them to be recreated.
+
+```bash
+terraform untaint aws_instance.webserver
+```

@@ -942,3 +942,10 @@ resource "aws_instance" "webserver" {
 > - As a best practice, terraform recommends using `provisioners` as last
 >   resort. Wherever possible, use resource arguments natively available i.e.
 >   userdata for AWS, metadata for GCP, etc for running startup scripts.
+
+## Taint and Untaint
+
+Terraform marks the resource as tainted if a resource creation fails and will
+try to create teh resource on next subsequent `terraform apply`.  
+There will be cases when resource creation fails due to some issues such as
+provisioner block issue.

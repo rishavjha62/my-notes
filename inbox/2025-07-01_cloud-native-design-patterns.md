@@ -438,7 +438,7 @@ control, using asynchronous event-based communication.
   - Distributed sort/search
   - Any big data batch processing
 
-### MapReduce Programming Model
+#### MapReduce Programming Model
 
 #### Step-by-Step Flow
 
@@ -526,3 +526,119 @@ control, using asynchronous event-based communication.
   - Task orchestration
   - Failure recovery
 - Ideal for batch-processing workloads in cloud environments
+
+### Saga Pattern
+
+#### Introduction
+
+- Microservices architecture encourages one database per microservice.
+- Sharing a database between services tightly couples them and leads to a
+  distributed monolith.
+- Isolated databases allow independent schema changes without breaking other
+  services.
+- **Problem:** We lose ACID transactions across services.
+- **Solution:** Saga Pattern — ensures **data consistency** in **distributed
+  transactions**.
+
+### What is the Saga Pattern?
+
+- A saga is a **sequence of local transactions**, each updating one
+  service/database.
+- After each successful operation, the next step is triggered.
+- If a step fails:
+  - Perform **compensating operations** to undo previous steps.
+  - Either retry the failed step or abort the entire saga.
+
+### Saga Implementations
+
+#### Execution Orchestrator Pattern
+
+- A centralized **orchestration service** controls the flow.
+- Calls services in order, waits for responses.
+- On failure, it triggers compensating operations to undo past actions.
+
+#### Choreography Pattern
+
+- No centralized service.
+- Services **listen to and emit events** via a message broker.
+- Each service:
+  - Listens to incoming events.
+  - Performs its action.
+  - Emits either success or compensating events depending on the result.
+
+### Real-Life Example: Ticketing System
+
+#### Business Requirements
+
+- Sell assigned seats for events.
+- Ensure:
+  - No blacklisted/bot users buy tickets.
+  - Customer is charged.
+  - Seat is reserved only once.
+
+#### Services Involved
+
+- `Order Service`
+- `Security Service`
+- `Billing Service`
+- `Reservation Service`
+- `Email Service`
+- Optional: `Orchestration Service` (if using execution orchestrator pattern)
+
+### Flow: Execution Orchestrator Saga
+
+1. **User Request → Orchestration Service**
+2. **Orchestration → Order Service**
+
+   - Create a pending order record.
+   - If seat is taken, either:
+     - Retry (if still pending)
+     - Abort (if already purchased)
+
+3. **Orchestration → Security Service**
+
+   - Validate user is not a bot or blacklisted.
+   - If invalid: abort saga and delete order.
+
+4. **Orchestration → Billing Service**
+
+   - Authorize pending transaction on user's card.
+   - If insufficient funds or invalid card:
+     - Abort saga and delete order.
+   - On success, save pending transaction.
+
+5. **Orchestration → Reservation Service**
+
+   - Check if seat is already reserved.
+   - If reserved:
+     - Compensate:
+       - Cancel billing transaction
+       - Delete order
+   - On success:
+     - Reserve ticket
+     - Update reservation DB
+
+6. **Orchestration → Finalization Steps**
+   - Bill user.
+   - Mark order as purchased.
+   - Send confirmation email.
+
+### Flow: Choreography Saga
+
+- Same services, **no orchestration service**.
+- Services communicate using **asynchronous events**:
+  - e.g. `order.created`, `security.validated`, `billing.pending`, etc.
+- Each service is responsible for:
+  - Triggering next step.
+  - Triggering compensating events if failure occurs.
+
+### Summary
+
+- Saga Pattern helps maintain **data consistency** in microservices with
+  separate databases.
+- Supports distributed transactions using local transactions + compensations.
+- Two main implementations:
+  - Execution Orchestrator (central controller)
+  - Choreography (event-driven flow)
+- Ensures reliable rollback in case of failure and enables smooth forward flow
+  on success.

@@ -1133,7 +1133,7 @@ Replaying all events from day one is **inefficient**.
 
 2. **CQRS + Event Sourcing**
 
-   - Combine with [[CQRS]]
+   - Combine with CQRS
    - **Command Service**:
      - Appends events to event log (e.g., broker or DB)
    - **Query Service**:
@@ -1142,23 +1142,23 @@ Replaying all events from day one is **inefficient**.
 
 #### Bonus: In-memory caching
 
-    - Use in-memory databases for reads (e.g., Redis)
+- Use in-memory databases for reads (e.g., Redis)
 
 #### Eventual Consistency
 
-    - Reads might **lag behind** writes
-    - Suitable for most use cases, **not** real-time-critical systems
+- Reads might **lag behind** writes
+- Suitable for most use cases, **not** real-time-critical systems
 
 #### Summary
 
-    - **Event Sourcing** captures every change as an event.
-    - Enables:
-        - Full history
-        - Write performance
-        - Analytics
-    - Events can be stored in:
-        - Traditional DBs (easier querying)
-        - Message brokers (scalable processing)
-    - Combine with **CQRS** for optimized reads.
-    - Apply **snapshots** or materialized views for fast access.
-    - Great fit for audit-focused and write-heavy systems.
+- **Event Sourcing** captures every change as an event.
+- Enables:
+  - Full history
+  - Write performance
+  - Analytics
+- Events can be stored in:
+  - Traditional DBs (easier querying)
+  - Message brokers (scalable processing)
+- Combine with **CQRS** for optimized reads.
+- Apply **snapshots** or materialized views for fast access.
+- Great fit for audit-focused and write-heavy systems.

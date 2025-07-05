@@ -1066,12 +1066,9 @@ event being sent to a message broker, even when services crash mid-operation.
 #### Why Not Just Store Current State?
 
 - For most CRUD-based apps (e.g., product catalog), current state is enough.
-- But in systems like:
-  - **Banking**
-  - **Inventory tracking**
-  - **Audit trails**
-  - ...just knowing the current state isn't enough.
-- We need the **entire history** of how that state came to be.
+- But in systems like **Banking**, **Inventory tracking**, **Audit trails**, etc
+  just knowing the current state isn't enough. We need the **entire history** of
+  how that state came to be.
 
 #### Real-World Use Cases
 

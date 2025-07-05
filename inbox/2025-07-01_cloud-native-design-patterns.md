@@ -409,3 +409,120 @@ control, using asynchronous event-based communication.
   requirements**.
 - Comes with **observability and testing challenges** that must be managed
   carefully.
+
+## Performance Patterns for Data Intensive Systems
+
+### MapReduce Architecture Pattern
+
+#### Introduction & Motivation
+
+- Solves the challenge of running computations on massive data by abstracting
+  away:
+
+  - Data distribution
+  - Task scheduling
+  - Failure recovery
+  - Result aggregation
+
+- The goal: define every computation in terms of a common model → map and reduce
+  functions.
+- The framework handles execution, parallelism, recovery, and output collection.
+
+#### Use Cases
+
+- Used for:
+  - Machine learning
+  - Log filtering and analysis
+  - Index construction
+  - Graph traversal
+  - Distributed sort/search
+  - Any big data batch processing
+
+### MapReduce Programming Model
+
+#### Step-by-Step Flow
+
+1. **Input:** Represented as key-value pairs (e.g., filename → file content).
+2. **Map Function:**
+   - Processes each key-value pair.
+   - Emits intermediate key-value pairs.
+3. **Shuffle:**
+   - Framework groups and sorts all intermediate data by key.
+4. **Reduce Function:**
+   - Processes each key with a list/iterator of values.
+   - Emits final output key-value pair (usually one per key).
+
+#### Example: Word Count
+
+- **Input:** Files with text
+- **Map:** Emit (word, 1) for every word in the file
+- **Shuffle:** Group all (word, 1) pairs by word
+- **Reduce:** Sum values for each word → (word, total count)
+
+### MapReduce Software Architecture
+
+#### Components
+
+1. **Master:**
+   - Schedules all map and reduce tasks
+   - Monitors progress
+   - Handles worker failures
+2. **Workers:**
+   - Map workers execute map() on their assigned input chunks
+   - Reduce workers handle reduce() tasks post-shuffle
+
+#### Execution Steps
+
+- Master splits input into chunks
+- Map workers process and partition their output into `R` partitions
+- Reduce workers pull relevant partitions, sort/shuffle, and run reduce()
+
+#### Parallelism
+
+- All map tasks run in parallel
+- Reduce workers start as soon as at least one map worker finishes
+- All reduce tasks also run in parallel
+
+### Failure Handling
+
+- **Worker Failure:**
+
+  - Master pings workers regularly
+  - Failed tasks are reassigned
+  - If a map worker fails, reduce workers are informed of new intermediate data
+    locations
+
+- **Master Failure:**
+  - Options:
+    - Restart from scratch
+    - Log snapshots and resume with new master
+    - Run a backup master in parallel
+
+### Cloud Environment Advantages
+
+- **Elastic compute:** Instantly scale to hundreds/thousands of machines
+- **Cost-effective:** Pay only when computation runs
+- **Batch pattern:** Ideal for scheduled jobs over large datasets
+- **Separation of storage vs compute:** Store cheap, compute expensive
+
+### Real-World Usage
+
+- Cloud vendors and open-source projects implement MapReduce
+- Users only write map() and reduce() logic
+- Commonly tuned for:
+  - Chunk size
+  - Partition function
+  - Number of reducers
+  - Fault tolerance
+
+### Summary
+
+- MapReduce simplifies big data processing via a reusable pattern
+- The architecture includes a master and many worker machines
+- Code logic is limited to defining `map` and `reduce`
+- Framework handles:
+  - Data partitioning
+  - Parallelism
+  - Task orchestration
+  - Failure recovery
+- Ideal for batch-processing workloads in cloud environments

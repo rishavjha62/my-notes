@@ -14,7 +14,7 @@ urls:
 
 ## Scalability Patterns
 
-### Load Balancing
+### 1. Load Balancing
 
 #### Objective
 
@@ -86,7 +86,7 @@ instances.
 - Combining load balancing with auto scaling yields highly resilient,
   cost-efficient architectures.
 
-### Pipes and Filters
+### 2. Pipes and Filters
 
 #### Objective
 
@@ -159,7 +159,7 @@ Decompose data processing into independent stages (filters) connected by streams
 - Careful design needed to balance modularity with system complexity and
   transactional requirements.
 
-### Scatter-Gather Pattern
+### 3. Scatter-Gather Pattern
 
 #### Objective
 
@@ -235,7 +235,7 @@ parallel, then aggregating the results into a unified response.
 - Enhances scalability, supports partial failure, and enables both real-time and
   batch-style workflows.
 
-### Execution Orchestration Pattern
+### 3. Execution Orchestration Pattern
 
 #### Objective
 
@@ -319,7 +319,7 @@ centralized orchestrator that manages the execution flow.
 - Enables independent service scaling and easy change management.
 - Centralized state management allows resilience and observability.
 
-### Choreography Pattern
+### 4.Choreography Pattern
 
 #### Objective
 

@@ -1049,3 +1049,125 @@ event being sent to a message broker, even when services crash mid-operation.
   - Building a **pre-joined materialized view**
   - Keeping it updated via **events**
 - Enables **low-latency, cost-effective** reads in a microservices environment.
+
+### Event Sourcing Pattern
+
+#### What is Event Sourcing?
+
+- **Event sourcing** is an architecture pattern where **state is not stored
+  directly**.
+- Instead of storing current values, we **store a sequence of events** that
+  describe state transitions over time.
+- Each **event** represents:
+  - A fact or change about the system
+  - **Immutability**: Once written, cannot be changed
+  - **Append-only**: New events are added to the log
+
+#### Why Not Just Store Current State?
+
+- For most CRUD-based apps (e.g., product catalog), current state is enough.
+- But in systems like:
+  - **Banking**
+  - **Inventory tracking**
+  - **Audit trails**
+  - ...just knowing the current state isn't enough.
+- We need the **entire history** of how that state came to be.
+
+#### Real-World Use Cases
+
+- **Bank Account**:
+  - Current balance = sum of all deposits and withdrawals.
+  - Clients expect a **transaction history**, not just a balance.
+- **Online Store Inventory**:
+  - 100 items left: Was it 200 sales + 100 returns? Or 1 bulk sale?
+  - Knowing the sequence matters.
+
+---
+
+#### Benefits of Event Sourcing
+
+1. **Complete History & Auditability**
+
+- Every state change is captured.
+- Enables:
+  - Auditing
+  - Analytics
+  - Fraud detection
+  - Debugging issues post-fact
+
+2. **High Write Performance**
+
+- Append-only events = No contention, no locking
+- Avoids conflicts in write-intensive scenarios (e.g., inventory updates)
+
+---
+
+#### How to Store Events
+
+##### Option 1: **Database Table**
+
+- Store each event as a row.
+- Schema:
+  - `event_type`, `entity_id`, `payload`, `timestamp`
+- Benefits:
+  - Easy to **query/analyze**
+  - Can filter by time, type, user, etc.
+- Tradeoff:
+  - Replay logic is needed to reconstruct state
+
+##### Option 2: **Message Broker** (Kafka, Pub/Sub)
+
+- Events are **published**, not just stored
+- Consumers **subscribe** and act (e.g., update materialized views)
+- Benefits:
+  - Scalable, high-throughput
+  - Good ordering guarantees
+- Tradeoff:
+  - Complex querying; best used for streaming/event processing
+
+---
+
+#### Reconstructing State
+
+##### Problem:
+
+Replaying all events from day one is **inefficient**.
+
+##### Solutions:
+
+##### 1. **Snapshots**
+
+- Periodically persist the current state
+- Future reads only need to replay from the **last snapshot**
+
+##### 2. **CQRS + Event Sourcing**
+
+- Combine with [[CQRS]]
+- **Command Service**:
+  - Appends events to event log (e.g., broker or DB)
+- **Query Service**:
+  - Listens to event stream
+  - Maintains **read-optimized view** (e.g., balance, order status)
+
+#### Bonus: In-memory caching
+
+- Use in-memory databases for reads (e.g., Redis)
+
+#### Eventual Consistency
+
+- Reads might **lag behind** writes
+- Suitable for most use cases, **not** real-time-critical systems
+
+#### Summary
+
+- **Event Sourcing** captures every change as an event.
+- Enables:
+  - Full history
+  - Write performance
+  - Analytics
+- Events can be stored in:
+  - Traditional DBs (easier querying)
+  - Message brokers (scalable processing)
+- Combine with **CQRS** for optimized reads.
+- Apply **snapshots** or materialized views for fast access.
+- Great fit for audit-focused and write-heavy systems.

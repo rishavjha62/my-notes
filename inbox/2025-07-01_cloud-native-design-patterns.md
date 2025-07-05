@@ -962,3 +962,90 @@ event being sent to a message broker, even when services crash mid-operation.
   - Complexity
   - Eventual consistency
   - DevOps effort
+
+### 6. Combining CQRS and Materialized View in Microservices
+
+#### The Problem
+
+- In monolithic systems, a **single relational database** allows JOINs across
+  multiple tables.
+- In microservices architecture:
+  - Data is **split across multiple services**, each with its **own database**.
+  - Cross-service JOINs are no longer possible.
+  - To aggregate data:
+    - Multiple **network calls** → microservices
+    - **Programmatic JOIN** → aggregation in service code
+  - Leads to **high latency**, **increased cost**, and **poor user experience**.
+
+#### The Solution
+
+- Combine:
+  - **CQRS** (Command Query Responsibility Segregation)
+  - **Materialized View** pattern
+
+#### Architecture Strategy
+
+- Create a **new query microservice**:
+  - Owns a **read-optimized database**
+  - Stores a **materialized view** built from data in other microservices
+- Updates to the materialized view are driven by **events** published by the
+  source services:
+  - Use **Message Broker** (e.g., Kafka, Pub/Sub)
+  - Or **Function-as-a-Service (FaaS)** triggers
+- Results in a **pre-joined**, low-latency data model available for
+  high-performance reads
+
+#### Consistency Model
+
+- Consistency is **eventual**, not strong.
+- Updates from source services eventually reflect in the materialized view.
+
+#### Real-World Example: Online Education Platform
+
+##### System Components
+
+- **API Gateway**: Routes external API calls.
+- **Courses Microservice**:
+  - Database includes course name, description, price.
+- **Reviews Microservice**:
+  - Database includes review text, star rating, user details.
+- **Course Search Microservice**:
+  - New microservice with **read-optimized DB**
+  - Contains a **materialized view** with:
+    - Course title, subtitle, price
+    - Review count and average rating
+
+##### Flow of Data
+
+1. **User performs a course search**
+   - API Gateway → Course Search Service
+   - Returns results from **materialized view**
+2. **Course updated**
+   - Course Service publishes event
+   - Course Search Service consumes it → updates view
+3. **New review added**
+   - Review Service publishes event
+   - Course Search Service consumes it → updates view
+
+##### Update Strategies
+
+- Updates can be:
+  - **Immediate**: On each data change
+  - **Scheduled**: To reduce write pressure (e.g., every X minutes)
+
+##### Benefits
+
+- Fast, unified queries across services
+- Reduced latency for UI-facing endpoints
+- Cost-efficient: avoids redundant network/database operations
+
+#### Summary
+
+- This pattern combines **CQRS** and **Materialized View** for
+  **microservices**.
+- Solves the challenge of **joining distributed data** across services.
+- Involves:
+  - Creating a **read-optimized service**
+  - Building a **pre-joined materialized view**
+  - Keeping it updated via **events**
+- Enables **low-latency, cost-effective** reads in a microservices environment.

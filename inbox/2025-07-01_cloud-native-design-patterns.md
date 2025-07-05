@@ -1083,40 +1083,40 @@ event being sent to a message broker, even when services crash mid-operation.
 
 1. **Complete History & Auditability**
 
-- Every state change is captured.
-- Enables:
-  - Auditing
-  - Analytics
-  - Fraud detection
-  - Debugging issues post-fact
+   - Every state change is captured.
+   - Enables:
+     - Auditing
+     - Analytics
+     - Fraud detection
+     - Debugging issues post-fact
 
 2. **High Write Performance**
 
-- Append-only events = No contention, no locking
-- Avoids conflicts in write-intensive scenarios (e.g., inventory updates)
+   - Append-only events = No contention, no locking
+   - Avoids conflicts in write-intensive scenarios (e.g., inventory updates)
 
 #### How to Store Events
 
 1. **Database Table**
 
-- Store each event as a row.
-- Schema:
-  - `event_type`, `entity_id`, `payload`, `timestamp`
-- Benefits:
-  - Easy to **query/analyze**
-  - Can filter by time, type, user, etc.
-- Tradeoff:
-  - Replay logic is needed to reconstruct state
+   - Store each event as a row.
+   - Schema:
+     - `event_type`, `entity_id`, `payload`, `timestamp`
+   - Benefits:
+     - Easy to **query/analyze**
+     - Can filter by time, type, user, etc.
+   - Tradeoff:
+     - Replay logic is needed to reconstruct state
 
 2. **Message Broker** (Kafka, Pub/Sub)
 
-- Events are **published**, not just stored
-- Consumers **subscribe** and act (e.g., update materialized views)
-- Benefits:
-  - Scalable, high-throughput
-  - Good ordering guarantees
-- Tradeoff:
-  - Complex querying; best used for streaming/event processing
+   - Events are **published**, not just stored
+   - Consumers **subscribe** and act (e.g., update materialized views)
+   - Benefits:
+     - Scalable, high-throughput
+     - Good ordering guarantees
+   - Tradeoff:
+     - Complex querying; best used for streaming/event processing
 
 #### Reconstructing State
 
@@ -1128,37 +1128,37 @@ Replaying all events from day one is **inefficient**.
 
 1. **Snapshots**
 
-- Periodically persist the current state
-- Future reads only need to replay from the **last snapshot**
+   - Periodically persist the current state
+   - Future reads only need to replay from the **last snapshot**
 
 2. **CQRS + Event Sourcing**
 
-- Combine with [[CQRS]]
-- **Command Service**:
-  - Appends events to event log (e.g., broker or DB)
-- **Query Service**:
-  - Listens to event stream
-  - Maintains **read-optimized view** (e.g., balance, order status)
+   - Combine with [[CQRS]]
+   - **Command Service**:
+     - Appends events to event log (e.g., broker or DB)
+   - **Query Service**:
+     - Listens to event stream
+     - Maintains **read-optimized view** (e.g., balance, order status)
 
 #### Bonus: In-memory caching
 
-- Use in-memory databases for reads (e.g., Redis)
+    - Use in-memory databases for reads (e.g., Redis)
 
 #### Eventual Consistency
 
-- Reads might **lag behind** writes
-- Suitable for most use cases, **not** real-time-critical systems
+    - Reads might **lag behind** writes
+    - Suitable for most use cases, **not** real-time-critical systems
 
 #### Summary
 
-- **Event Sourcing** captures every change as an event.
-- Enables:
-  - Full history
-  - Write performance
-  - Analytics
-- Events can be stored in:
-  - Traditional DBs (easier querying)
-  - Message brokers (scalable processing)
-- Combine with **CQRS** for optimized reads.
-- Apply **snapshots** or materialized views for fast access.
-- Great fit for audit-focused and write-heavy systems.
+    - **Event Sourcing** captures every change as an event.
+    - Enables:
+        - Full history
+        - Write performance
+        - Analytics
+    - Events can be stored in:
+        - Traditional DBs (easier querying)
+        - Message brokers (scalable processing)
+    - Combine with **CQRS** for optimized reads.
+    - Apply **snapshots** or materialized views for fast access.
+    - Great fit for audit-focused and write-heavy systems.

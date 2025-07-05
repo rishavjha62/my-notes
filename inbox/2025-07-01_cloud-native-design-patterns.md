@@ -642,3 +642,105 @@ control, using asynchronous event-based communication.
   - Choreography (event-driven flow)
 - Ensures reliable rollback in case of failure and enables smooth forward flow
   on success.
+
+### Transactional Outbox Pattern
+
+#### Objective
+
+Guarantee that every critical database update is followed by a corresponding
+event being sent to a message broker, even when services crash mid-operation.
+
+#### Problem Statement
+
+- In an event-driven architecture, services often:
+  - Update a local database.
+  - Emit an event to trigger further processing by other services.
+- These two actions are **not atomic**—there’s no transaction across database
+  and message broker.
+- If a crash happens in between:
+  - **User saved, no event sent** → rest of the system unaware.
+  - **Event sent, user not saved** → system acts on invalid/incomplete data.
+
+#### Pattern Overview
+
+- Introduce an **Outbox table** in the same database.
+- Any change to the core business table (e.g., `users`) also adds an event to
+  the **Outbox**.
+- Both inserts are part of the **same transaction** → guarantees atomicity.
+- A separate service called the **Message Relay (or Sender)**:
+  - Polls the outbox.
+  - Sends events to the message broker.
+  - Marks them as sent (or deletes them).
+
+#### Benefits
+
+- Ensures **exactly-once business logic execution** even in face of service
+  crashes.
+- Solves the **dual-write problem** (write to DB + send message).
+- Can support **multiple message broker types** (Kafka, Pub/Sub, RabbitMQ,
+  etc.).
+- Can be implemented using relational or non-relational databases.
+
+#### Potential Issues & Solutions
+
+##### 1. Duplicate Events
+
+- Scenario:
+  - Message is sent to broker.
+  - Crash happens before it's marked as "sent".
+- Result: **Same event might be sent again.**
+
+###### Solution:
+
+- Use **at-least-once** delivery semantics.
+- Add a **message ID** to each outbox entry.
+- Consumers track processed IDs → ignore duplicates.
+- Ensure downstream consumers are **idempotent**.
+
+##### 2. Lack of Transaction Support
+
+- Some NoSQL databases (e.g., document stores) **don’t support multi-table
+  transactions**.
+
+###### Solution:
+
+- Store outbox message as a **field inside the main document**.
+- Sender scans for documents with unsent outbox messages.
+- After sending, remove the field or mark it as sent.
+
+##### 3. Event Ordering
+
+- E.g., `user_registered` followed by `user_canceled`.
+- If `user_canceled` is sent before `user_registered`, consumers may reject the
+  cancel event.
+
+###### Solution:
+
+- Add **sequence numbers** to Outbox entries.
+- Sender service **sorts by sequence** before sending events.
+- Guarantees **correct temporal order** of events.
+
+#### Example Use Case
+
+**Job Platform: New User Registration**
+
+1. User signs up → `User Service`:
+   - Inserts user into `users` table.
+   - Inserts signup event into `outbox` table.
+2. `Message Relay` service:
+   - Sends event to message broker.
+3. Downstream services (Search, Scheduler, Email):
+   - Subscribe to event and take appropriate actions.
+
+#### Summary
+
+- **Transactional Outbox Pattern** bridges the gap between database writes and
+  event emission.
+- Key ideas:
+  - Use a single DB transaction to write both data and message.
+  - Delegate message sending to an external relay.
+- Ensures strong consistency across distributed systems.
+- Must handle:
+  - **Duplicates** with message IDs and idempotency.
+  - **Lack of DB transactions** via document-embedded messages.
+  - **Ordering** via sequencing of outbox records.

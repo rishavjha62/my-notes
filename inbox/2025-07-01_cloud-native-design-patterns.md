@@ -1050,7 +1050,7 @@ event being sent to a message broker, even when services crash mid-operation.
   - Keeping it updated via **events**
 - Enables **low-latency, cost-effective** reads in a microservices environment.
 
-### Event Sourcing Pattern
+### 7. Event Sourcing Pattern
 
 #### What is Event Sourcing?
 
@@ -1082,8 +1082,6 @@ event being sent to a message broker, even when services crash mid-operation.
   - 100 items left: Was it 200 sales + 100 returns? Or 1 bulk sale?
   - Knowing the sequence matters.
 
----
-
 #### Benefits of Event Sourcing
 
 1. **Complete History & Auditability**
@@ -1099,8 +1097,6 @@ event being sent to a message broker, even when services crash mid-operation.
 
 - Append-only events = No contention, no locking
 - Avoids conflicts in write-intensive scenarios (e.g., inventory updates)
-
----
 
 #### How to Store Events
 
@@ -1124,8 +1120,6 @@ event being sent to a message broker, even when services crash mid-operation.
   - Good ordering guarantees
 - Tradeoff:
   - Complex querying; best used for streaming/event processing
-
----
 
 #### Reconstructing State
 

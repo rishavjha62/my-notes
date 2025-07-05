@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/2025-06-20_terraform-basics.md",
+                "file": "inbox/2025-07-01_cloud-native-design-patterns.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-20_terraform-basics"
+              "title": "2025-07-01_cloud-native-design-patterns"
             }
           }
         ]
@@ -181,14 +181,14 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "5f7a7d80686c2d44",
+  "active": "ec909fcce833e480",
   "lastOpenFiles": [
+    "inbox/2025-06-20_terraform-basics.md",
     "inbox/2025-07-01_cloud-native-design-patterns.md~",
     "inbox/4913",
     "inbox/2025-06-20_terraform-basics.md~",
     "inbox/2025-07-01_cloud-native-design-patterns.md",
     "inbox/2025-06-15_kubernetes-administrator.md",
-    "inbox/2025-06-20_terraform-basics.md",
     "inbox/2025-06-01_docker-course.md",
     "inbox/2025-06-15_kubernetes-administrator.md~",
     "inbox/2025-06-14_kubernetes-cheat-sheet.md~",

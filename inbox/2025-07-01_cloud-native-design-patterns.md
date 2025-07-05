@@ -831,3 +831,134 @@ event being sent to a message broker, even when services crash mid-operation.
   placement.
 - Widely supported in modern databases and easily integrated into microservice
   architectures.
+
+### CQRS (Command and Query Responsibility Segregation)
+
+#### Terminology
+
+- **Command**: Operations that **mutate** data (insert, update, delete).
+  - Examples: Add user, post review, delete comment.
+- **Query**: Operations that **read** data.
+  - Examples: Fetch all reviews for a product, show product details.
+
+#### Motivation
+
+- Traditional systems mix commands and queries in the same service and database.
+- This leads to trade-offs in:
+  - **Schema design**
+  - **Performance tuning**
+  - **Business logic complexity**
+- CQRS **separates** read and write operations into:
+  - Different **services**
+  - Different **databases**
+- Each side is optimized independently:
+  - Write-optimized DB (relational, normalized)
+  - Read-optimized DB (NoSQL, denormalized, precomputed)
+
+#### Benefits
+
+- **Separation of Concerns**:
+  - Command Service: Business logic, validations, user permissions.
+  - Query Service: Read-only, fast access, no business logic.
+- **Independent Evolution**:
+  - Each service can evolve, scale, and deploy independently.
+- **Optimized Storage Models**:
+  - Use schemas and storage patterns tailored to specific access patterns.
+- **Scalability**:
+  - Scale services and databases based on their individual workloads.
+- **Improved Performance**:
+  - Queries become faster and cheaper when isolated.
+
+#### Synchronization Strategy
+
+- Command DB → Event → Query DB
+- Methods:
+  1. **Message Broker**
+     - Command service publishes event after DB write.
+     - Query service consumes event and updates read DB.
+     - Use **Transactional Outbox** pattern to guarantee atomicity.
+  2. **Function as a Service**
+     - Triggered on DB change.
+     - Updates the read database accordingly.
+     - Cost-effective for infrequent writes.
+
+#### Consistency Model
+
+- CQRS offers **eventual consistency** between command and query stores.
+- Not suitable for cases requiring **strong consistency**.
+- Make trade-offs based on:
+  - Business use case
+  - Tolerance for stale reads
+
+#### Real-World Example: Online Store Reviews
+
+##### Command Side
+
+- Users add/edit/delete reviews.
+- Relational DB:
+  - Columns: user_id, product_id, order_id, review, rating
+- Business logic ensures:
+  - User purchased product
+  - No duplicate reviews per order
+  - Content filtering for inappropriate reviews
+
+##### Query Side
+
+- Users read:
+  - Reviews
+  - Average product ratings
+- Read-optimized NoSQL DB:
+  - Reviews collection includes:
+    - user_name, review_text, rating, store_location, product_id
+  - Ratings collection includes:
+    - product_id, average_rating
+- Querying is simple:
+  - Filter by product ID
+  - Data is pre-aggregated and denormalized
+- Update strategies:
+  - **Low review volume**: Recompute and update rating immediately.
+  - **High review volume**: Defer to scheduled FaaS that recomputes ratings in
+    batch.
+
+##### Scaling
+
+- Query service and DB can be scaled independently.
+- Use autoscaling based on traffic patterns.
+
+##### Expansion
+
+- Add more read models:
+  - Product inventory
+  - Description
+  - Trending products
+  - Recommendations
+- Each optimized and decoupled from command logic.
+
+#### Trade-Offs & Complexity
+
+- **Overhead**:
+  - Two services
+  - Two databases
+  - Synchronization mechanisms
+- **Maintenance**:
+  - Higher dev/test/deploy complexity
+- **Best used when**:
+  - High performance requirements
+  - Heavy read/write loads
+  - Complex business logic on write path
+
+#### Summary
+
+- CQRS = Separation of Command and Query responsibilities.
+- Write and Read paths have their own optimized:
+  - Codebases
+  - Databases
+  - Scaling and consistency models
+- Gains:
+  - Performance
+  - Maintainability
+  - Scalability
+- Costs:
+  - Complexity
+  - Eventual consistency
+  - DevOps effort

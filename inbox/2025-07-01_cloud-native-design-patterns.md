@@ -744,3 +744,90 @@ event being sent to a message broker, even when services crash mid-operation.
   - **Duplicates** with message IDs and idempotency.
   - **Lack of DB transactions** via document-embedded messages.
   - **Ordering** via sequencing of outbox records.
+
+### Materialized View Pattern
+
+#### Introduction
+
+- Solves performance and cost issues when querying large datasets repeatedly.
+- Complex queries (joins, aggregations) are expensive and slow.
+- Increases latency for end users and leads to high cloud resource costs.
+- Solution: Precompute and store results in a separate, read-optimized table
+  called a **Materialized View**.
+
+#### Pattern Overview
+
+- Create a **read-only** table populated with the result of a complex query.
+- When needed, query the materialized view instead of computing results live.
+- Updates to base tables can trigger:
+  - Immediate regeneration
+  - Scheduled refresh (batch mode)
+
+#### Real-World Example: Online Education Platform
+
+- Tables: `courses`, `reviews`
+- Goal: Show top courses per topic based on average rating.
+- Original query: Join `courses` + `reviews`, group by course ID, compute
+  average rating, filter by topic.
+- This query is:
+  - Costly to run repeatedly
+  - Slow at scale (thousands of courses, millions of reviews)
+- Solution:
+  - Create a materialized view with course ID, title, topic, and average rating.
+  - Optional: Create one view per topic (e.g., `programming_mv`, `art_mv`) for
+    ultra-fast queries.
+
+#### Benefits
+
+- **Low Latency**: Read-optimized views return results faster.
+- **Cost-Efficient**: Avoid recomputation of the same queries.
+- **Scalability**: Supports massive reads without hitting core DB.
+- **Flexibility**: Can support multiple use cases (e.g., dashboards, APIs).
+
+#### Implementation Considerations
+
+1. **Storage Trade-Off**
+
+   - Uses extra space to store precomputed data.
+   - Trade-off between storage cost vs. read efficiency.
+   - Use selectively for high-impact queries.
+
+2. **Where to Store**
+
+   - **Same Database**:
+     - Simple, native support in modern RDBMS (e.g., PostgreSQL, Oracle).
+     - Auto-refresh on data changes using incremental updates.
+   - **Separate Store** (e.g., Redis, BigQuery, Elasticsearch):
+     - Optimized for reads.
+     - Must manually sync from source tables.
+     - Suitable for analytics or caching.
+
+3. **Refresh Strategy**
+
+   - **Real-time Refresh**: For highly dynamic data.
+   - **Scheduled Refresh**: Lower cost, good for slowly changing datasets.
+   - **Manual Refresh**: Triggered only when needed.
+
+4. **Query Optimization**
+
+   - Materialized views can store data:
+     - Without filters (global view)
+     - With filters (e.g., topic-specific views)
+   - Index or pre-sort the view to support common access patterns (e.g.,
+     ranking)
+
+5. **Recovery and Redundancy**
+
+   - Reconstructible from base tables — backup is not critical.
+   - Ideal candidate for in-memory systems where durability isn’t mandatory.
+
+#### Summary
+
+- **Materialized View** is a performance pattern for optimizing frequent,
+  complex queries.
+- Saves time and cost in high-read environments.
+- Works well for analytics, dashboards, and recommendation systems.
+- Implementation should consider storage cost, update frequency, and view
+  placement.
+- Widely supported in modern databases and easily integrated into microservice
+  architectures.

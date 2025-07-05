@@ -12,7 +12,7 @@ urls:
 
 # cloud native design patterns
 
-## Scalability Patterns
+## -> Scalability Patterns
 
 ### 1. Load Balancing
 
@@ -235,7 +235,7 @@ parallel, then aggregating the results into a unified response.
 - Enhances scalability, supports partial failure, and enables both real-time and
   batch-style workflows.
 
-### 3. Execution Orchestration Pattern
+### 4. Execution Orchestration Pattern
 
 #### Objective
 
@@ -319,7 +319,7 @@ centralized orchestrator that manages the execution flow.
 - Enables independent service scaling and easy change management.
 - Centralized state management allows resilience and observability.
 
-### 4.Choreography Pattern
+### 5. Choreography Pattern
 
 #### Objective
 
@@ -410,9 +410,9 @@ control, using asynchronous event-based communication.
 - Comes with **observability and testing challenges** that must be managed
   carefully.
 
-## Performance Patterns for Data Intensive Systems
+## -> Performance Patterns for Data Intensive Systems
 
-### MapReduce Architecture Pattern
+### 1. MapReduce Architecture Pattern
 
 #### Introduction & Motivation
 
@@ -527,7 +527,7 @@ control, using asynchronous event-based communication.
   - Failure recovery
 - Ideal for batch-processing workloads in cloud environments
 
-### Saga Pattern
+### 2. Saga Pattern
 
 ##### Introduction
 
@@ -643,7 +643,7 @@ control, using asynchronous event-based communication.
 - Ensures reliable rollback in case of failure and enables smooth forward flow
   on success.
 
-### Transactional Outbox Pattern
+### 3. Transactional Outbox Pattern
 
 #### Objective
 
@@ -745,7 +745,7 @@ event being sent to a message broker, even when services crash mid-operation.
   - **Lack of DB transactions** via document-embedded messages.
   - **Ordering** via sequencing of outbox records.
 
-### Materialized View Pattern
+### 4. Materialized View Pattern
 
 #### Introduction
 
@@ -832,7 +832,7 @@ event being sent to a message broker, even when services crash mid-operation.
 - Widely supported in modern databases and easily integrated into microservice
   architectures.
 
-### CQRS (Command and Query Responsibility Segregation)
+### 5. CQRS (Command and Query Responsibility Segregation)
 
 #### Terminology
 

@@ -428,7 +428,7 @@ control, using asynchronous event-based communication.
   functions.
 - The framework handles execution, parallelism, recovery, and output collection.
 
-#### Use Cases
+##### Use Cases
 
 - Used for:
   - Machine learning
@@ -440,7 +440,7 @@ control, using asynchronous event-based communication.
 
 #### MapReduce Programming Model
 
-#### Step-by-Step Flow
+##### Step-by-Step Flow
 
 1. **Input:** Represented as key-value pairs (e.g., filename → file content).
 2. **Map Function:**
@@ -452,16 +452,16 @@ control, using asynchronous event-based communication.
    - Processes each key with a list/iterator of values.
    - Emits final output key-value pair (usually one per key).
 
-#### Example: Word Count
+##### Example: Word Count
 
 - **Input:** Files with text
 - **Map:** Emit (word, 1) for every word in the file
 - **Shuffle:** Group all (word, 1) pairs by word
 - **Reduce:** Sum values for each word → (word, total count)
 
-### MapReduce Software Architecture
+#### MapReduce Software Architecture
 
-#### Components
+##### Components
 
 1. **Master:**
    - Schedules all map and reduce tasks
@@ -471,19 +471,19 @@ control, using asynchronous event-based communication.
    - Map workers execute map() on their assigned input chunks
    - Reduce workers handle reduce() tasks post-shuffle
 
-#### Execution Steps
+##### Execution Steps
 
 - Master splits input into chunks
 - Map workers process and partition their output into `R` partitions
 - Reduce workers pull relevant partitions, sort/shuffle, and run reduce()
 
-#### Parallelism
+##### Parallelism
 
 - All map tasks run in parallel
 - Reduce workers start as soon as at least one map worker finishes
 - All reduce tasks also run in parallel
 
-### Failure Handling
+#### Failure Handling
 
 - **Worker Failure:**
 
@@ -498,14 +498,14 @@ control, using asynchronous event-based communication.
     - Log snapshots and resume with new master
     - Run a backup master in parallel
 
-### Cloud Environment Advantages
+#### Cloud Environment Advantages
 
 - **Elastic compute:** Instantly scale to hundreds/thousands of machines
 - **Cost-effective:** Pay only when computation runs
 - **Batch pattern:** Ideal for scheduled jobs over large datasets
 - **Separation of storage vs compute:** Store cheap, compute expensive
 
-### Real-World Usage
+#### Real-World Usage
 
 - Cloud vendors and open-source projects implement MapReduce
 - Users only write map() and reduce() logic
@@ -515,7 +515,7 @@ control, using asynchronous event-based communication.
   - Number of reducers
   - Fault tolerance
 
-### Summary
+#### Summary
 
 - MapReduce simplifies big data processing via a reusable pattern
 - The architecture includes a master and many worker machines
@@ -529,7 +529,7 @@ control, using asynchronous event-based communication.
 
 ### Saga Pattern
 
-#### Introduction
+##### Introduction
 
 - Microservices architecture encourages one database per microservice.
 - Sharing a database between services tightly couples them and leads to a
@@ -540,7 +540,7 @@ control, using asynchronous event-based communication.
 - **Solution:** Saga Pattern — ensures **data consistency** in **distributed
   transactions**.
 
-### What is the Saga Pattern?
+#### What is the Saga Pattern?
 
 - A saga is a **sequence of local transactions**, each updating one
   service/database.
@@ -549,15 +549,15 @@ control, using asynchronous event-based communication.
   - Perform **compensating operations** to undo previous steps.
   - Either retry the failed step or abort the entire saga.
 
-### Saga Implementations
+#### Saga Implementations
 
-#### Execution Orchestrator Pattern
+##### Execution Orchestrator Pattern
 
 - A centralized **orchestration service** controls the flow.
 - Calls services in order, waits for responses.
 - On failure, it triggers compensating operations to undo past actions.
 
-#### Choreography Pattern
+##### Choreography Pattern
 
 - No centralized service.
 - Services **listen to and emit events** via a message broker.
@@ -566,9 +566,9 @@ control, using asynchronous event-based communication.
   - Performs its action.
   - Emits either success or compensating events depending on the result.
 
-### Real-Life Example: Ticketing System
+#### Real-Life Example: Ticketing System
 
-#### Business Requirements
+##### Business Requirements
 
 - Sell assigned seats for events.
 - Ensure:
@@ -576,7 +576,7 @@ control, using asynchronous event-based communication.
   - Customer is charged.
   - Seat is reserved only once.
 
-#### Services Involved
+##### Services Involved
 
 - `Order Service`
 - `Security Service`
@@ -585,7 +585,7 @@ control, using asynchronous event-based communication.
 - `Email Service`
 - Optional: `Orchestration Service` (if using execution orchestrator pattern)
 
-### Flow: Execution Orchestrator Saga
+#### Flow: Execution Orchestrator Saga
 
 1. **User Request → Orchestration Service**
 2. **Orchestration → Order Service**
@@ -623,7 +623,7 @@ control, using asynchronous event-based communication.
    - Mark order as purchased.
    - Send confirmation email.
 
-### Flow: Choreography Saga
+#### Flow: Choreography Saga
 
 - Same services, **no orchestration service**.
 - Services communicate using **asynchronous events**:
@@ -632,7 +632,7 @@ control, using asynchronous event-based communication.
   - Triggering next step.
   - Triggering compensating events if failure occurs.
 
-### Summary
+#### Summary
 
 - Saga Pattern helps maintain **data consistency** in microservices with
   separate databases.

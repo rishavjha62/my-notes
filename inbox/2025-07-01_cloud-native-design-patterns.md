@@ -1097,7 +1097,7 @@ event being sent to a message broker, even when services crash mid-operation.
 
 #### How to Store Events
 
-##### Option 1: **Database Table**
+1. **Database Table**
 
 - Store each event as a row.
 - Schema:
@@ -1108,7 +1108,7 @@ event being sent to a message broker, even when services crash mid-operation.
 - Tradeoff:
   - Replay logic is needed to reconstruct state
 
-##### Option 2: **Message Broker** (Kafka, Pub/Sub)
+2. **Message Broker** (Kafka, Pub/Sub)
 
 - Events are **published**, not just stored
 - Consumers **subscribe** and act (e.g., update materialized views)
@@ -1126,12 +1126,12 @@ Replaying all events from day one is **inefficient**.
 
 ##### Solutions:
 
-##### 1. **Snapshots**
+1. **Snapshots**
 
 - Periodically persist the current state
 - Future reads only need to replay from the **last snapshot**
 
-##### 2. **CQRS + Event Sourcing**
+2. **CQRS + Event Sourcing**
 
 - Combine with [[CQRS]]
 - **Command Service**:
